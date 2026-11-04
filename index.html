@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Imprimible de Recursos de Educación Física - Primaria (1º a 6º)</title>
+  <style>
+    /* RESET Y ESTILOS BASE */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1e293b;
+      background-color: #f1f5f9;
+      line-height: 1.45;
+      font-size: 13.5px;
+    }
+
+    /* PANTALLA: BARRA DE NAVEGACIÓN Y FILTROS */
+    .screen-header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      color: #ffffff;
+      padding: 24px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .header-title h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .header-title p {
+      font-size: 14px;
+      color: #93c5fd;
+      margin-top: 4px;
+    }
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #2563eb;
+      color: #ffffff;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13.5px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: #334155;
+    }
+    .btn-secondary:hover {
+      background: #475569;
+    }
+    .btn-accent {
+      background: #059669;
+    }
+    .btn-accent:hover {
+      background: #047857;
+    }
+
+    /* FILTROS */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 12px 16px;
+      border-radius: 10px;
+      backdrop-filter: blur(8px);
+    }
+    .filter-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1 1 200px;
+    }
+    .filter-item label {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #cbd5e1;
+      letter-spacing: 0.5px;
+    }
+    .filter-item select, .filter-item input {
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      outline: none;
+    }
+    .filter-item select:focus, .filter-item input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+    .filter-stats {
+      font-size: 12px;
+      color: #94a3b8;
+      align-self: center;
+      margin-left: auto;
+      font-weight: 600;
+    }
+
+    /* CONTENEDOR DE FICHAS */
+    .catalog-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    /* TARJETA DE FICHA DIDÁCTICA */
+    .ficha-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      padding: 24px 28px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* ENCABEZADO DE FICHA */
+    .ficha-header {
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .ficha-meta-top {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+    .badge-ciclo-1 { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+    .badge-ciclo-2 { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    .badge-ciclo-3 { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+    
+    .badge-bloque { background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; }
+    .badge-code { background: #0f172a; color: #ffffff; }
+
+    .ficha-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.25;
+    }
+    .ficha-competencias {
+      font-size: 11.5px;
+      color: #475569;
+      margin-top: 4px;
+    }
+    .ficha-competencias strong {
+      color: #0f172a;
+    }
+
+    .ficha-btn-print {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .ficha-btn-print:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    /* GRID TÉCNICO */
+    .ficha-tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12.5px;
+    }
+    .tech-item strong {
+      color: #0f172a;
+      display: inline-block;
+      margin-right: 4px;
+    }
+
+    /* SECCIONES DE CONTENIDO */
+    .section-title {
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #1e3a8a;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px dashed #cbd5e1;
+      padding-bottom: 3px;
+    }
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: #2563eb;
+      border-radius: 2px;
+    }
+
+    .ficha-body {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .objetivos-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4px;
+      font-size: 12.5px;
+    }
+    .objetivos-list li {
+      padding-left: 16px;
+      position: relative;
+    }
+    .objetivos-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #059669;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .dinamica-text {
+      font-size: 13px;
+      color: #334155;
+      text-align: justify;
+    }
+    .dinamica-text p {
+      margin-bottom: 6px;
+    }
+    .dinamica-text ol, .dinamica-text ul {
+      margin-left: 20px;
+      margin-bottom: 6px;
+    }
+    .dinamica-text li {
+      margin-bottom: 4px;
+    }
+
+    /* ESQUEMA / DIAGRAMA */
+    .diagram-box {
+      background: #0f172a;
+      color: #38bdf8;
+      font-family: "Courier New", Courier, monospace;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 11px;
+      line-height: 1.35;
+      overflow-x: auto;
+      white-space: pre;
+      border-left: 4px solid #38bdf8;
+    }
+
+    /* CAJAS DUA Y REFLEXIÓN */
+    .dua-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 700px) {
+      .dua-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .dua-card {
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+    }
+    .dua-support {
+      background: #f0fdf4;
+      border-left: 3px solid #16a34a;
+      color: #14532d;
+    }
+    .dua-challenge {
+      background: #fef2f2;
+      border-left: 3px solid #dc2626;
+      color: #7f1d1d;
+    }
+    .dua-card strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 11.5px;
+      text-transform: uppercase;
+    }
+
+    .debrief-box {
+      background: #eff6ff;
+      border-left: 3px solid #2563eb;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      color: #1e3a8a;
+    }
+    .debrief-box strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      color: #1d4ed8;
+    }
+    .debrief-box ul {
+      margin-left: 18px;
+    }
+
+    .safety-alert {
+      font-size: 11.5px;
+      color: #9a3412;
+      background: #fff7ed;
+      border: 1px dashed #fdba74;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+    .safety-alert strong {
+      color: #c2410c;
+    }
+
+    /* FOOTER FICHA */
+    .ficha-footer {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    /* MODAL NUEVA FICHA */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+    }
+    .modal-overlay.active {
+      display: flex;
+    }
+    .modal-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px;
+      max-width: 650px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    /* ESTILOS DE IMPRESIÓN (A4 OPTIMIZADO) */
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt !important;
+        line-height: 1.3 !important;
+      }
+      .no-print, .screen-header, .ficha-btn-print {
+        display: none !important;
+      }
+      .catalog-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        gap: 0 !important;
+      }
+      .ficha-card {
+        page-break-after: always;
+        break-after: page;
+        border: 1.5pt solid #1e293b !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 14mm 15mm !important;
+        margin-bottom: 0 !important;
+        min-height: 98vh;
+      }
+      .ficha-card:last-child {
+        page-break-after: auto;
+        break-after: auto;
+      }
+      .diagram-box {
+        background: #f8fafc !important;
+        color: #0f172a !important;
+        border: 1pt solid #94a3b8 !important;
+        border-left: 3pt solid #0f172a !important;
+      }
+      .badge-ciclo-1, .badge-ciclo-2, .badge-ciclo-3, .badge-bloque, .badge-code {
+        border: 1pt solid #000000 !important;
+        color: #000000 !important;
+        background: transparent !important;
+      }
+      .dua-support, .dua-challenge, .debrief-box, .safety-alert {
+        background: #ffffff !important;
+        border: 1pt solid #64748b !important;
+        color: #000000 !important;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 10mm 12mm 10mm 12mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE CONTROL EN PANTALLA -->
+  <header class="screen-header no-print">
+    <div class="header-content">
+      <div class="header-top">
+        <div class="header-title">
+          <h1>Catálogo de Recursos de Educación Física (1º a 6º de Primaria)</h1>
+          <p>Organización por niveles, bloques de saberes básicos y fichas didácticas 100% imprimibles</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-accent" onclick="window.print()">
+            🖨️ Imprimir Selección / Todo
+          </button>
+          <button class="btn btn-secondary" onclick="window.location.href='00_MATRIZ_CURRICULAR_LOMLOE.md'">
+            📄 Matriz Curricular
+          </button>
+          <button class="btn" onclick="abrirPlantillaModal()">
+            ➕ Plantilla en Blanco
+          </button>
+        </div>
+      </div>
+
+      <!-- FILTROS DINÁMICOS -->
+      <div class="filter-bar">
+        <div class="filter-item">
+          <label for="filtroCiclo">Ciclo / Cursos</label>
+          <select id="filtroCiclo" onchange="aplicarFiltros()">
+            <option value="todos">Todos los ciclos (1º a 6º)</option>
+            <option value="1">1er Ciclo (1º y 2º Primaria)</option>
+            <option value="2">2º Ciclo (3º y 4º Primaria)</option>
+            <option value="3">3er Ciclo (5º y 6º Primaria)</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label for="filtroBloque">Bloque de Saberes Básicos</label>
+          <select id="filtroBloque" onchange="aplicarFiltros()">
+            <option value="todos">Todos los bloques</option>
+            <option value="Bloque A">Bloque A: Vida activa y saludable</option>
+            <option value="Bloque C">Bloque C: Habilidades y motricidad</option>
+            <option value="Bloque D">Bloque D: Cooperación y retos</option>
+            <option value="Bloque E">Bloque E: Expresión corporal y cultura</option>
+            <option value="Bloque F">Bloque F: Medio natural y entorno</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label for="busquedaTexto">Buscar por palabra clave</label>
+          <input type="text" id="busquedaTexto" placeholder="Ej: paracaídas, datchball, relevo, pulso..." oninput="aplicarFiltros()">
+        </div>
+
+        <div class="filter-stats" id="contadorFichas">
+          Mostrando 18 de 18 fichas
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENEDOR PRINCIPAL DE FICHAS -->
+  <main class="catalog-container" id="contenedorFichas">
+
+    <!-- ========================================== -->
+    <!-- PRIMER CICLO (1º Y 2º) - FICHAS 1 A 6      -->
+    <!-- ========================================== -->
+
+    <!-- FICHA 1 -->
+    <article class="ficha-card" data-ciclo="1" data-bloque="Bloque C">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-1">1er Ciclo (1º y 2º)</span>
+            <span class="badge badge-bloque">Bloque C: HMB y Motricidad</span>
+            <span class="badge badge-code">F-1C-01</span>
+          </div>
+          <h2 class="ficha-title">El Zoológico en Movimiento (Cuento Motor)</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE2 (Control y HMB), CE4 (Interacción positiva) | <strong>Clave:</strong> CPSAA, CCL, CCEC
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Gimnasio o pista delimitada</div>
+        <div class="tech-item"><strong>Duración:</strong> 20 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> Conos de 4 colores, aros en el suelo, pandero</div>
+        <div class="tech-item"><strong>Agrupación:</strong> Gran grupo (sin eliminaciones)</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Experimentar desplazamientos variados (cuadrupedias, saltos con pies juntos/pata coja, reptaciones).</li>
+            <li><strong>Socioemocional:</strong> Aceptar consignas con entusiasmo y autorregular el tono muscular sin colisionar.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Desarrollo y Dinámica del Juego</div>
+          <div class="dinamica-text">
+            <p>El alumnado son cuidadores y animales de una reserva. Al ritmo del pandero se desplazan según el animal anunciado: <strong>Canguros</strong> (saltos a pies juntos rebotando con rodillas semiflexionadas), <strong>Serpientes</strong> (reptación sin despegar el abdomen), <strong>Osos</strong> (cuadrupedia ágil palmas y plantas) y <strong>Flamencos</strong> (equilibrio unipodal al grito de ¡Foto!).</p>
+            <p>Al sonar el golpe fuerte de pandero (<em>"¡Llega la tormenta!"</em>), cada pareja de animales debe refugiarse dentro de un aro libre saludándose con el sonido de su especie. No hay eliminación: quien llega último propone el siguiente animal.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+[SELVA: Monos] (▲ Cono Verde)                    (▲ Cono Amarillo) [SABANA: Leones]
+                     ○ Aro                               ○ Aro
+                              🚶 Alumnos dispersos
+                                      ○ Aro
+[OCÉANO] (▲ Cono Azul)                           (▲ Cono Blanco) [POLO NORTE]</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Permitir apoyos de rodillas en cuadrupedia y aros de mayor diámetro para facilitar la entrada compartida.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Desplazamiento en cuadrupedia invertida (cangrejo) o cambios de dirección sin girar el tronco.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Con qué animal os cansasteis más? ¿Qué partes del cuerpo hacían más fuerza?</li>
+            <li>¿Qué hacíamos con la mirada para no chocar con nadie al correr o saltar?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Calzado deportivo bien atado. Controlar que no haya manos pisadas en los desplazamientos a cuatro patas manteniendo distancia.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 1</span>
+      </div>
+    </article>
+
+    <!-- FICHA 2 -->
+    <article class="ficha-card" data-ciclo="1" data-bloque="Bloque C">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-1">1er Ciclo (1º y 2º)</span>
+            <span class="badge badge-bloque">Bloque C: Esquema y Lateralidad</span>
+            <span class="badge badge-code">F-1C-02</span>
+          </div>
+          <h2 class="ficha-title">Los Guardianes del Tesoro y las Gemas Mágicas</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE2 (Lateralidad y frenada), CE4 (Respeto de turnos) | <strong>Clave:</strong> CPSAA, CC
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Media pista polideportiva</div>
+        <div class="tech-item"><strong>Duración:</strong> 20 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> Conos rojos y azules, saquitos/pelotas de tenis, 2 cajas</div>
+        <div class="tech-item"><strong>Agrupación:</strong> Gran grupo y 2 Guardianes centrales</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Practicar arrancadas explosivas, frenadas estables y discriminación de la mano dominante/no dominante.</li>
+            <li><strong>Cognitivo:</strong> Atender a órdenes sonoras de lateralidad (derecha = rojo, izquierda = azul).</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Desarrollo y Dinámica del Juego</div>
+          <div class="dinamica-text">
+            <p>En el centro hay un cofre lleno de gemas custodiado por dos guardianes de espaldas. A la señal <em>"¡Ladrones en el castillo!"</em>, los exploradores avanzan sigilosamente. El docente grita: <em>"¡Robamos gema con la mano DERECHA!"</em> o <em>"¡Gema azul con la mano IZQUIERDA!"</em>.</p>
+            <p>Cuando el docente grita <em>"¡Despiertan los guardianes!"</em>, estos se giran y los exploradores deben congelarse sobre un solo pie. Quien se mueva no se elimina: rodea un cono exterior y regresa. Si vuelven con la gema en la mano correcta sin ser tocados, suman para el cofre de equipo.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+Línea de Salida (Exploradores) ══════════════════════════════════════════
+               🏃        🏃        🏃        🏃        🏃
+                                ↓
+                        [ Guardián 1 ]    [ Guardián 2 ]
+                             (◎ COFRE DE GEMAS)
+                                ↑
+Línea de Salida (Exploradores) ══════════════════════════════════════════</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Cintas de color en la muñeca (rojo=derecha, azul=izquierda) y equilibrio sobre dos pies juntos al frenar.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Transportar la gema en equilibrio sobre el dorso de la mano sin que caiga al suelo.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué hacéis con los brazos para mantener el equilibrio y no caer al frenar de golpe?</li>
+            <li>¿Con qué mano os resultó más rápido y cómodo agarrar la gema?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Mantener una zona de amortiguación de 2 metros alrededor del cofre para evitar choques al agacharse a coger el material.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 2</span>
+      </div>
+    </article>
+
+    <!-- FICHA 3 -->
+    <article class="ficha-card" data-ciclo="1" data-bloque="Bloque D">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-1">1er Ciclo (1º y 2º)</span>
+            <span class="badge badge-bloque">Bloque D: Cooperación y Emociones</span>
+            <span class="badge badge-code">F-1C-03</span>
+          </div>
+          <h2 class="ficha-title">El Viaje del Paracaídas Mágico y las Olas</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE4 (Cooperación indispensable), CE1 (Gestión del esfuerzo) | <strong>Clave:</strong> CPSAA, CC
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Gimnasio cubierto sin viento</div>
+        <div class="tech-item"><strong>Duración:</strong> 25 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> 1 paracaídas lúdico de 4-5 m, 5 pelotas de gomaespuma</div>
+        <div class="tech-item"><strong>Agrupación:</strong> Gran grupo (15 a 25 alumnos en círculo)</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Sincronizar movimientos de tracción y elevación de brazos con el grupo; control del ritmo y fuerza.</li>
+            <li><strong>Socioemocional:</strong> Comprender que el éxito depende del esfuerzo colectivo (si uno suelta, el juego se desinfla).</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Desarrollo y Dinámica del Juego</div>
+          <div class="dinamica-text">
+            <p><strong>1. Olas de mar:</strong> Movimientos ondulatorios suaves (<em>"mar en calma"</em>) o enérgicos (<em>"¡tempestad!"</em>) sujetando las asas.</p>
+            <p><strong>2. Los barquitos náufragos:</strong> Se lanzan 3 pelotas al paracaídas. El grupo debe hacerlas rodar en círculo por el borde sin que caigan por el agujero central ni salgan disparadas.</p>
+            <p><strong>3. El iglú gigante:</strong> A la de tres, elevan los brazos a la máxima altura, dan dos pasos al frente y se sientan sobre el borde interior, quedando todos reunidos dentro de la cúpula mágica.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+                     (Alumnado en círculo concéntrico)
+                              🚶   🚶   🚶
+                        🚶                 🚶
+                    🚶        ┌───────┐        🚶
+                   🚶        │ PARACA-│         🚶
+                    🚶        │  ÍDAS │        🚶
+                        🚶   └───────┘     🚶
+                              🚶   🚶   🚶</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Dos alumnos compartiendo la misma asa para sumar fuerza; adaptación total para alumnado en silla de ruedas en el círculo.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Encestar una pelota ligera por el hueco central impulsándola únicamente con olas sincronizadas de la tela.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué pasaba con los balones si una mitad del círculo tiraba muy fuerte y la otra se quedaba parada?</li>
+            <li>¿Cómo nos sentimos dentro del iglú todos juntos y protegidos?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Prohibido tirarse de rodillas o de cabeza al pasar bajo la tela; circular erguidos para no golpearse.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 3</span>
+      </div>
+    </article>
+
+    <!-- FICHA 4 -->
+    <article class="ficha-card" data-ciclo="1" data-bloque="Bloque C">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-1">1er Ciclo (1º y 2º)</span>
+            <span class="badge badge-bloque">Bloque C: Lanzamientos y Óculo-Manual</span>
+            <span class="badge badge-code">F-1C-04</span>
+          </div>
+          <h2 class="ficha-title">Cazadores de Estrellas y Cometas Voladores</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE2 (Ajuste perceptivo-motor) | <strong>Clave:</strong> STEM, CPSAA
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Pista exterior con suelo liso</div>
+        <div class="tech-item"><strong>Duración:</strong> 20 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> Pañuelos de gasa de malabares, pelotas cometa con cintas, aros</div>
+        <div class="tech-item"><strong>Agrupación:</strong> Por parejas con rotación de roles</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Adaptar la trayectoria corporal a la caída lenta de objetos; lanzar con precisión a dianas fijas.</li>
+            <li><strong>Cognitivo:</strong> Comparar la velocidad de caída de un pañuelo de gasa frente a una pelota con cola.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Desarrollo y Dinámica del Juego</div>
+          <div class="dinamica-text">
+            <p><strong>1. Pañuelos flotantes:</strong> Cada alumno lanza su pañuelo verticalmente y lo atrapa antes de tocar el suelo con la otra mano, dando una palmada previa o con partes del cuerpo (pie, hombro).</p>
+            <p><strong>2. Parejas de cometas:</strong> A 3 metros de distancia, el compañero A lanza la cometa trazando una parábola alta y el compañero B corre a cazarla antes del suelo. Si logran 3 recepciones seguidas, dan un paso atrás.</p>
+            <p><strong>3. Dianas a las constelaciones:</strong> Lanzamiento a aros colocados en el suelo sumando puntos para el reto de clase.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+ [ PAREJA 1 ]               [ PAREJA 2 ]               [ ZONA DIANAS ]
+  (A) ────> (B)              (A) ────> (B)               ○ Aro 1 (1 pto)
+  [3 metros]                 [3 metros]                 ○ Aro 2 (2 ptos)
+                                                         ○ Aro 3 (3 ptos)</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Usar pañuelos de seda de gran tamaño (caída muy lenta) y recepcionar con ambas manos en forma de cazoleta.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Atrapar el pañuelo tras realizar un giro de 360º o usando exclusivamente la mano no dominante.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué cayó más despacio: el pañuelo o la cometa? ¿Por qué?</li>
+            <li>¿Hacia dónde mirabais todo el tiempo: a vuestras manos o al vuelo del pañuelo?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Mantener pasillos libres de al menos 2 metros entre parejas para evitar colisiones al correr a atrapar móviles desviados.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 4</span>
+      </div>
+    </article>
+
+    <!-- FICHA 5 -->
+    <article class="ficha-card" data-ciclo="1" data-bloque="Bloque E">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-1">1er Ciclo (1º y 2º)</span>
+            <span class="badge badge-bloque">Bloque E: Expresión Corporal</span>
+            <span class="badge badge-code">F-1C-05</span>
+          </div>
+          <h2 class="ficha-title">El Museo de las Esculturas Sonoras</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE3 (Expresión y creatividad), CE4 (Respeto artístico) | <strong>Clave:</strong> CCEC, CPSAA, CCL
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Sala de psicomotricidad o gimnasio</div>
+        <div class="tech-item"><strong>Duración:</strong> 20 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> Música variada (rápida, lenta, misteriosa), tarjetas de emociones</div>
+        <div class="tech-item"><strong>Agrupación:</strong> Gran grupo con roles de Esculturas y Visitantes</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Controlar la tensión y relajación muscular voluntaria; experimentar posturas en plano alto, medio y bajo.</li>
+            <li><strong>Socioemocional:</strong> Desinhibirse a través del juego dramático sin miedo a la mirada de los demás.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Desarrollo y Dinámica del Juego</div>
+          <div class="dinamica-text">
+            <p>La mitad de la clase son <em>Esculturas</em> y la otra mitad <em>Visitantes del museo</em>. Mientras suena la música, las esculturas cobran vida y bailan según el ritmo.</p>
+            <p>Cuando la música se detiene, el docente anuncia una consigna temática: <em>"¡Esculturas de gigantes asustados!"</em>, <em>"¡Robots congelados en plano bajo!"</em>. Las esculturas deben quedar petrificadas transmitiendo esa emoción.</p>
+            <p>Los visitantes recorren las obras y pueden pulsar un "botón imaginario" en el hombro de la escultura para que esta emita un sonido o frase antes de volver a su inmovilidad. A los 10 minutos se invierten los papeles.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+                 [ SALA DE ARTE / GIMNASIO ]
+    🧍 (Visitante 1)             🗿 (Escultura congelada - Plano alto)
+                🗿 (Escultura en el suelo - Plano bajo)
+    🧍 (Visitante 2)             🗿 (Escultura en equilibrio)</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Permitir trabajar en parejas como "estatuas siamesas" unidas por la mano para dar seguridad emocional.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Crear esculturas colectivas de 3 personas a tres niveles de altura simultáneos (alto, medio y suelo).
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué parte del cuerpo os ayudó más a transmitir miedo, alegría o sorpresa?</li>
+            <li>¿Cómo controlabais la respiración para no mover ni un músculo cuando venía el visitante?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Cuidar los apoyos corporales al descender a posturas en el suelo; evitar torsiones forzadas de cuello.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 5</span>
+      </div>
+    </article>
+
+    <!-- FICHA 6 -->
+    <article class="ficha-card" data-ciclo="1" data-bloque="Bloque F">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-1">1er Ciclo (1º y 2º)</span>
+            <span class="badge badge-bloque">Bloque F & A: Medio Natural y Salud</span>
+            <span class="badge badge-code">F-1C-06</span>
+          </div>
+          <h2 class="ficha-title">El Bosque Sensorial y las Huellas Ecológicas</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE5 (Respeto al entorno natural), CE1 (Hidratación y salud) | <strong>Clave:</strong> STEM, CPSAA, CC
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Patio escolar exterior / Zonas con árboles</div>
+        <div class="tech-item"><strong>Duración:</strong> 25 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> Tarjetas con huellas de animales, pinzas de madera, cantimploras</div>
+        <div class="tech-item"><strong>Agrupación:</strong> En tríos de exploradores cooperativos</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Desplazarse por terrenos irregulares adaptando la zancada y el equilibrio.</li>
+            <li><strong>Socioemocional:</strong> Respetar el patrimonio natural del colegio y acordar decisiones en trío.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Desarrollo y Dinámica del Juego</div>
+          <div class="dinamica-text">
+            <p>En el patio hay escondidas 4 clases de huellas de animales protegidos. Cada trío lleva un cuaderno guía y debe localizarlas sin separarse.</p>
+            <p>Al encontrar cada huella realizan la acción motriz asociada: <strong>Huella de ardilla</strong> (5 saltos continuos pies juntos), <strong>Huella de pájaro</strong> (equilibrio a la pata coja batiendo brazos 6 segundos), <strong>Huella de ciervo</strong> (zancadas amplias de carrera elevando rodillas) y <strong>Huella de oso</strong> (6 pasos lentos en sentadilla profunda).</p>
+            <p>Tras completar las 4 huellas acuden al "Manantial" (zona delimitada) para hidratarse correctamente con su cantimplora.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+    [ ÁRBOL A ]                                      [ GRADA / BANCO ]
+   (Huella Pájaro)                                   (Huella Ardilla)
+                      🚶🚶🚶 (Trío exploradores)
+                                 │
+                                 ▼
+                     ┌───────────────────────┐
+                     │ MANANTIAL DE AGUA     │
+                     │ (Zona de Hidratación) │
+                     └───────────────────────┘</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Huellas colocadas a la altura de los ojos y con colores de alto contraste; apoyo físico entre compañeros.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Uno de los alumnos del trío cierra los ojos y sus dos compañeros lo guían únicamente con indicaciones verbales de voz.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Por qué debemos beber agua en pequeños sorbos antes y después de hacer ejercicio?</li>
+            <li>¿Cómo cuidamos las plantas del patio mientras corríamos a buscar las pistas?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Delimitar zonas seguras fuera de zonas de aparcamiento o escaleras empinadas. Mirar siempre hacia adelante para no chocar con árboles.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 6</span>
+      </div>
+    </article>
+
+
+    <!-- ========================================== -->
+    <!-- SEGUNDO CICLO (3º Y 4º) - FICHAS 7 A 12    -->
+    <!-- ========================================== -->
+
+    <!-- FICHA 7 -->
+    <article class="ficha-card" data-ciclo="2" data-bloque="Bloque C">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-2">2º Ciclo (3º y 4º)</span>
+            <span class="badge badge-bloque">Bloque C: HMB Combinadas</span>
+            <span class="badge badge-code">F-2C-01</span>
+          </div>
+          <h2 class="ficha-title">El Gran Desafío Multitarea (Carrera de Retos y Enlaces)</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE2 (Encadenamiento fluido de HMB), CE4 (Relevo cooperativo) | <strong>Clave:</strong> CPSAA, STEM
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Pista polideportiva completa</div>
+        <div class="tech-item"><strong>Duración:</strong> 25 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> 4 bancos suecos, 8 vallas bajas, aros, 8 balones, dianas en pared</div>
+        <div class="tech-item"><strong>Agrupación:</strong> 4 equipos en calles de relevo continuo</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Enlazar sin pausas: carrera en equilibrio + batida y salto de valla + bote en zigzag + lanzamiento de precisión.</li>
+            <li><strong>Cognitivo:</strong> Dosificar la velocidad de carrera antes del tiro para aumentar el porcentaje de acierto.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Desarrollo y Dinámica del Juego</div>
+          <div class="dinamica-text">
+            <p>Se organizan 4 calles idénticas para los equipos: <strong>Tramo 1:</strong> Carrera rápida por la viga invertida del banco sueco. <strong>Tramo 2:</strong> Salto de 3 vallas bajas a pies juntos amortiguando la caída. <strong>Tramo 3:</strong> Coger balón y botar en slalom entre conos (derecha a la ida, izquierda a la vuelta). <strong>Tramo 4:</strong> Tiro a diana en la pared.</p>
+            <p>Tras lanzar, depositan el balón en la cesta y regresan por el pasillo exterior para dar el relevo chocando la mano. El reto de la clase es conseguir 30 dianas entre todos los equipos antes de que termine el tiempo.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+ [Fila Equipo 1] ───> [Banco Sueco] ───> [3 Vallas] ───> [Bote Zigzag] ───> [Diana Pared]
+                                                                                   │
+   (Pasillo de retorno al sprint sin molestar) <───────────────────────────────────┘</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Banco sueco en posición ancha; sustituir vallas por líneas en el suelo; balones blandos de agarre fácil.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Realizar el bote con la vista al frente (sin mirar la bola) y lanzar a la diana con salto previo en suspensión.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué ocurría con la puntería si lanzábamos a toda velocidad sin frenar un segundo antes?</li>
+            <li>¿Cómo flexionamos las rodillas al caer de la valla para proteger los tobillos y la columna?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Colchonetas de amortiguación tras las vallas. Mantener 3 metros entre calles para evitar invasiones de carril.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 7</span>
+      </div>
+    </article>
+
+    <!-- FICHA 8 -->
+    <article class="ficha-card" data-ciclo="2" data-bloque="Bloque E">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-2">2º Ciclo (3º y 4º)</span>
+            <span class="badge badge-bloque">Bloque E: Cultura Motriz y Tradición</span>
+            <span class="badge badge-code">F-2C-02</span>
+          </div>
+          <h2 class="ficha-title">Juegos Tradicionales del Mundo (El Mbube Zulú)</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE3 (Cultura lúdica tradicional), CE4 (Empatía e inclusión) | <strong>Clave:</strong> CCEC, CC, CCL
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Pista o sala diáfana</div>
+        <div class="tech-item"><strong>Duración:</strong> 25 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> 2 pañuelos o antifaces opacos, tiza</div>
+        <div class="tech-item"><strong>Agrupación:</strong> Gran grupo en círculo protector</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Desarrollar la orientación espacial guiada exclusivamente por el canal auditivo.</li>
+            <li><strong>Socioemocional:</strong> Reconocer y respetar juegos tradicionales de otras culturas (Sudáfrica).</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Desarrollo y Dinámica del Juego</div>
+          <div class="dinamica-text">
+            <p>En lengua zulú, <em>Mbube</em> significa "León". La presa es el <em>Impala</em> (gacela). El grupo forma un círculo tomado de las manos. Dentro se sitúan dos alumnos con antifaz: el león y la gacela, quienes se desplazan con pasos prudentes.</p>
+            <p>El círculo exterior orienta al león con su canto: si el león está lejos de la gacela, cantan <em>"Mbube, mbube..."</em> muy lento y en voz baja. Conforme se acerca a la presa, aceleran el ritmo y suben el volumen: <em>"¡MBUBE, MBUBE, MBUBE!"</em>.</p>
+            <p>La gacela debe esquivar escuchando la voz del grupo. Si en 90 segundos no la atrapa, la gacela gana y entran dos nuevos participantes.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+                    (Círculo de Alumnado cantando "Mbube")
+                                  🚶  🚶  🚶
+                           🚶                    🚶
+                        🚶    🦁 LEÓN (vendado)     🚶
+                        🚶        🦌 GACELA (vendada)🚶
+                           🚶                    🚶
+                                  🚶  🚶  🚶</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Incorporar cascabeles en los tobillos de la gacela o del león para añadir referencias acústicas directas.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Introducir dos leones coordinados que deben comunicarse con señales acústicas acordadas.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Cómo os sentisteis al desplazaros sin el sentido de la vista? ¿Qué otro sentido tuvisteis que agudizar?</li>
+            <li>¿Qué juegos tradicionales de vuestra familia o abuelos utilizan también la venda o el oído?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Los miembros del círculo exterior actúan como amortiguadores: si un jugador vendado se acerca, ponen las manos suaves en los hombros para reorientarlo sin empujar.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 8</span>
+      </div>
+    </article>
+
+    <!-- FICHA 9 -->
+    <article class="ficha-card" data-ciclo="2" data-bloque="Bloque C">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-2">2º Ciclo (3º y 4º)</span>
+            <span class="badge badge-bloque">Bloque C & D: Predeporte e Invasión</span>
+            <span class="badge badge-code">F-2C-03</span>
+          </div>
+          <h2 class="ficha-title">Iniciación al Colpbol (El Deporte Colectivo del Golpeo)</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE2 (Golpeo de balón), CE4 (Cooperación obligatoria y coeducación) | <strong>Clave:</strong> CPSAA, CC, CE
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Campo polideportivo con porterías</div>
+        <div class="tech-item"><strong>Duración:</strong> 30 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> 1 balón de Colpbol o blando de 24 cm, petos de 2 colores</div>
+        <div class="tech-item"><strong>Agrupación:</strong> 2 equipos mixtos de 6 o 7 en pista</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Golpear con la palma abierta de la mano o antebrazos orientando la pelota hacia espacios libres.</li>
+            <li><strong>Socioemocional:</strong> Respetar la regla de cooperación máxima (nadie puede dar dos toques seguidos; el pase es imperativo).</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Reglas Fundamentales del Colpbol</div>
+          <div class="dinamica-text">
+            <p><strong>1. Sólo golpeo:</strong> La pelota se juega exclusivamente a base de golpeos con manos, brazos o parte superior del tronco. Queda prohibido agarrar, retener o lanzar la pelota.</p>
+            <p><strong>2. Un solo toque por persona:</strong> Un jugador no puede dar dos toques seguidos (pase obligatorio constante).</p>
+            <p><strong>3. Gol doble cooperativo:</strong> Se anota introduciendo la pelota en la meta contraria. Si el gol se consigue tras jugada en la que participan al menos 3 personas distintas del equipo, ¡vale doble!</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+ [ Portería Equipo Azul ]                                  [ Portería Equipo Rojo ]
+  ┌───┐                                                                   ┌───┐
+  │   │     🔵 Defensor            🔴 Atacante                            │   │
+  │   │                    ⚽ Balón (al aire)                             │   │
+  │   │     🔵 Centrocampista                     🔴 Delantero            │   │
+  └───┘                                                                   └───┘
+                                [ Zona Central ]</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Permitir dos botes antes del golpeo para dar más tiempo de ajuste motor; uso de balón ligero de foam acolchado.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Obligación de ejecutar el golpeo decisivo de pase con la mano no dominante si se está cerca del área rival.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Por qué en este juego es imposible que un solo jugador se quede con todo el balón o sea individualista?</li>
+            <li>¿Qué tenéis que hacer cuando no tenéis el balón para ayudar al compañero que va a golpear?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Se golpea la pelota, nunca al compañero. Prohibido patear con el pie. Mantener 1 metro de distancia defensiva al golpeo.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 9</span>
+      </div>
+    </article>
+
+    <!-- FICHA 10 -->
+    <article class="ficha-card" data-ciclo="2" data-bloque="Bloque E">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-2">2º Ciclo (3º y 4º)</span>
+            <span class="badge badge-bloque">Bloque E: Acrosport y Circo</span>
+            <span class="badge badge-code">F-2C-04</span>
+          </div>
+          <h2 class="ficha-title">Constructores del Circo (Iniciación al Acrosport)</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE3 (Expresión corporal y figuras), CE4 (Confianza y seguridad) | <strong>Clave:</strong> CCEC, CPSAA, CC
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Gimnasio cubierto con suelo acolchado</div>
+        <div class="tech-item"><strong>Duración:</strong> 25 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> 8 colchonetas estándar unidas, tarjetas con figuras de acrosport</div>
+        <div class="tech-item"><strong>Agrupación:</strong> Tríos estables (Portor, Ágil y Ayudante)</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Mantener equilibrios estáticos estables alineando hombros, caderas y rodillas.</li>
+            <li><strong>Socioemocional:</strong> Desarrollar máxima confianza mutua y responsabilizarse de la seguridad física del compañero.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Reglas Sagradas y Repertorio de Figuras</div>
+          <div class="dinamica-text">
+            <p><strong>1. Zonas autorizadas de apoyo:</strong> Los pies y manos del Ágil sólo apoyan sobre hombros (cintura escapular) o caderas (cintura pelviana) del Portor. <em>¡Jamás sobre el centro de la columna vertebral!</em></p>
+            <p><strong>2. El rol del Ayudante:</strong> Sostiene las caderas del ágil al subir y bajar, y avisa si la figura pierde estabilidad.</p>
+            <p><strong>3. Figuras del reto:</strong> El Banco y la Tabla (plano bajo), La Mesa y la Escultura (parejas), y El Trío de la Victoria (dos portores en semisentadilla). Mantener fija cada figura <strong>5 segundos</strong> antes de desmontar con suavidad.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición de Apoyos Correctos</div>
+          <div class="diagram-box">
+       [ÁGIL: Manos en hombros]        [ÁGIL: Pies en cadera]
+                 │                                │
+                 ▼                                ▼
+       [PORTOR: Cintura Escapular]    [PORTOR: Cintura Pélvica]
+       ════════════════════════════════════════════════════════
+             ¡ZONA PROHIBIDA DE APOYO: MITAD DE LA ESPALDA!</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Figuras en el suelo sin elevación completa; el ayudante realiza sujeción física constante.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Enlazar dos figuras seguidas con una transición dancística coreografiada y desmontaje simétrico.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué sentimos cuando fuimos la base firme (portor) de nuestro compañero?</li>
+            <li>¿Por qué el trabajo del ayudante es imprescindible aunque no salga en el centro de la figura?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> ¡Terminantemente prohibido saltar o dejarse caer para desmontar! El desmontaje se realiza paso a paso al revés.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 10</span>
+      </div>
+    </article>
+
+    <!-- FICHA 11 -->
+    <article class="ficha-card" data-ciclo="2" data-bloque="Bloque F">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-2">2º Ciclo (3º y 4º)</span>
+            <span class="badge badge-bloque">Bloque F: Orientación Escolar</span>
+            <span class="badge badge-code">F-2C-05</span>
+          </div>
+          <h2 class="ficha-title">Cazadores de Balizas (Iniciación a la Orientación con Plano)</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE5 (Interpretación de planos y entorno), CE2 (Carrera dosificada) | <strong>Clave:</strong> STEM, CPSAA, CE
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Patio escolar y zonas exteriores seguras</div>
+        <div class="tech-item"><strong>Duración:</strong> 30 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> 10 croquis del patio, 10 pinzas/balizas con letras, tarjeta de control</div>
+        <div class="tech-item"><strong>Agrupación:</strong> Por parejas (Navegante con plano y Corredor)</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Dosificar la velocidad de carrera y sortear elementos arquitectónicos con agilidad.</li>
+            <li><strong>Cognitivo:</strong> Orientar el plano respecto al terreno real (hacer coincidir el frente del dibujo con el frente físico).</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Desarrollo y Dinámica de la Búsqueda</div>
+          <div class="dinamica-text">
+            <p><strong>1. Regla de oro:</strong> "El plano siempre se gira": antes de salir, giran el croquis para que coincida exactamente con lo que ven enfrente.</p>
+            <p><strong>2. Sistema de estrella:</strong> Desde la Base Central, cada pareja recibe un código de 4 balizas en orden distinto. Al localizar la baliza (pinza en banco, árbol o fuente), anotan la letra secreta y regresan a comprobar.</p>
+            <p><strong>3. Descifrado de la palabra clave:</strong> Al completar las 4 balizas, las letras forman una palabra ligada al medio ambiente o la salud (ej. <em>S-A-L-U-D</em> o <em>Á-R-B-O-L</em>). Se alternan los roles de mapa y corredor en cada baliza.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+   [Gimnasio] ──(Baliza 1)                          (Baliza 3)── [Graderío]
+                      \                                /
+                       \     ┌──────────────┐         /
+                        ────>│ BASE CENTRAL │<────────
+                       /     │ (Salida/Check│         \
+                      /      └──────────────┘          \
+   [Zona Árboles] ──(Baliza 2)                      (Baliza 4)── [Fuente]</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Planos con fotografías reales añadidas junto a los círculos de las balizas para facilitar la identificación visual.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Modalidad libre tipo "Score": encontrar el mayor número de balizas en 12 minutos gestionando ellos mismos la ruta más corta.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué hacíais si teníais dudas sobre el rumbo: corríais más rápido o parabais a mirar el croquis con calma?</li>
+            <li>¿Cómo os repartisteis las tareas entre quien llevaba el plano y quien comprobaba la pinza?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Delimitar con conos las zonas prohibidas del centro (vallas exteriores, aparcamientos). Cuidado en las esquinas ciegas de edificios.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 11</span>
+      </div>
+    </article>
+
+    <!-- FICHA 12 -->
+    <article class="ficha-card" data-ciclo="2" data-bloque="Bloque A">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-2">2º Ciclo (3º y 4º)</span>
+            <span class="badge badge-bloque">Bloque A & B: Vida Activa y Salud</span>
+            <span class="badge badge-code">F-2C-06</span>
+          </div>
+          <h2 class="ficha-title">Capitanes del Calentamiento y la Espalda Fuerte</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE1 (Autonomía en calentamiento y postura) | <strong>Clave:</strong> STEM, CPSAA
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Semicírculo en pista o gimnasio</div>
+        <div class="tech-item"><strong>Duración:</strong> 20 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> Tarjetas con fases del calentamiento, 4 mochilas con carga real</div>
+        <div class="tech-item"><strong>Agrupación:</strong> Gran grupo en asamblea y parejas de ergonomía</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Movilizar las articulaciones en sentido ascendente; activar la frecuencia cardiaca de manera progresiva.</li>
+            <li><strong>Cognitivo:</strong> Aplicar principios ergonómicos correctos al agacharse a coger cargas pesadas (mochila escolar).</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Estructura del Calentamiento y Taller Ergonómico</div>
+          <div class="dinamica-text">
+            <p><strong>1. Movilidad en ascensor:</strong> De abajo hacia arriba: tobillos (círculos), rodillas (flexo-extensión suave), cadera (hula-hop), hombros (aspas) y cuello (asentimientos suaves).</p>
+            <p><strong>2. El Capitán del día:</strong> Un alumno voluntario lidera una secuencia de desplazamientos de carrera activa (talones a glúteos, carrera lateral, tijeras) que todo el grupo réplica.</p>
+            <p><strong>3. Taller de la mochila saludable:</strong> Práctica de elevación: flexionar rodillas manteniendo el tronco erguido (evitar doblar la espalda con piernas tiesas). Ajuste de tirantes simétricos sobre ambos hombros.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición en Asamblea</div>
+          <div class="diagram-box">
+                     [ EL SEMICÍRCULO DEL CAPITÁN ]
+
+                           👤 Capitán del día
+                                 │
+     👥     👥     👥     👥     │     👥     👥     👥     👥
+   [ Alumnado dispuesto en abanico con visibilidad total ]</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Apoyo en espalderas para la movilidad de tobillos si hay falta de equilibrio; tarjetas ilustradas con la secuencia visual.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Localizar el pulso cardíaco en el cuello o muñeca y explicar cómo cambia antes y después de la activación.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Por qué es arriesgado empezar a correr al sprint a lo loco sin calentar antes?</li>
+            <li>¿Qué consecuencias sufre nuestra espalda si llevamos la mochila pesada colgada de un solo lado todos los días?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Evitar rebotes violentos en frío; los estiramientos deben ser suaves y placenteros, nunca causar dolor punzante.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 12</span>
+      </div>
+    </article>
+
+
+    <!-- ========================================== -->
+    <!-- TERCER CICLO (5º Y 6º) - FICHAS 13 A 18    -->
+    <!-- ========================================== -->
+
+    <!-- FICHA 13 -->
+    <article class="ficha-card" data-ciclo="3" data-bloque="Bloque C">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-3">3er Ciclo (5º y 6º)</span>
+            <span class="badge badge-bloque">Bloque C & D: Cancha Dividida</span>
+            <span class="badge badge-code">F-3C-01</span>
+          </div>
+          <h2 class="ficha-title">Liga de Datchball Escolar (Deporte Mixto de Pelota Viva)</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE2 (Lanzamientos y esquivas), CE4 (Autoarbitraje y honestidad) | <strong>Clave:</strong> CPSAA, CC, CE
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Pista polideportiva dividida en dos campos</div>
+        <div class="tech-item"><strong>Duración:</strong> 30 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> 3 pelotas de foam densas homologadas, petos, banco/hospital</div>
+        <div class="tech-item"><strong>Agrupación:</strong> 2 equipos mixtos de 6 jugadores en pista</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Lanzar con precisión y trayectoria tensa hacia blancos móviles; fintas y caídas de amortiguación.</li>
+            <li><strong>Socioemocional:</strong> Aplicar el autoarbitraje reconociendo el impacto propio de forma voluntaria sin discutir.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Reglas Esenciales de Datchball</div>
+          <div class="dinamica-text">
+            <p><strong>1. Salida:</strong> Los 3 balones reposan en el medio. A la señal <em>"¡1, 2, 3... DATCHBALL!"</em> esprintan a por ellos y deben retrasarlos tras la línea de 3 m antes de tirar.</p>
+            <p><strong>2. Impacto directo:</strong> Si un balón lanzado toca a un jugador antes de tocar el suelo, queda "herido" y pasa a su hospital.</p>
+            <p><strong>3. El "Aire" salvador:</strong> Si un compañero atrapa un lanzamiento rival directo en el aire sin que caiga, elimina al tirador contrario y rescata al primer compañero de su hospital.</p>
+            <p><strong>4. Victoria:</strong> Se gana el set al vaciar el campo rival o por mayor número de supervivientes a los 5 minutos.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+ [ HOSPITAL ROJO ]                                            [ CAMPO AZUL ]
+ ┌───────────────┐ ══════════════════════════════════════════ ┌────────────┐
+ │  Rescatables  │      🔵          🔵          🔵           │  Defensas  │
+ └───────────────┘                                            └────────────┘
+ ───────────────── Línea de 3 m ────────────────────────────
+        ⚽ (Pelota 1)        ⚽ (Pelota 2)        ⚽ (Pelota 3)  <-- Línea Central
+ ───────────────── Línea de 3 m ────────────────────────────
+ ┌───────────────┐                                            ┌────────────┐
+ │  Rescatables  │      🔴          🔴          🔴           │  Defensas  │
+ └───────────────┘ ══════════════════════════════════════════ └────────────┘
+ [ HOSPITAL AZUL ]                                            [ CAMPO ROJO ]</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Permitir recepciones en dos tiempos amortiguando en el pecho; zona de campo más amplia para fintas.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Bloquear un tiro rival usando el balón propio como escudo y armar contrataque en menos de 3 segundos.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué valor tiene admitir que te han tocado cuando nadie te ha visto? ¿Por qué la honestidad es más valiosa que ganar?</li>
+            <li>¿Qué táctica funcionó mejor: disparar rápido en solitario o combinar dos tiros a la vez contra el mismo rival?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Sólo pelotas homologadas de espuma de alta densidad (piel de poliuretano). Prohibidos tiros deliberados a la cabeza.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 13</span>
+      </div>
+    </article>
+
+    <!-- FICHA 14 -->
+    <article class="ficha-card" data-ciclo="3" data-bloque="Bloque C">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-3">3er Ciclo (5º y 6º)</span>
+            <span class="badge badge-bloque">Bloque C & D: Invasión y Desmarque</span>
+            <span class="badge badge-code">F-3C-02</span>
+          </div>
+          <h2 class="ficha-title">Vuelo Compartido: Ultimate Frisbee (Sin Contacto)</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE2 (Pases de disco y pivote), CE4 (Espíritu de juego sin árbitro) | <strong>Clave:</strong> CPSAA, CC, CE
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Campo rectangular de 40 x 20 m con 2 zonas de ensayo</div>
+        <div class="tech-item"><strong>Duración:</strong> 30 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> 1 disco volador homologado (145-175 g), conos planos de zona</div>
+        <div class="tech-item"><strong>Agrupación:</strong> 2 equipos mixtos de 5 contra 5</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Ejecutar lanzamientos de revés (backhand) y derecha (forehand); pivotar sin desplazamiento con el disco.</li>
+            <li><strong>Socioemocional:</strong> Practicar el <em>Spirit of the Game</em> (resolución dialogada de faltas por los propios jugadores).</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Reglas Fundamentales del Ultimate</div>
+          <div class="dinamica-text">
+            <p><strong>1. Pases para avanzar:</strong> El frisbee se desplaza sólo por pases en cualquier dirección. Quien tiene el disco debe frenar y pivotar sobre un pie fijo (máximo 8 segundos para pasar).</p>
+            <p><strong>2. Pérdida de posesión (Turnover):</strong> Si el disco cae al suelo, sale fuera o es interceptado, el equipo rival toma posesión desde ese lugar de forma inmediata.</p>
+            <p><strong>3. Punto de ensayo:</strong> Se anota punto al recepcionar un pase limpio dentro de la zona de fondo rival.</p>
+            <p><strong>4. Cero contacto:</strong> Prohibido arrebatar el disco de las manos o empujar; defensa a 1 metro de distancia.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición Espacial</div>
+          <div class="diagram-box">
+ ┌──────────────────────┐  <-- ZONA DE ENSAYO EQUIPO A (5 m)
+ │                      │
+ ├──────────────────────┤  ═════════════════════════════════════════════
+ │                      │
+ │        🔵 Defensor   │               🔴 Atacante sin disco (corte)
+ │                      │                     ↗
+ │   🔴 Portador del    │  ─────── (Pase) ───
+ │      disco (pivota)  │
+ │                      │
+ ├──────────────────────┤  ═════════════════════════════════════════════
+ │                      │
+ └──────────────────────┘  <-- ZONA DE ENSAYO EQUIPO B (5 m)</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Disco de foam o tela suave (sin impacto); permitir recepción de sándwich con dos manos en el pecho.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Conteo defensivo reducido a 5 segundos y obligación de enlazar 5 pases antes de poder ensayar.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Cómo resolvisteis en el campo una jugada dudosa sin árbitro y sin gritar?</li>
+            <li>¿Qué tipo de corte (desmarque) os funcionó mejor para escapar de la marca y recibir solos?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> No lanzarse en plancha si hay peligro de chocar con otro compañero en la zona de gol.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 14</span>
+      </div>
+    </article>
+
+    <!-- FICHA 15 -->
+    <article class="ficha-card" data-ciclo="3" data-bloque="Bloque E">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-3">3er Ciclo (5º y 6º)</span>
+            <span class="badge badge-bloque">Bloque E: Danza Urbana y Creación</span>
+            <span class="badge badge-code">F-3C-03</span>
+          </div>
+          <h2 class="ficha-title">Flashmob Escolar (Coreografía de Ritmos Urbanos)</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE3 (Creación dancística y compás de 8 tiempos), CE4 (Trabajo cooperativo) | <strong>Clave:</strong> CCEC, CPSAA, CCL
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Gimnasio o sala con buena acústica</div>
+        <div class="tech-item"><strong>Duración:</strong> 30 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> Altavoz potente, música urbana (compás 4/4 marcado), pizarra</div>
+        <div class="tech-item"><strong>Agrupación:</strong> Grupos de creación de 4-5 alumnos tras fase común</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Sincronizar secuencias de pasos, giros y descensos de nivel al ritmo de 8 tiempos musicales.</li>
+            <li><strong>Socioemocional:</strong> Vencer el sentido del ridículo y valorar la diversidad de estilos personales con empatía.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Estructura y Frases Coreográficas</div>
+          <div class="dinamica-text">
+            <p><strong>1. Base común (16 tiempos):</strong><br>
+            • <em>Tiempos 1-4:</em> Dos pasos laterales a la derecha flexionando rodillas con empuje de hombros + dos a la izquierda.<br>
+            • <em>Tiempos 5-8:</em> Onda de brazos en el pecho terminando en estatua urbana (Freeze) en el 8.<br>
+            • <em>Tiempos 9-12:</em> Pasos cruzados al frente alternando pies.<br>
+            • <em>Tiempos 13-16:</em> Giro de 180º y caída a semisentadilla (plano bajo).</p>
+            <p><strong>2. Creación propia (8 tiempos):</strong> Cada equipo inventa sus 8 tiempos propios introduciendo un cambio de formación espacial (de fila a uve o círculo).</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Formaciones Espaciales</div>
+          <div class="diagram-box">
+   [ FORMACIÓN LÍNEA ]             [ FORMACIÓN EN "V" ]             [ CÍRCULO CONGIRO ]
+     👤  👤  👤  👤                       👤                               👤     👤
+                                      👤      👤                         
+                                    👤          👤                         👤     👤</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Marcar los pasos a tempo medio (un movimiento cada dos tiempos del compás); apoyo de vídeos guía en bucle.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Incorporar un canon rítmico (el subgrupo A empieza 4 tiempos después del subgrupo B) o un freeze final en acrosport.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué os resultó más exigente: memorizar los pasos o coordinaros todos en el mismo instante musical?</li>
+            <li>¿Cómo consensuasteis en el grupo los 8 tiempos propios cuando había ideas diferentes?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Calzado con amortiguación para impactos reiterados. Calentamiento articular previo minucioso de tobillos y rodillas.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 15</span>
+      </div>
+    </article>
+
+    <!-- FICHA 16 -->
+    <article class="ficha-card" data-ciclo="3" data-bloque="Bloque F">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-3">3er Ciclo (5º y 6º)</span>
+            <span class="badge badge-bloque">Bloque F: Orientación y Medio Natural</span>
+            <span class="badge badge-code">F-3C-04</span>
+          </div>
+          <h2 class="ficha-title">Carrera de Orientación Tipo "Score" (Tiempo y Estrategia)</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE5 (Estrategia y huella ecológica), CE2 (Resistencia aeróbica) | <strong>Clave:</strong> STEM, CPSAA, CE
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Parque urbano o recinto exterior amplio</div>
+        <div class="tech-item"><strong>Duración:</strong> 35 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> Mapas de orientación a escala, 15 balizas numeradas, tarjetas de control</div>
+        <div class="tech-item"><strong>Agrupación:</strong> En parejas o tríos mixtos con cronómetro</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Dosificar la carrera continua durante 25 minutos en terreno variado con desniveles.</li>
+            <li><strong>Cognitivo:</strong> Calcular la rentabilidad de las balizas según distancia y trazar la ruta óptima para no llegar tarde a meta.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Reglas y Dinámica de la Modalidad "Score"</div>
+          <div class="dinamica-text">
+            <p><strong>1. Puntuación por dificultad:</strong> No hay orden obligatorio. Balizas serie 10 (cercanas = 10 puntos), serie 20 (medias = 20 puntos) y serie 30 (lejanas o pendientes = 30 puntos).</p>
+            <p><strong>2. Cuenta atrás inexorable (25 min):</strong> Todos salen a las 00:00 y deben estar en meta a los 25 minutos exactos. <strong>Penalización:</strong> Cada minuto o fracción de retraso resta 5 puntos.</p>
+            <p><strong>3. El minuto de oro estratégico:</strong> Antes de arrancar, disponen de 60 segundos de silencio absoluto para consensuar la ruta y repartir roles (control del mapa y control del cronómetro).</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición de Balizas Score</div>
+          <div class="diagram-box">
+ [ ESQUEMA SCORE ]
+        (▲ 31: 30 ptos) ──── Muy alejada
+               \
+  (▲ 21: 20 ptos)───\
+                     ┌───────────────┐ ───── (▲ 11: 10 ptos) ── Muy cercana
+                     │ SALIDA / META │
+                     │  (Tiempo: 25')│ ───── (▲ 12: 10 ptos)
+                     └───────────────┘
+                            /
+              (▲ 22: 20 ptos)</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Planos ampliados en formato grande con brújula de rumbo prefijado y emparejamiento con compañero experto.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Baliza enigma: una baliza contiene una operación matemática que multiplica la puntuación si se descifra correctamente in situ.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué equipo sumó más puntos: el que salió corriendo a lo loco o el que calculó con calma qué balizas valían más?</li>
+            <li>¿Tuvisteis que renunciar a una baliza lejana para evitar la penalización por tiempo? ¿Cómo tomasteis esa decisión?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Punto de reunión central y silbato de socorro en caso de extravío. Respetar al 100% la flora y no dejar ningún residuo.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 16</span>
+      </div>
+    </article>
+
+    <!-- FICHA 17 -->
+    <article class="ficha-card" data-ciclo="3" data-bloque="Bloque A">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-3">3er Ciclo (5º y 6º)</span>
+            <span class="badge badge-bloque">Bloque A: Condición Física y Salud</span>
+            <span class="badge badge-code">F-3C-05</span>
+          </div>
+          <h2 class="ficha-title">Mi Motor Cardíaco (Circuito Funcional y Pulsaciones)</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE1 (Autorregulación del esfuerzo y salud funcional) | <strong>Clave:</strong> STEM, CPSAA
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Gimnasio o pista delimitada</div>
+        <div class="tech-item"><strong>Duración:</strong> 30 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> Ficha de registro de lpm, cuerdas, balones lastrados de 1 kg, colchonetas</div>
+        <div class="tech-item"><strong>Agrupación:</strong> Por parejas (uno ejecuta 45 s y el otro asiste/cuenta)</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Ejecutar con buena técnica: sentadillas seguras, planchas abdominales isométricas y saltos a la comba.</li>
+            <li><strong>Cognitivo:</strong> Medir las pulsaciones por minuto (lpm) palpando la carótida durante 15 s (x4) y evaluar el esfuerzo en la escala RPE (1 a 10).</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Las 6 Estaciones de Salud y Tomas Cardíacas</div>
+          <div class="dinamica-text">
+            <p><strong>Circuito en 6 estaciones (45 s trabajo / 30 s rotación):</strong> 1. Salto a la comba continuo. 2. Flexiones en espaldera o banco sueco. 3. Plancha abdominal isométrica sobre antebrazos (Core). 4. Escalera de agilidad de pies adentro-afuera. 5. Sentadillas con espalda erguida. 6. Zancadas con balón medicinal en el pecho.</p>
+            <p><strong>3 Tomas Cardíacas obligatorias:</strong> <em>Toma 1:</em> Reposo inicial sentado (ej. 75-85 lpm). <em>Toma 2:</em> Inmediata al finalizar el circuito (ej. 145-165 lpm). <em>Toma 3:</em> Tras 3 minutos de vuelta a la calma caminando y respirando (comprobar descenso de la curva).</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Protocolo de Registro</div>
+          <div class="diagram-box">
+ ┌────────────────────────────────────────────────────────────────────────┐
+ │ REGISTRO CARDIOVASCULAR PERSONAL                                        │
+ │ 1. Reposo: ______ lpm  │ 2. Esfuerzo Máximo: ______ lpm │ RPE: [1 al 10]│
+ │ 3. Recuperación (3 min): ______ lpm (Diferencia de recuperación)       │
+ └────────────────────────────────────────────────────────────────────────┘</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Plancha con rodillas apoyadas en colchoneta; comba imaginaria sin cuerda para asegurar coordinación fluida.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Planchas con apoyo de 3 puntos (elevando un pie) y explicar por qué la bajada rápida del pulso es signo de buena forma física.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué siente el corazón cuando saltamos a la comba y por qué necesita latir más deprisa?</li>
+            <li>¿Por qué para tener buena salud no hace falta cargar pesos gigantes ni agotarse hasta marearse?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Detener de inmediato el ejercicio si aparece sensación de mareo; acceso libre al agua de las cantimploras en cada rotación.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 17</span>
+      </div>
+    </article>
+
+    <!-- FICHA 18 -->
+    <article class="ficha-card" data-ciclo="3" data-bloque="Bloque D">
+      <div class="ficha-header">
+        <div>
+          <div class="ficha-meta-top">
+            <span class="badge badge-ciclo-3">3er Ciclo (5º y 6º)</span>
+            <span class="badge badge-bloque">Bloque D & C: Retos Cooperativos</span>
+            <span class="badge badge-code">F-3C-06</span>
+          </div>
+          <h2 class="ficha-title">Escape Room Motor: La Misión del Santuario Perdido</h2>
+          <div class="ficha-competencias">
+            <strong>Competencias LOMLOE:</strong> CE4 (Liderazgo compartido y consenso), CE2 (Resolución motriz de retos) | <strong>Clave:</strong> CPSAA, STEM, CE
+          </div>
+        </div>
+        <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
+          🖨️ Imprimir esta ficha
+        </button>
+      </div>
+
+      <div class="ficha-tech-grid">
+        <div class="tech-item"><strong>Espacio:</strong> Gimnasio con material estructurado</div>
+        <div class="tech-item"><strong>Duración:</strong> 35 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> 4 cajas con candados numéricos de 3 cifras, bancos, aros, picas, gomas</div>
+        <div class="tech-item"><strong>Agrupación:</strong> 4 equipos cooperativos con roles asignados</div>
+      </div>
+
+      <div class="ficha-body">
+        <div>
+          <div class="section-title">Objetivos de Aprendizaje</div>
+          <ul class="objetivos-list">
+            <li><strong>Motor:</strong> Superar retos de equilibrio grupal, tracción y transportes colectivos sin tocar la "lava".</li>
+            <li><strong>Socioemocional:</strong> Escuchar las propuestas de todos los miembros del equipo y gestionar la frustración ante el error.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-title">Las 3 Pruebas del Escape Room Motor</div>
+          <div class="dinamica-text">
+            <p><strong>Prueba 1: El Puente de Hielo sobre el Volcán:</strong> El equipo debe cruzar 15 metros usando solo 2 bancos y 3 aros sin tocar el suelo ("lava"). Obtienen el <em>Dígito 1</em> (nº de apoyos del banco).</p>
+            <p><strong>Prueba 2: La Telaraña Láser:</strong> Cruzar por los huecos de una red de elásticos sin hacer sonar los cascabeles. Cada alumno debe pasar por un orificio distinto (los de arriba con ayuda de porteo grupal). Obtienen el <em>Dígito 2</em>.</p>
+            <p><strong>Prueba 3: La Torre de Equilibrios Imposibles:</strong> Levantar una estructura con 6 picas y 4 conos que sostenga un balón en la cima 10 s sin tocarlo. Obtienen el <em>Dígito 3</em>.</p>
+            <p><strong>Apertura cooperativa:</strong> Al abrir su caja, cada equipo extrae una pieza gigante de un puzle común que solo se completa uniendo las piezas de los 4 grupos.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title">Disposición de Estaciones</div>
+          <div class="diagram-box">
+ ┌──────────────────────┐                     ┌──────────────────────┐
+ │ EQUIPO 1: Puente     │                     │ EQUIPO 2: Telaraña   │
+ │   [Bancos + Aros]    │                     │   [Cuerdas / Postes] │
+ └──────────────────────┘                     └──────────────────────┘
+                          ┌─────────────────┐
+                          │   ZONA CENTRAL  │
+                          │   PUZLE COMÚN   │
+                          └─────────────────┘
+ ┌──────────────────────┐                     ┌──────────────────────┐
+ │ EQUIPO 3: Torre      │                     │ EQUIPO 4: Transporte │
+ │   [Picas + Balón]    │                     │   [Colchoneta móvil] │
+ └──────────────────────┘                     └──────────────────────┘</div>
+        </div>
+
+        <div class="dua-grid">
+          <div class="dua-card dua-support">
+            <strong>🟢 Apoyo DUA:</strong> Permitir hasta 2 apoyos de emergencia en la lava usando un "salvavidas" de espuma; pistas progresivas si hay bloqueo de más de 3 min.
+          </div>
+          <div class="dua-card dua-challenge">
+            <strong>🔴 Reto DUA:</strong> Uno de los miembros tiene una limitación motriz simulada (brazo en cabestrillo) y el grupo debe asistirlo y transportarlo seguro.
+          </div>
+        </div>
+
+        <div class="debrief-box">
+          <strong>Reflexión Final (Debriefing):</strong>
+          <ul>
+            <li>¿Qué ocurrió en vuestro grupo cuando falló el primer intento de cruzar el puente? ¿Quién aportó la solución?</li>
+            <li>¿Por qué en este juego nadie, por muy fuerte o rápido que sea, podía resolverlo en solitario?</li>
+          </ul>
+        </div>
+
+        <div class="safety-alert">
+          <strong>⚠️ Seguridad:</strong> Colchonetas de seguridad bajo cualquier elevación superior a 40 cm; supervisión estricta al pasar por la telaraña elástica.
+        </div>
+      </div>
+
+      <div class="ficha-footer">
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>Página 18</span>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- MODAL DE PLANTILLA EN BLANCO -->
+  <div class="modal-overlay" id="modalPlantilla">
+    <div class="modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h3 style="font-size: 18px; font-weight: 800; color: #0f172a;">Plantilla Rápida para Crear Nueva Ficha</h3>
+        <button onclick="cerrarPlantillaModal()" style="background: none; border: none; font-size: 20px; cursor: pointer; color: #64748b;">✕</button>
+      </div>
+      <p style="font-size: 13px; color: #475569; margin-bottom: 16px;">
+        Puedes copiar la plantilla estándar en Markdown desde el archivo <code style="background: #f1f5f9; padding: 2px 6px; border-radius: 4px;">PLANTILLA_FICHA_EN_BLANCO.md</code> o imprimir una ficha vacía para rellenar a mano durante tus sesiones.
+      </p>
+      <div style="display: flex; gap: 10px; justify-content: flex-end;">
+        <button class="btn btn-secondary" onclick="cerrarPlantillaModal()">Cerrar</button>
+        <button class="btn btn-accent" onclick="window.open('PLANTILLA_FICHA_EN_BLANCO.md', '_blank')">Abrir Plantilla Markdown</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT DE FILTRADO Y GESTIÓN DE IMPRESIÓN -->
+  <script>
+    function aplicarFiltros() {
+      const cicloSeleccionado = document.getElementById('filtroCiclo').value;
+      const bloqueSeleccionado = document.getElementById('filtroBloque').value;
+      const textoBusqueda = document.getElementById('busquedaTexto').value.toLowerCase().trim();
+
+      const fichas = document.querySelectorAll('.ficha-card');
+      let visibles = 0;
+
+      fichas.forEach(ficha => {
+        const ciclo = ficha.getAttribute('data-ciclo');
+        const bloque = ficha.getAttribute('data-bloque');
+        const contenidoTexto = ficha.innerText.toLowerCase();
+
+        const coincideCiclo = (cicloSeleccionado === 'todos' || ciclo === cicloSeleccionado);
+        const coincideBloque = (bloqueSeleccionado === 'todos' || bloque.includes(bloqueSeleccionado));
+        const coincideTexto = (textoBusqueda === '' || contenidoTexto.includes(textoBusqueda));
+
+        if (coincideCiclo && coincideBloque && coincideTexto) {
+          ficha.style.display = 'flex';
+          visibles++;
+        } else {
+          ficha.style.display = 'none';
+        }
+      });
+
+      document.getElementById('contadorFichas').innerText = `Mostrando ${visibles} de ${fichas.length} fichas`;
+    }
+
+    function imprimirFichaIndividual(boton) {
+      const fichaSeleccionada = boton.closest('.ficha-card');
+      const todasLasFichas = document.querySelectorAll('.ficha-card');
+
+      // Ocultar temporalmente todas las demás fichas
+      todasLasFichas.forEach(f => {
+        if (f !== fichaSeleccionada) {
+          f.dataset.prevDisplay = f.style.display;
+          f.style.display = 'none';
+        }
+      });
+
+      // Disparar ventana de impresión
+      window.print();
+
+      // Restaurar visualización previa
+      todasLasFichas.forEach(f => {
+        if (f !== fichaSeleccionada) {
+          f.style.display = f.dataset.prevDisplay || 'flex';
+        }
+      });
+    }
+
+    function abrirPlantillaModal() {
+      document.getElementById('modalPlantilla').classList.add('active');
+    }
+
+    function cerrarPlantillaModal() {
+      document.getElementById('modalPlantilla').classList.remove('active');
+    }
+  </script>
+</body>
+</html>
