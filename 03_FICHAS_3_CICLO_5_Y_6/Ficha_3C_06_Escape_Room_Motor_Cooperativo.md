@@ -1,77 +1,77 @@
-# FICHA 3C-06 | ESCAPE ROOM MOTOR: EL ENIGMA DE LAS 4 LLAVES
+# Ficha 3C-06 | Escape room motor: el enigma de las cuatro llaves
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│ CICLO: 3er Ciclo (Recomendado 5º y 6º de Educación Primaria)                 │
-│ BLOQUE DE CONTENIDOS: Bloque D & C (Retos cooperativos y resolución motriz) │
-│ CÓDIGO: F-3C-06                     DURACIÓN ESTIMADA: 35 minutos           │
-│ COMPETENCIAS ESPECÍFICAS: CE4, CE2  COMPETENCIAS CLAVE: CPSAA, STEM, CE     │
+│ Ciclo: 3.er ciclo (recomendado 5.º y 6.º de educación primaria)             │
+│ Bloque de contenidos: Bloque D y C (retos cooperativos y resolución motriz) │
+│ Código: F-3C-06                     Duración estimada: 35 minutos           │
+│ Competencias específicas: CE4, CE2  Competencias clave: CPSAA, STEM, CE     │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-## TÍTULO: Escape Room Motor: La Misión del Santuario Perdido
+## Título: Escape room motor: la misión del santuario perdido
 
-### 1. Ficha Técnica Operativa
-* **Espacio:** Gimnasio o polideportivo con diverso material desplegado (bancos, picas, cuerdas, aros, colchonetas).
-* **Materiales:** 4 candados numéricos con código de 3 cifras (o sobres secretos con acertijo), 4 cajas fuertes (cajas de cartón/plástico cerradas con cadena o cinta), 4 tarjetas de enigmas motrices, tiza para marcar zonas de "lava".
-* **Agrupación:** 4 equipos cooperativos de 5-6 alumnos con roles asignados (Portavoz, Estratega del material, Guardián del tiempo, Encargado del código).
-* **Intensidad:** Media-Alta (esfuerzo físico combinado con desafío lógico bajo presión de tiempo).
+### 1. Ficha técnica operativa
+* **Espacio:** gimnasio o polideportivo con diverso material desplegado (bancos, picas, cuerdas, aros y colchonetas).
+* **Materiales:** cuatro candados numéricos con código de tres cifras (o sobres secretos con acertijo), cuatro cajas cerradas, cuatro tarjetas de enigmas motrices, tiza para marcar zonas de «lava».
+* **Agrupación:** cuatro equipos cooperativos de cinco o seis alumnos con roles asignados (portavoz, estratega del material, encargado del tiempo y encargado del código).
+* **Intensidad:** media-alta (esfuerzo físico combinado con desafío lógico bajo presión de tiempo).
 
-### 2. Objetivos de Aprendizaje
-* **Motor:** Superar retos de equilibrio colectivo, tracción, suspensión y transportes grupales sin tocar el suelo prohibido ("suelo de lava").
-* **Socioemocional:** Ejercer liderazgo compartido, escuchar activamente las ideas de todos los compañeros sin imponerse y gestionar la frustración ante el fallo.
-* **Cognitivo:** Resolver enigmas matemáticos y de lógica motriz para descifrar la combinación numérica que abre la siguiente caja.
-
----
-
-### 3. Las 4 Pruebas del Escape Room
-
-* **Prueba 1: El Puente de Hielo sobre el Volcán:**
-  * Todo el equipo debe cruzar de un extremo a otro del gimnasio (15 metros) utilizando únicamente 2 bancos suecos y 3 aros de plástico.
-  * **Regla:** Nadie puede tocar el suelo ("lava"). Si alguien pisa el suelo, todo el equipo debe retroceder 3 metros.
-  * *Recompensa:* Al otro lado encuentran el primer dígito del candado: `Dígito 1 = Número de apoyos del banco sueco`.
-
-* **Prueba 2: El Enigma de la Telaraña Láser:**
-  * Cruzar por los huecos de una red de cuerdas elásticas tejidas entre dos postes sin tocar ninguna cuerda (ni hacer sonar los cascabeles atados a ellas). Cada miembro del equipo debe pasar por un hueco diferente (los de abajo se pasan reptando, los del medio a hombros de un compañero).
-  * *Recompensa:* Descifran el segundo dígito: `Dígito 2 = Número de cuerdas horizontales`.
-
-* **Prueba 3: La Torre de Equilibrios Imposibles:**
-  * Construir una estructura estable con 6 picas y 4 conos que soporte una pelota de baloncesto en la cúspide durante al menos 10 segundos sin tocarla con las manos una vez soltada.
-  * *Recompensa:* Obtienen el tercer dígito.
-
-* **Apertura de la Caja Final y Victoria Cooperativa:**
-  * Cada equipo introduce su código de 3 cifras en el candado. Dentro encuentran una pieza de un puzle gigante de clase que sólo se completa uniendo las piezas de los 4 equipos.
+### 2. Objetivos de aprendizaje
+* **Motor:** superar retos de equilibrio colectivo, tracción, suspensión y transportes grupales sin tocar el suelo no permitido («suelo de lava»).
+* **Socioemocional:** ejercer liderazgo compartido, escuchar activamente las ideas de todos los compañeros sin imponerse y gestionar la frustración ante el fallo.
+* **Cognitivo:** resolver enigmas matemáticos y de lógica motriz para descifrar la combinación numérica que abre la siguiente caja.
 
 ---
 
-### 4. Disposición Espacial
+### 3. Las cuatro pruebas del escape room
+
+* **Prueba 1: El puente de hielo sobre el volcán:**
+  * El equipo debe cruzar de un extremo a otro del gimnasio (15 metros) utilizando únicamente dos bancos suecos y tres aros de plástico.
+  * **Regla:** nadie puede tocar el suelo («lava»). Si alguien pisa el suelo, todo el equipo debe retroceder tres metros.
+  * *Recompensa:* al otro lado encuentran el primer dígito del candado: `dígito 1 = número de apoyos del banco sueco`.
+
+* **Prueba 2: El enigma de la telaraña:**
+  * Cruzar por los huecos de una red de cuerdas elásticas tejidas entre dos postes sin tocar ninguna cuerda ni hacer sonar los cascabeles atados a ellas. Cada miembro del equipo debe pasar por un hueco diferente (los inferiores reptando, los medios con porteo de compañeros).
+  * *Recompensa:* descifran el segundo dígito: `dígito 2 = número de cuerdas horizontales`.
+
+* **Prueba 3: La torre de equilibrios:**
+  * Construir una estructura estable con seis picas y cuatro conos que sostenga una pelota de baloncesto en la cúspide durante al menos diez segundos sin tocarla con las manos una vez soltada.
+  * *Recompensa:* obtienen el tercer dígito.
+
+* **Apertura de la caja final y victoria cooperativa:**
+  * Cada equipo introduce su código de tres cifras en el candado. Dentro encuentran una pieza de un puzle gigante de clase que sólo se completa uniendo las piezas de los cuatro equipos.
+
+---
+
+### 4. Disposición espacial
 ```
  ┌──────────────────────┐                     ┌──────────────────────┐
- │ EQUIPO 1: Puente     │                     │ EQUIPO 2: Telaraña   │
- │   [Bancos + Aros]    │                     │   [Cuerdas / Postes] │
+ │ Equipo 1: puente     │                     │ Equipo 2: telaraña   │
+ │   [Bancos y aros]    │                     │   [Cuerdas y postes] │
  └──────────────────────┘                     └──────────────────────┘
                           ┌─────────────────┐
-                          │   ZONA CENTRAL  │
-                          │   PUZLE COMÚN   │
+                          │   Zona central  │
+                          │   puzle común   │
                           └─────────────────┘
  ┌──────────────────────┐                     ┌──────────────────────┐
- │ EQUIPO 3: Torre      │                     │ EQUIPO 4: Transporte │
- │   [Picas + Balón]    │                     │   [Colchoneta móvil] │
+ │ Equipo 3: torre      │                     │ Equipo 4: transporte │
+ │   [Picas y balón]    │                     │  [Colchoneta móvil]  │
  └──────────────────────┘                     └──────────────────────┘
 ```
 
 ---
 
-### 5. Medidas DUA e Inclusión
-* **🟢 Nivel de Apoyo:** Permitir hasta 2 apoyos de emergencia en el suelo de lava con un "salvavidas" de gomaespuma; tarjetas de pistas con solución progresiva si el equipo se bloquea durante más de 3 minutos.
-* **🔵 Nivel Estándar:** Superación de los retos respetando todas las reglas físicas y descifrado autónomo de códigos.
-* **🔴 Nivel de Desafío:** Uno de los miembros del equipo tiene una limitación motriz simulada (brazo vendado o ojos vendados) y el grupo debe transportarlo y asistirlo de manera segura en todo momento.
+### 5. Medidas DUA e inclusión
+* **🟢 Nivel de apoyo:** permitir hasta dos apoyos de emergencia en la «lava» con un apoyo auxiliar de gomaespuma; tarjetas de pistas con solución progresiva si el equipo se bloquea durante más de tres minutos.
+* **🔵 Nivel estándar:** superación de los retos respetando todas las reglas físicas y descifrado autónomo de códigos.
+* **🔴 Nivel de desafío:** un miembro del equipo tiene una limitación motriz simulada (brazo en cabestrillo) y el grupo debe asistirlo y transportarlo de manera segura en todo momento.
 
 ---
 
-### 6. Preguntas de Reflexión (Debriefing)
+### 6. Preguntas de reflexión final (debriefing)
 * *¿Qué pasó en el equipo cuando no conseguíais cruzar el puente al primer intento? ¿Quién propuso la solución definitiva?*
-* *¿Por qué en este juego ninguna persona sola por muy fuerte o rápida que fuera podía ganar sin la ayuda de los demás?*
+* *¿Por qué en este juego nadie podía tener éxito sin la ayuda de los demás?*
 
 ---
 

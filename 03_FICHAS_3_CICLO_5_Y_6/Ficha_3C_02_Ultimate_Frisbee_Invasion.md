@@ -1,43 +1,43 @@
-# FICHA 3C-02 | DEPORTE ALTERNATIVO: ULTIMATE FRISBEE
+# Ficha 3C-02 | Deporte alternativo: ultimate frisbee
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│ CICLO: 3er Ciclo (Recomendado 5º y 6º de Educación Primaria)                 │
-│ BLOQUE DE CONTENIDOS: Bloque C & D (Invasión, desmarque y juego limpio)     │
-│ CÓDIGO: F-3C-02                     DURACIÓN ESTIMADA: 30 minutos           │
-│ COMPETENCIAS ESPECÍFICAS: CE2, CE4  COMPETENCIAS CLAVE: CPSAA, CC, CE       │
+│ Ciclo: 3.er ciclo (recomendado 5.º y 6.º de educación primaria)             │
+│ Bloque de contenidos: Bloque C y D (invasión, desmarque y juego limpio)     │
+│ Código: F-3C-02                     Duración estimada: 30 minutos           │
+│ Competencias específicas: CE2, CE4  Competencias clave: CPSAA, CC, CE       │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-## TÍTULO: Vuelo Compartido: Ultimate Frisbee (Sin Contacto y Autoarbitrado)
+## Título: Vuelo compartido: ultimate frisbee (sin contacto y autoarbitrado)
 
-### 1. Ficha Técnica Operativa
-* **Espacio:** Campo exterior rectangular (hierba o pista polideportiva) de aprox. 40 x 20 metros con dos zonas de anotación (zonas de ensayo de 5 metros en los fondos).
-* **Materiales:** 1 disco volador homologado (145 g o 175 g de plástico semirrígido o foam para iniciación), conos planos para delimitar las zonas de gol.
-* **Agrupación:** 2 equipos mixtos de 5 contra 5.
-* **Intensidad:** Alta (cambios de dirección, cortes hacia el espacio libre y aceleraciones).
+### 1. Ficha técnica operativa
+* **Espacio:** campo exterior rectangular (hierba o pista polideportiva) de aprox. 40 x 20 metros con dos zonas de anotación (zonas de ensayo de cinco metros en los fondos).
+* **Materiales:** un disco volador homologado (145 g o 175 g de plástico semirrígido o espuma para iniciación), conos planos para delimitar las zonas de anotación.
+* **Agrupación:** dos equipos mixtos de cinco contra cinco.
+* **Intensidad:** alta (cambios de dirección, cortes hacia el espacio libre y aceleraciones).
 
-### 2. Objetivos de Aprendizaje
-* **Motor:** Dominar lanzamientos técnicos básicos (revés y derecha / forehand); pivotar con un pie fijo sin desplazarse con el móvil en la mano; interceptar trayectorias en el aire.
-* **Socioemocional:** Asumir el "Espíritu de Juego" (*Spirit of the Game*), donde no existen árbitros y los propios jugadores dialogan pacíficamente para resolver cualquier discrepancia reglamentaria.
-* **Cognitivo:** Crear apoyos en abanico y romper la marca defensiva mediante cortes verticales y transversales.
-
----
-
-### 3. Principios y Reglas Fundamentales
-
-1. **Avance del disco:** El frisbee solo puede avanzar mediante **pases en cualquier dirección** entre compañeros de equipo.
-2. **Prohibido correr con el disco:** El jugador en posesión del disco no puede desplazarse. Debe frenar inmediatamente y establecer un pie de pivote (igual que en baloncesto).
-3. **Tiempo de posesión:** El portador tiene un máximo de **7 a 10 segundos** para lanzar (el defensor cuenta en voz alta a 1 metro de distancia: *"Stall 1, Stall 2, Stall 3..."*).
-4. **Pérdida de posesión (Turnover):** Si el pase es interceptado por el rival, cae al suelo, sale fuera de los límites o se agota el tiempo, el equipo defensor toma posesión inmediata desde ese mismo punto.
-5. **Anotación:** Se consigue un punto cuando un pase completado es recibido dentro de la zona de ensayo rival.
-6. **Cero contacto físico:** Está estrictamente prohibido quitar el disco de las manos del portador o empujar.
+### 2. Objetivos de aprendizaje
+* **Motor:** dominar lanzamientos técnicos básicos (revés y derecha); pivotar con un pie fijo sin desplazarse con el móvil en la mano; interceptar trayectorias en el aire.
+* **Socioemocional:** asumir el espíritu de juego (*spirit of the game*), donde no existen árbitros externos y los propios jugadores dialogan pacíficamente para resolver cualquier discrepancia reglamentaria.
+* **Cognitivo:** crear apoyos en abanico y superar la marca defensiva mediante cortes verticales y transversales.
 
 ---
 
-### 4. Disposición Espacial
+### 3. Principios y reglas fundamentales
+
+1. **Avance del disco:** el frisbee solo puede avanzar mediante **pases en cualquier dirección** entre compañeros de equipo.
+2. **Prohibido correr con el disco:** quien tiene la posesión del disco no puede desplazarse. Debe frenar de inmediato y establecer un pie de pivote (igual que en baloncesto).
+3. **Tiempo de posesión:** el portador dispone de un máximo de **siete a diez segundos** para lanzar (el defensor cuenta en voz alta a un metro de distancia: *«uno, dos, tres...»*).
+4. **Pérdida de posesión (*turnover*):** si el pase es interceptado por el rival, cae al suelo, sale fuera de los límites o se agota el tiempo, el equipo defensor toma posesión inmediata desde ese mismo punto.
+5. **Anotación:** se consigue un punto cuando un pase completado se recibe dentro de la zona de ensayo rival.
+6. **Cero contacto físico:** no está permitido arrebatar el disco de las manos del portador ni empujar.
+
+---
+
+### 4. Disposición espacial
 ```
- ┌──────────────────────┐  <-- ZONA DE ENSAYO EQUIPO A (5 m)
+ ┌──────────────────────┐  <-- Zona de ensayo equipo A (5 m)
  │                      │
  ├──────────────────────┤  ═════════════════════════════════════════════
  │                      │
@@ -48,21 +48,21 @@
  │                      │
  ├──────────────────────┤  ═════════════════════════════════════════════
  │                      │
- └──────────────────────┘  <-- ZONA DE ENSAYO EQUIPO B (5 m)
+ └──────────────────────┘  <-- Zona de ensayo equipo B (5 m)
 ```
 
 ---
 
-### 5. Medidas DUA e Inclusión
-* **🟢 Nivel de Apoyo:** Usar frisbee de espuma suave o tela (menos impacto al atrapar con dos manos tipo "sándwich" o "pinza"); permitir hasta 3 pasos de frenado natural.
-* **🔵 Nivel Estándar:** Pie de pivote estricto y recepción limpia sin caída al suelo.
-* **🔴 Nivel de Desafío:** Conteo defensivo reducido a 5 segundos y exigencia de encadenar al menos 5 pases antes de poder ensayar.
+### 5. Medidas DUA e inclusión
+* **🟢 Nivel de apoyo:** usar disco de espuma suave o tela (menor impacto al atrapar con dos manos tipo «sándwich» o «pinza»); permitir hasta tres pasos de frenado natural.
+* **🔵 Nivel estándar:** pie de pivote estricto y recepción limpia sin caída al suelo.
+* **🔴 Nivel de desafío:** conteo defensivo reducido a cinco segundos y exigencia de encadenar al menos cinco pases antes de poder ensayar.
 
 ---
 
-### 6. Preguntas de Reflexión (Debriefing)
+### 6. Preguntas de reflexión final (debriefing)
 * *¿Cómo resolvisteis en la pista una jugada dudosa donde no os poníais de acuerdo sin gritar ni enfadaros?*
-* *¿Qué tipo de corte (desmarque) os resultó más útil para libraros del defensor y recibir solos?*
+* *¿Qué tipo de desmarque os resultó más útil para libraros del defensor y recibir solos?*
 
 ---
 

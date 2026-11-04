@@ -1,62 +1,62 @@
-# FICHA 2C-04 | ACROSPORT: FIGURAS BÁSICAS Y PIRÁMIDES COOPERATIVAS
+# Ficha 2C-04 | Acrosport: figuras básicas y pirámides cooperativas
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│ CICLO: 2º Ciclo (Recomendado 3º y 4º de Educación Primaria)                 │
-│ BLOQUE DE CONTENIDOS: Bloque E (Expresión artística y circo/acrosport)      │
-│ CÓDIGO: F-2C-04                     DURACIÓN ESTIMADA: 25 minutos           │
-│ COMPETENCIAS ESPECÍFICAS: CE3, CE4  COMPETENCIAS CLAVE: CCEC, CPSAA, CC     │
+│ Ciclo: 2.º ciclo (recomendado 3.º y 4.º de educación primaria)              │
+│ Bloque de contenidos: Bloque E (expresión artística y circo o acrosport)    │
+│ Código: F-2C-04                     Duración estimada: 25 minutos           │
+│ Competencias específicas: CE3, CE4  Competencias clave: CCEC, CPSAA, CC     │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-## TÍTULO: Constructores del Circo (Iniciación al Acrosport en Parejas y Tríos)
+## Título: Constructores del circo (iniciación al acrosport en parejas y tríos)
 
-### 1. Ficha Técnica Operativa
-* **Espacio:** Sala de gimnasio con suelo limpio o tatami de colchonetas unidas sin huecos.
-* **Materiales:** 6 a 8 colchonetas estándar de gimnasia escolar, tarjetas ilustradas con figuras básicas homologadas (Banco, Mesa, Avión, Dúo en cuadrupedia).
-* **Agrupación:** Equipos estables de 3 o 4 alumnos (1 Portor, 1 Ágil y 1-2 Ayudantes/Observadores).
-* **Intensidad:** Media (fuerza isométrica, control tónico y máxima concentración).
+### 1. Ficha técnica operativa
+* **Espacio:** sala de gimnasio con suelo acolchado o tatami de colchonetas unidas sin huecos.
+* **Materiales:** seis a ocho colchonetas estándar de gimnasia escolar, tarjetas ilustradas con figuras básicas homologadas (el banco, la mesa, el avión, dúo en cuadrupedia).
+* **Agrupación:** equipos estables de tres o cuatro alumnos (un portor, un ágil y uno o dos ayudantes).
+* **Intensidad:** media (fuerza isométrica, control tónico y máxima concentración).
 
-### 2. Objetivos de Aprendizaje
-* **Motor:** Mantener posiciones de equilibrio estático alineando hombros, caderas y rodillas; aplicar apoyos corporales seguros.
-* **Socioemocional:** Desarrollar confianza plena y responsabilidad mutua hacia la integridad física del compañero.
-* **Cognitivo:** Reconocer las zonas anatómicas de apoyo correcto (cadera/pelvis y hombros) y zonas prohibidas (zona lumbar, centro de la columna, cuello).
-
----
-
-### 3. Las Tres Reglas Sagradas del Acrosport
-1. **Zonas de apoyo autorizadas:** Los pies y manos del "Ágil" solo pueden apoyarse sobre las cinturas escapular (hombros) y pelviana (glúteos/caderas) del "Portor". **Jamás en mitad de la columna vertebral.**
-2. **Espalda siempre recta y abdomen activo:** Ni arqueada hacia abajo ni jorobada.
-3. **El rol del Ayudante es vital:** El tercer alumno no descansa; sostiene las caderas del ágil durante la subida y bajada y avisa si la figura se descompone.
+### 2. Objetivos de aprendizaje
+* **Motor:** mantener posiciones de equilibrio estático alineando hombros, caderas y rodillas; aplicar apoyos corporales seguros.
+* **Socioemocional:** desarrollar confianza plena y responsabilidad mutua hacia la integridad física del compañero.
+* **Cognitivo:** reconocer las zonas anatómicas de apoyo correcto (cadera o pelvis y hombros) y las zonas no permitidas (zona lumbar, centro de la columna, cuello).
 
 ---
 
-### 4. Repertorio de Figuras Básicas (Fase Progresiva)
+### 3. Las tres reglas principales del acrosport
+1. **Zonas de apoyo autorizadas:** los pies y manos del ágil solo pueden apoyarse sobre las cinturas escapular (hombros) y pelviana (glúteos y caderas) del portor. **Nunca en el centro de la columna vertebral.**
+2. **Espalda siempre recta y abdomen activo:** sin arquear hacia abajo ni encorvar.
+3. **El papel del ayudante es imprescindible:** sostiene las caderas del ágil durante la subida y bajada, y avisa si la figura se descompone.
 
-* **Figura 1: El Puente Doble (Parejas):**
-  * *Portor:* En cuadrupedia firme con brazos y muslos perpendiculares al suelo (90º).
-  * *Ágil:* Apoya suavemente sus manos en los hombros del portor y sus pies sobre las caderas.
-* **Figura 2: La Mesa y la Escultura:**
-  * *Portor:* Tumbado boca arriba (decúbito supino), flexiona rodillas y apoya plantas de los pies firmes.
-  * *Ágil:* Se sienta sobre los muslos del portor o extiende un brazo en posición de estatua.
-* **Figura 3: El Trío de la Victoria:**
+---
+
+### 4. Repertorio de figuras básicas (fase progresiva)
+
+* **Figura 1: El puente doble (parejas):**
+  * *Portor:* en cuadrupedia firme con brazos y muslos perpendiculares al suelo (90º).
+  * *Ágil:* apoya suavemente sus manos en los hombros del portor y sus pies sobre las caderas.
+* **Figura 2: La mesa y la escultura:**
+  * *Portor:* tumbado boca arriba (decúbito supino), flexiona rodillas y apoya plantas de los pies firmes.
+  * *Ágil:* se sienta sobre los muslos del portor o extiende un brazo en posición de estatua.
+* **Figura 3: El trío de la victoria:**
   * Dos portores hombro con hombro en semisentadilla firme; el ágil sube con un pie en cada muslo asistido por el ayudante central.
-* **Tiempo de muestra:** Cada figura debe mantenerse fija y sonriente durante **5 segundos** antes de desmontarse en orden inverso.
+* **Tiempo de muestra:** cada figura debe mantenerse fija durante **cinco segundos** antes de desmontarse en orden inverso.
 
 ---
 
-### 5. Medidas DUA e Inclusión
-* **🟢 Nivel de Apoyo:** Figuras en planos bajos con apoyo de rodillas y manos en el suelo; el ayudante mantiene sujeción continua de seguridad.
-* **🔵 Nivel Estándar:** Ejecución y mantenimiento autónomo de figuras de 2 y 3 participantes durante 5 segundos con desmontaje controlado.
-* **🔴 Nivel de Desafío:** Enlazar dos figuras seguidas con una transición coreográfica fluida al ritmo de una música suave.
+### 5. Medidas DUA e inclusión
+* **🟢 Nivel de apoyo:** figuras en planos bajos con apoyo de rodillas y manos en el suelo; el ayudante mantiene sujeción continua de seguridad.
+* **🔵 Nivel estándar:** ejecución y mantenimiento autónomo de figuras de dos y tres participantes durante cinco segundos con desmontaje controlado.
+* **🔴 Nivel de desafío:** enlazar dos figuras seguidas con una transición coreográfica fluida al ritmo de una música suave.
 
 ---
 
-### 6. Preguntas de Reflexión (Debriefing)
+### 6. Preguntas de reflexión final (debriefing)
 * *¿Qué sentimos cuando fuimos el soporte (portor) de nuestro compañero? ¿Y cuándo estuvimos arriba (ágil)?*
-* *¿Por qué el papel de los ayudantes es tan importante aunque no salgan en la foto de la pirámide?*
+* *¿Por qué el papel de los ayudantes es tan importante aunque no salgan en el centro de la pirámide?*
 
 ---
 
 ### 7. Seguridad
-* **¡Prohibido tirarse o saltar al desmontar la figura!** El desmontaje se hace despacio, paso a paso, exactamente igual que se montó. Zapatillas fuera si el agarre es mejor con calcetines antideslizantes.
+* **No está permitido saltar ni dejarse caer al desmontar la figura.** El desmontaje se realiza despacio, paso a paso, exactamente igual que se montó.
