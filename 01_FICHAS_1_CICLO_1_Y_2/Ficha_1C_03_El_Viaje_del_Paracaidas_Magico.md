@@ -68,3 +68,12 @@
 
 ### 7. Seguridad
 * Prohibido tirarse de cabeza o con las rodillas al suelo al pasar por debajo del paracaídas; circular en carrera suave con la cabeza erguida para evitar golpes entre compañeros.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Sincronización rítmica:** Movimientos coordinados con la tela. | Suelta el asa, tira a destiempo o descoordina las ondas del grupo. | Sigue el movimiento con retraso y le cuesta modular la fuerza de tracción. | Acompasa sus brazos al ritmo colectivo creando ondas homogéneas y el iglú. | Sincroniza fuerza y ritmo a la perfección y ayuda a guiar el tempo del grupo. |
+| **Interdependencia positiva:** Compromiso con el reto compartido. | Muestra desinterés por la tarea colectiva o perjudica la tensión de la tela. | Participa mientras le resulta divertido pero se distrae ante consignas complejas. | Mantiene su agarre firme y comprende que el éxito depende de la unión de todos. | Es motor de cohesión, anima a sus compañeros y cuida que nadie quede excluido. |

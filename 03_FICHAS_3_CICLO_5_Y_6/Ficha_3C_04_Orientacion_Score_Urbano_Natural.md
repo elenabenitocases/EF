@@ -72,3 +72,12 @@
 
 ### 7. Seguridad y respeto al entorno
 * Protocolo de reagrupamiento: si una pareja se extravía, acude al punto de reunión principal (salida) o hace sonar su silbato. Prohibido pisar canteros de plantas o arrojar residuos.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Dosificación y resistencia aeróbica:** Gestión del esfuerzo durante 25 min. | Empieza al esprint y se agota a los cinco minutos caminando el resto del tiempo. | Mantiene la carrera con paradas bruscas y descoordinación respiratoria. | Dosifica el ritmo continuo durante toda la prueba adaptándose a las pendientes. | Regula la zancada y el ritmo cardíaco con maestría, finalizando en meta con energía. |
+| **Estrategia y gestión del tiempo:** Elección de ruta sin penalización. | Sale sin planificar, no controla el reloj y llega con gran penalización de retraso. | Planifica la ruta pero calcula mal los tiempos llegando muy justo o tarde a meta. | Diseña una ruta lógica, descarta balizas lejanas para no sufrir retraso y llega a tiempo. | Optimiza el balance tiempo-puntos de forma brillante y demuestra un estricto control horario. |

@@ -66,3 +66,12 @@
 
 ### 7. Seguridad
 * Calzado deportivo bien atado; revisar que el suelo no resbale. Mantener distancia de seguridad al desplazarse a cuatro patas para evitar pisadas involuntarias en las manos.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Variabilidad motriz:** Desplazamientos en cuadrupedia, saltos y reptación. | Se desplaza únicamente caminando o muestra gran torpeza para cambiar de patrón. | Realiza los desplazamientos pero con rigidez motriz o apoyos inestables. | Ejecuta con fluidez los distintos desplazamientos imitando a los animales. | Domina la variedad de patrones motrices, cambia de ritmo y orienta el cuerpo con agilidad. |
+| **Control espacial y respeto:** Prevención de colisiones con compañeros. | Choca con frecuencia o no mira a su alrededor al desplazarse. | Evita colisiones solo cuando se detiene por completo o a baja velocidad. | Se desplaza mirando el entorno y respeta el espacio vital de los demás. | Anticipa trayectorias ajenas, ayuda a los compañeros y comparte refugio con cortesía. |

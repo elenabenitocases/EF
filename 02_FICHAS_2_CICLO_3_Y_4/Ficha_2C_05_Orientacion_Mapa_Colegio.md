@@ -68,3 +68,12 @@
 
 ### 7. Seguridad
 * Delimitar claramente con conos las líneas que no se pueden cruzar (zonas de aparcamiento, vallas perimetrales, escaleras no autorizadas); correr con precaución en las esquinas ciegas de los edificios.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Lectura de planos y orientación:** Correspondencia del mapa con el patio. | Corre al azar sin consultar el plano o es incapaz de situar el norte/frente. | Localiza balizas por ensayo y error tras perder el rumbo varias veces. | Gira el mapa adecuadamente y localiza las balizas en orden lógico y eficaz. | Interpreta la simbología con agilidad, traza rumbos directos y ayuda a su pareja. |
+| **Toma conjunta de decisiones:** Trabajo coordinado en pareja. | Discute con su pareja, impone su criterio o le reprocha los errores de rumbo. | Acepta las decisiones de la pareja de forma pasiva sin aportar ideas. | Reparte roles equitativamente (mapa y carrera) y consensúa cada trayecto con calma. | Comunica con serenidad bajo presión de tiempo, apoya a su par y descifra el enigma. |

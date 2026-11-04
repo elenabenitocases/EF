@@ -77,3 +77,12 @@
 
 ### 7. Seguridad
 * Supervisar estrechamente el paso por la telaraña y los apoyos de bancos suecos; colchonetas colocadas debajo de cualquier elevación superior a 40 cm.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Resolución motriz de enigmas:** Habilidades en equilibrio y suspensión. | Toca la lava por precipitación, descompone la estructura o se da por vencido. | Supera las pruebas tras múltiples fallos y necesitando pistas continuas del docente. | Resuelve los retos físicos coordinando apoyos estables y transportes seguros. | Muestra gran agilidad y creatividad motriz para superar los retos con máxima eficacia. |
+| **Liderazgo compartido y resiliencia:** Escucha activa y gestión del error. | Monopoliza el código, no escucha a sus pares o se enfada al cometer un fallo. | Acepta las ideas de otros pero muestra baja tolerancia al frustrarse ante el error. | Escucha todas las opiniones, cumple su rol asignado y persevera con calma. | Fomenta la participación de todos, mantiene la moral alta y celebra el éxito del puzle común. |

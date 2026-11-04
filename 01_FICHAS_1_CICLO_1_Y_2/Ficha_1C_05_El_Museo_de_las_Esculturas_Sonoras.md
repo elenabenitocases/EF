@@ -67,3 +67,12 @@
 
 ### 7. Seguridad
 * Evitar posturas acrobáticas peligrosas o giros forzados de cuello; cuidar la amortiguación si una postura termina en el suelo.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Control tónico e inmovilidad:** Estatua congelada y niveles espaciales. | Se mueve constantemente o se ríe sin poder frenar la acción muscular. | Se inmoviliza pero con posturas poco expresivas o perdiendo el equilibrio. | Mantiene la inmovilidad total durante diez segundos en planos alto, medio o suelo. | Adopta posturas plásticas de gran expresividad, modulando el tono muscular con maestría. |
+| **Desinhibición y respeto artístico:** Actitud escénica y como público. | Siente vergüenza extrema o se burla de las posturas de otros compañeros. | Participa con reserva o timidez; observa a los demás en silencio. | Se desinhibe en el papel de estatua y actúa como visitante respetuoso y curioso. | Vive el juego dramático con plenitud, aporta creatividad y refuerza positivamente al grupo. |

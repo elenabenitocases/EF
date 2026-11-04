@@ -68,3 +68,12 @@
 
 ### 7. Seguridad
 * Delimitar claramente las zonas prohibidas del patio (zonas de obras, escaleras peligrosas, salidas a la calle); recordar no correr mirando al suelo para evitar choques frontales.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Desplazamiento en el entorno:** Adaptación a terrenos irregulares. | Tropieza con frecuencia o evita los desniveles por inseguridad motriz. | Se desplaza con cautela excesiva o requiere apoyo continuo para sortear obstáculos. | Adapta el paso a bancos, tierra y pendientes manteniendo el equilibrio. | Se mueve con agilidad y soltura por todo el espacio natural con seguridad total. |
+| **Conciencia ecológica y de salud:** Respeto al medio e hidratación. | Pisa plantas deliberadamente, tira papeles o rechaza beber agua. | Cumple las normas del entorno y bebe agua solo cuando el docente se lo recuerda. | Cuida el espacio natural sin dejar residuos e interioriza la importancia de hidratarse. | Promueve activamente el cuidado del entorno y lidera hábitos saludables en su equipo. |

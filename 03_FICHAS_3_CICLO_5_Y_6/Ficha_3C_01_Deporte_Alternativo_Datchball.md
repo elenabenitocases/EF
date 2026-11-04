@@ -70,3 +70,12 @@
 
 ### 7. Seguridad
 * Solo se utilizan pelotas homologadas de espuma de alta densidad (nunca balones de fútbol o baloncesto). Se prohíben lanzamientos intencionados dirigidos a la cabeza.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Lanzamiento tenso y esquiva:** Precisión hacia blancos y fintas. | Lanza bombeado sin puntería o permanece estático siendo blanco fácil. | Lanza con fuerza pero sin precisión táctica; esquiva con cierta inseguridad. | Lanza con trayectoria tensa coordinando el tiro y esquiva balones con fintas ágiles. | Domina la lectura táctica, combina tiros sincronizados con compañeros y atrapa aires. |
+| **Autoarbitraje y honestidad motriz:** Reconocimiento voluntario del toque. | Oculta los impactos recibidos o discute agresivamente cuando le tocan. | Acepta el impacto solo tras la queja reiterada de los rivales o del docente. | Reconoce el impacto de forma voluntaria e inmediata dirigiéndose al hospital. | Es referente de honestidad deportiva, aplaude las jugadas limpias y modula al equipo. |

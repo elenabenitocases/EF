@@ -66,3 +66,12 @@
 
 ### 7. Seguridad
 * Delimitar claramente la distancia entre el cofre y los guardianes (mínimo dos metros) para evitar tropiezos de cabeza o choques al agacharse a recoger el material.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Dominancia lateral y frenado:** Discriminación de mano y parada unipodal. | Confunde de forma sistemática derecha e izquierda y cae al frenar de golpe. | Discrimina la lateralidad tras dudar y frena con apoyos inseguros. | Elige la mano correcta con rapidez y mantiene el equilibrio sobre un pie al frenar. | Discrimina al instante la lateralidad y clava el equilibrio estático con soltura impecable. |
+| **Juego limpio y normas:** Aceptación del rol y toque de los guardianes. | Niega haber sido tocado o se enfada al tener que realizar la vuelta al cono. | Acepta las reglas tras la llamada de atención del docente. | Reconoce con deportividad cuando le tocan y cumple la reincorporación activa. | Demuestra una honestidad ejemplar, felicita a los guardianes y dinamiza el juego limpio. |

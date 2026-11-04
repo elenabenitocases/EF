@@ -60,3 +60,12 @@
 
 ### 7. Seguridad
 * Colocar colchonetas quitamiedos o de recepción tras los saltos; mantener al menos tres metros entre calles para evitar invasiones de carril.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Encadenamiento motor:** Enlace continuo de carrera, salto, bote y tiro. | Se detiene por completo entre cada estación y pierde el control del balón. | Realiza las acciones pero con pausas evidentes y lanzamientos imprecisos. | Enlaza con fluidez la carrera, el salto, el bote en eslalon y la parada antes del tiro. | Conecta cada patrón motriz a máxima velocidad con precisión y control corporal óptimo. |
+| **Solidaridad en el relevo:** Compromiso con el reto colectivo. | Olvida chocar la mano o se desentiende del equipo tras terminar su turno. | Espera el relevo de forma estática y colabora solo cuando le toca participar. | Realiza el relevo limpio chocando la mano y alienta con entusiasmo a su equipo. | Organiza la fila de espera con generosidad, optimiza el relevo y anima a toda la clase. |

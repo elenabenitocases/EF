@@ -68,3 +68,12 @@
 
 ### 7. Seguridad
 * Uso de discos blandos en fases iniciales si el alumnado aún tiene reflejo de esquiva ante el vuelo del frisbee; prohibido lanzarse en plancha si hay riesgo de impactar contra un compañero.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Pase de disco y pie de pivote:** Técnica de revés/derecha y paradas. | Corre con el disco en la mano o lanza sin rotación provocando caídas constantes. | Mantiene el pivote con dudas y domina únicamente el lanzamiento de revés. | Aplica pivote limpio sin caminar y realiza pases precisos de revés y derecha. | Domina múltiples trayectorias con el disco, lee los cortes y asiste con precisión quirúrgica. |
+| **Espíritu de juego (*spirit of the game*):** Resolución dialogada sin árbitro. | Comete faltas de contacto físico deliberadas o grita al haber discrepancias. | Evita el contacto pero discute las faltas con enfado requiriendo mediación. | Respeta la distancia de un metro, dialoga con calma ante fueras y busca acuerdos. | Encarna a la perfección la filosofía del ultimate, resolviendo lances con deportividad y respeto. |

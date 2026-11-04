@@ -65,3 +65,12 @@
 
 ### 7. Seguridad
 * Mantener pasillos de separación de al menos dos metros entre parejas para evitar choques al correr a buscar un pañuelo desviado.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Coordinación óculo-manual:** Lanzamiento parabólico y atrapada. | No sigue la trayectoria visual del móvil y se le cae en todos los intentos. | Lanza de forma irregular o atrapa el móvil con dudas apoyándolo en el cuerpo. | Lanza dibujando una parábola suave y atrapa con manos limpias antes del suelo. | Ajusta la trayectoria con precisión milimétrica y atrapa con ambas manos o giros. |
+| **Trabajo en pareja:** Comunicación y respeto de distancias. | Se queja de los lanzamientos de su pareja o invade el carril ajeno. | Lanza hacia su compañero pero sin regular la fuerza ni esperar la preparación. | Lanza pensando en facilitar la recepción de su pareja y le anima con cariño. | Muestra gran empatía motriz, adapta el lanzamiento al nivel del compañero y celebra los logros. |

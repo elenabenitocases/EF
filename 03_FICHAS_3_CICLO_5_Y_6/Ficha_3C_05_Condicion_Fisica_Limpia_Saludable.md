@@ -57,3 +57,12 @@
 
 ### 7. Seguridad
 * Detener de inmediato el ejercicio si un alumno refiere mareo, visión borrosa o dolor torácico; garantizar hidratación libre con cantimplora entre estaciones.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Técnica de fuerza funcional:** Postura en sentadilla y plancha abdominal. | Arquea la zona lumbar peligrosamente en plancha o adelanta rodillas en sentadilla. | Realiza el ejercicio con fallos leves de alineación pero corrige tras el aviso. | Mantiene la espalda alineada, apoya talones en sentadilla y activa el abdomen firme. | Ejecuta cada estación con una técnica biomecánica limpia, segura y ergonómica. |
+| **Autorregulación y registro cardiovascular:** Control del pulso y RPE. | Es incapaz de localizar el pulso o falsea los datos de esfuerzo y registro. | Localiza el pulso con ayuda externa y registra los datos con cierta lentitud. | Localiza y cuenta de forma autónoma las pulsaciones e interpreta la escala de esfuerzo. | Analiza con criterio científico su recuperación cardíaca y valora el ejercicio para su salud. |

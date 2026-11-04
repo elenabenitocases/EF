@@ -60,3 +60,12 @@
 
 ### 7. Seguridad
 * **No está permitido saltar ni dejarse caer al desmontar la figura.** El desmontaje se realiza despacio, paso a paso, exactamente igual que se montó.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Apoyos seguros y alineación:** Posturas estables de portor y ágil. | Apoya pies o manos en la columna vertebral con grave riesgo o arquea la espalda. | Realiza los apoyos correctos pero tiembla o pierde la alineación a los tres segundos. | Mantiene la figura estable durante cinco segundos con hombros y caderas firmes. | Clava posturas perfectas con espalda recta, tono abdominal activo y estética limpia. |
+| **Responsabilidad y rol del ayudante:** Cuidado preventivo del compañero. | Se desentiende de la figura o se aleja de la colchoneta mientras otros suben. | Permanece cerca pero no sujeta las caderas ni asiste activamente en la subida. | Sostiene con firmeza las caderas del ágil al subir y bajar garantizando seguridad. | Ejerce de observador atento, corrige posturas a sus compañeros y cuida al grupo. |

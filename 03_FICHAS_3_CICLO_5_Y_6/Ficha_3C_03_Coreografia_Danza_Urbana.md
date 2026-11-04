@@ -64,3 +64,12 @@
 
 ### 7. Seguridad
 * Calzado con amortiguación adecuada para no sobrecargar las piernas en los saltos repetidos; calentamiento articular riguroso de tobillos y muñecas antes de la sesión.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Sincronización rítmica y memoria:** Compás de 8 tiempos y secuencias. | Desconoce la frase musical y se mueve a destiempo o desacompasado. | Recuerda los pasos con titubeos y le cuesta recuperar el ritmo tras un error. | Ejecuta la coreografía completa de 24 tiempos a tempo real en sincronía grupal. | Demuestra musicalidad exquisita, clava los acentos rítmicos y asiste a sus compañeros. |
+| **Creación colectiva y desinhibición:** Aporte de los 8 tiempos propios. | Muestra desgana, se niega a bailar o boicotea las propuestas de su grupo. | Participa en la creación de forma pasiva copiando ideas ajenas sin aportar. | Propone pasos originales, debate con respeto y disfruta de la muestra escénica. | Lidera con empatía la creación grupal, aporta formaciones dinámicas y motiva al equipo. |

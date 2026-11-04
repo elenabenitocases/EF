@@ -70,3 +70,12 @@
 
 ### 7. Seguridad
 * Los compañeros del círculo exterior actúan como protección amortiguadora: si un participante vendado se acerca al borde, colocan suavemente las palmas en sus hombros para reorientarlo hacia el centro sin empujar.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Orientación cinestésico-auditiva:** Desplazamiento seguro a ciegas. | Se quita el antifaz por miedo o camina de forma temeraria tropezando. | Camina con rigidez guiándose solo cuando el volumen de la voz es muy alto. | Se desplaza con cautela, escucha el canto del coro e identifica la cercanía de la presa. | Demuestra una aguda percepción acústica, modula sus pasos y finta con serenidad. |
+| **Valoración intercultural y empatía:** Respeto al juego tradicional. | Se burla de la lengua zulú o de las costumbres de juego de otros pueblos. | Participa en el juego como una actividad más sin reflexionar sobre su origen. | Muestra interés por las raíces del juego tradicional y respeta a sus compañeros. | Valora la riqueza cultural del juego tradicional y promueve un clima de inclusión total. |

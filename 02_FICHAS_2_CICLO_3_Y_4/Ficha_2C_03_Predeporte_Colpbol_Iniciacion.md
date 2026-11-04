@@ -67,3 +67,12 @@
 
 ### 7. Seguridad
 * Enfatizar que se golpea el balón, nunca al compañero; no está permitido meter la pierna o patear el balón en el suelo; respetar una distancia mínima de un metro al defender el golpeo.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Técnica del golpeo y desmarque:** Impacto con palma abierta y orientación. | Agarra o retiene la pelota repetidamente o la golpea con el pie sin control. | Golpea el balón con la mano pero sin direccionar el pase hacia los compañeros. | Golpea limpiamente con una o dos manos orientando el móvil hacia espacios libres. | Domina el golpeo con ambas manos, asiste con precisión y se desmarca al espacio vacío. |
+| **Cooperación imperativa y coeducación:** Regla de un toque y juego mixto. | Acapara el juego o intenta dar dos toques seguidos ignorando las normas. | Pasa la pelota solo a sus amigos más cercanos obviando el resto del equipo. | Respeta rigurosamente el toque único y busca involucrar a todos en las jugadas. | Es motor del juego cooperativo, facilita goles dobles y fomenta la equidad en la pista. |

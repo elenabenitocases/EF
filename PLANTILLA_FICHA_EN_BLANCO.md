@@ -70,3 +70,12 @@
 
 ### 7. Puntos clave de seguridad y prevención
 * [Precaución con choques frontales, cordones atados, delimitación de zonas seguras de frenado].
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Dimensión motriz:** Ejecución del patrón motor principal. | Muestra dificultad acusada para coordinar el movimiento básico. | Ejecuta el patrón con cierta rigidez o necesidad de apoyo externo. | Aplica el gesto técnico con fluidez, control corporal y eficacia. | Domina el patrón motor, adapta la velocidad y ayuda a modelarlo a otros. |
+| **Dimensión socioemocional:** Cooperación y juego limpio. | Incumple las normas con frecuencia o genera conflictos al competir. | Acepta las normas aunque le cuesta colaborar en momentos de tensión. | Colabora activamente, respeta el turno y practica el juego limpio. | Ejerce liderazgo positivo, resuelve discrepancias con asertividad y cuida al grupo. |

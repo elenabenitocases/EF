@@ -67,3 +67,12 @@
 
 ### 7. Seguridad
 * Evitar ejercicios bruscos en frío; insistir en que el estiramiento debe ser una tensión agradable y nunca dolorosa.
+
+---
+
+### 8. Rúbrica de evaluación competencial
+
+| Indicador evaluable | En proceso (1) | Básico (2) | Conseguido (3) | Avanzado (4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Movilidad articular y activación:** Secuencia ascendente sin rebotes. | Hace movimientos bruscos y lesivos de cuello o salta sin orden ni control. | Recuerda algunos ejercicios pero necesita la guía continua del docente. | Ejecuta la secuencia ordenada de tobillos a hombros y activa el pulso con fluidez. | Dirige al grupo con claridad, explica la función de cada ejercicio y modula el ritmo. |
+| **Higiene postural y ergonomía:** Transporte y elevación de la mochila. | Dobla la cintura con piernas rígidas para coger peso y lleva la mochila de un hombro. | Conoce la norma ergonómica pero la olvida al coger peso de forma apresurada. | Flexiona rodillas manteniendo la espalda erguida y ajusta los dos tirantes al cuerpo. | Aplica de forma automática la ergonomía correcta y aconseja a otros en el día a día. |
