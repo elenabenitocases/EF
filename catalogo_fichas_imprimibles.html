@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -185,7 +185,7 @@
     .badge-ciclo-3 { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
     
     .badge-bloque { background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; }
-    .badge-code { background: #0f172a; color: #ffffff; }
+    .badge-code { background: #f8fafc; color: #ffffff; }
 
     .ficha-title {
       font-size: 20px;
@@ -303,16 +303,16 @@
 
     /* ESQUEMA / DIAGRAMA */
     .diagram-box {
-      background: #0f172a;
-      color: #38bdf8;
-      font-family: "Courier New", Courier, monospace;
+      background: #f8fafc;
+      color: #0f172a;
+      font-family: Consolas, "Cascadia Code", "Segoe UI Mono", Menlo, monospace;
       padding: 10px 14px;
       border-radius: 8px;
       font-size: 11px;
       line-height: 1.35;
       overflow-x: auto;
       white-space: pre;
-      border-left: 4px solid #38bdf8;
+      border: 1px solid #cbd5e1; border-left: 4px solid #2563eb;
     }
 
     /* CAJAS DUA Y REFLEXIÓN */
@@ -466,7 +466,30 @@
         margin: 10mm 12mm 10mm 12mm;
       }
     }
-    /* ESTILOS PARA RÃšBRICAS */
+
+    /* REFINAMIENTO TIPOGRÁFICO Y CONTRASTE */
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ESQUEMA / DIAGRAMA ESPACIAL */
+    .diagram-box {
+      background: #f8fafc !important;
+      color: #0f172a !important;
+      font-family: Consolas, "Cascadia Code", "Segoe UI Mono", Menlo, monospace !important;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 11.5px;
+      line-height: 1.4;
+      overflow-x: auto;
+      white-space: pre;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid #2563eb;
+    }
+
+    /* ESTILOS PARA RÚBRICAS DE EVALUACIÓN */
     .rubrica-box {
       margin-top: 10px;
     }
@@ -502,7 +525,7 @@
       background-color: #f8fafc;
     }
 
-    /* BADGES TEMÃTICOS */
+    /* DISTINTIVOS (BADGES) TEMÁTICOS */
     .badge-coop {
       background: #ecfdf5;
       color: #065f46;
@@ -519,7 +542,7 @@
       border: 1px solid #d8b4fe;
     }
 
-    /* QUICK TABS / PILLS */
+    /* BOTONES DE PESTAÑA (PILLS) */
     .quick-tabs {
       display: flex;
       flex-wrap: wrap;
@@ -551,7 +574,7 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.25);
     }
 
-    /* EN IMPRESIÃ“N */
+    /* REGLAS PARA IMPRESIÓN PROFESIONAL A4 */
     @media print {
       .rubrica-table {
         font-size: 8.5pt !important;
@@ -574,12 +597,19 @@
       .quick-tabs {
         display: none !important;
       }
+      .diagram-box {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border: 1pt solid #475569 !important;
+        border-left: 3pt solid #0f172a !important;
+      }
     }
+
 </style>
 </head>
 <body>
 
-  <!-- BARRA DE CONTROL EN PANTALLA -->
+    <!-- BARRA DE CONTROL EN PANTALLA -->
   <header class="screen-header no-print">
     <div class="header-content">
       <div class="header-top">
@@ -601,51 +631,50 @@
       </div>
 
       <!-- FILTROS DINÁMICOS -->
-            <!-- FILTROS DINÃMICOS -->
       <div class="filter-bar">
         <div class="filter-item">
-          <label for="filtroCiclo">Espacio / ciclo escolar</label>
+          <label for="filtroCiclo">Espacio o ciclo escolar</label>
           <select id="filtroCiclo" onchange="aplicarFiltros()">
             <option value="todos">Todos los espacios y ciclos (27 propuestas)</option>
-            <option value="1">1.er ciclo (1.Âº y 2.Âº de primaria) [6 fichas]</option>
-            <option value="2">2.Âº ciclo (3.Âº y 4.Âº de primaria) [6 fichas]</option>
-            <option value="3">3.er ciclo (5.Âº y 6.Âº de primaria) [6 fichas]</option>
-            <option value="coop">ðŸ¤ Espacio: Juegos cooperativos [3 fichas]</option>
-            <option value="atle">ðŸ‘Ÿ Espacio: Atletismo escolar [3 fichas]</option>
-            <option value="expr">ðŸŽ­ Espacio: ExpresiÃ³n corporal [3 fichas]</option>
+            <option value="1">1.er ciclo (1.º y 2.º de primaria) [6 fichas]</option>
+            <option value="2">2.º ciclo (3.º y 4.º de primaria) [6 fichas]</option>
+            <option value="3">3.er ciclo (5.º y 6.º de primaria) [6 fichas]</option>
+            <option value="coop">🤝 Espacio: Juegos cooperativos [3 fichas]</option>
+            <option value="atle">👟 Espacio: Atletismo escolar [3 fichas]</option>
+            <option value="expr">🎭 Espacio: Expresión corporal [3 fichas]</option>
           </select>
         </div>
 
         <div class="filter-item">
-          <label for="filtroBloque">Bloque de saberes bÃ¡sicos</label>
+          <label for="filtroBloque">Bloque de saberes básicos</label>
           <select id="filtroBloque" onchange="aplicarFiltros()">
             <option value="todos">Todos los bloques</option>
             <option value="Bloque A">Bloque A: Vida activa y saludable</option>
             <option value="Bloque C">Bloque C: Habilidades y motricidad</option>
-            <option value="Bloque D">Bloque D: CooperaciÃ³n y retos</option>
-            <option value="Bloque E">Bloque E: ExpresiÃ³n corporal y cultura</option>
+            <option value="Bloque D">Bloque D: Cooperación y retos</option>
+            <option value="Bloque E">Bloque E: Expresión corporal y cultura</option>
             <option value="Bloque F">Bloque F: Medio natural y entorno</option>
           </select>
         </div>
 
         <div class="filter-item">
           <label for="busquedaTexto">Buscar por palabra clave</label>
-          <input type="text" id="busquedaTexto" placeholder="Ej.: lava, relevo, sombra, fitball, compÃ¡s..." oninput="aplicarFiltros()">
+          <input type="text" id="busquedaTexto" placeholder="Ej.: lava, relevo, sombra, fitball, compás..." oninput="aplicarFiltros()">
         </div>
 
         <div class="filter-stats" id="contadorFichas">
           Mostrando 27 de 27 fichas
         </div>
 
-        <!-- ACCESO RÃPIDO POR BOTONES DE PESTAÃ‘A -->
+        <!-- ACCESO RÁPIDO POR PESTAÑAS -->
         <div class="quick-tabs">
-          <button class="pill-btn active" data-tab="todos" onclick="filtrarPorPill('todos')">ðŸ“š Todos (27)</button>
-          <button class="pill-btn" data-tab="1" onclick="filtrarPorPill('1')">ðŸ§’ 1.er ciclo (6)</button>
-          <button class="pill-btn" data-tab="2" onclick="filtrarPorPill('2')">ðŸƒ 2.Âº ciclo (6)</button>
-          <button class="pill-btn" data-tab="3" onclick="filtrarPorPill('3')">âš½ 3.er ciclo (6)</button>
-          <button class="pill-btn" data-tab="coop" onclick="filtrarPorPill('coop')">ðŸ¤ Juegos cooperativos (3)</button>
-          <button class="pill-btn" data-tab="atle" onclick="filtrarPorPill('atle')">ðŸ‘Ÿ Atletismo escolar (3)</button>
-          <button class="pill-btn" data-tab="expr" onclick="filtrarPorPill('expr')">ðŸŽ­ ExpresiÃ³n corporal (3)</button>
+          <button class="pill-btn active" data-tab="todos" onclick="filtrarPorPill('todos')">📚 Todos (27)</button>
+          <button class="pill-btn" data-tab="1" onclick="filtrarPorPill('1')">🧒 1.er ciclo (6)</button>
+          <button class="pill-btn" data-tab="2" onclick="filtrarPorPill('2')">🏃 2.º ciclo (6)</button>
+          <button class="pill-btn" data-tab="3" onclick="filtrarPorPill('3')">⚽ 3.er ciclo (6)</button>
+          <button class="pill-btn" data-tab="coop" onclick="filtrarPorPill('coop')">🤝 Juegos cooperativos (3)</button>
+          <button class="pill-btn" data-tab="atle" onclick="filtrarPorPill('atle')">👟 Atletismo escolar (3)</button>
+          <button class="pill-btn" data-tab="expr" onclick="filtrarPorPill('expr')">🎭 Expresión corporal (3)</button>
         </div>
       </div>
     </div>
@@ -732,13 +761,13 @@
           <strong>⚠️ Seguridad:</strong> calzado deportivo bien atado. Controlar que no haya manos pisadas en los desplazamientos a cuatro patas manteniendo distancia.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -846,13 +875,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> mantener una zona de amortiguación de dos metros alrededor del cofre para evitar choques al agacharse a coger el material.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -963,13 +992,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> no está permitido tirarse de rodillas o de cabeza al pasar bajo la tela; circular erguidos para no golpearse.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -1075,13 +1104,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> mantener pasillos libres de al menos dos metros entre parejas para evitar colisiones al correr a atrapar móviles desviados.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -1187,13 +1216,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> cuidar los apoyos corporales al descender a posturas en el suelo; evitar torsiones forzadas de cuello.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -1304,13 +1333,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> delimitar zonas seguras fuera de áreas de aparcamiento o escaleras empinadas. Mirar siempre hacia adelante para no chocar con árboles.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -1419,13 +1448,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> colchonetas de amortiguación tras las vallas. Mantener tres metros entre calles para evitar invasiones de carril.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -1534,13 +1563,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> los miembros del círculo exterior actúan como amortiguadores: si un jugador vendado se acerca, ponen las manos suaves en los hombros para reorientarlo sin empujar.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -1649,13 +1678,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> se golpea la pelota, nunca al compañero. Prohibido patear con el pie. Mantener un metro de distancia defensiva al golpeo.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -1763,13 +1792,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> no está permitido saltar o dejarse caer para desmontar. El desmontaje se realiza paso a paso en orden inverso.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -1878,13 +1907,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> delimitar con conos las zonas no permitidas del centro (vallas exteriores, aparcamientos). Cuidado en las esquinas ciegas de edificios.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -1992,13 +2021,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> evitar rebotes violentos en frío; los estiramientos deben ser suaves y placenteros, nunca causar dolor punzante.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -2117,13 +2146,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> sólo pelotas homologadas de espuma de alta densidad (piel de poliuretano). Prohibidos tiros deliberados a la cabeza.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -2238,13 +2267,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> no lanzarse en plancha si hay peligro de chocar con otro compañero en la zona de gol.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -2353,13 +2382,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> calzado con amortiguación para impactos reiterados. Calentamiento articular previo de tobillos y rodillas.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -2471,13 +2500,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> punto de reunión central y silbato de socorro en caso de extravío. Respetar la flora y no dejar ningún residuo.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -2583,13 +2612,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> detener de inmediato el ejercicio si aparece sensación de mareo; acceso libre al agua de las cantimploras en cada rotación.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -2704,13 +2733,13 @@ Línea de salida (exploradores) ════════════════
           <strong>⚠️ Seguridad:</strong> colchonetas de seguridad bajo cualquier elevación superior a 40 cm; supervisión estricta al pasar por la telaraña elástica.
         </div>
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -2742,7 +2771,7 @@ Línea de salida (exploradores) ════════════════
       </div>
     </article>
     <!-- ============================================================== -->
-    <!-- ESPACIO TEMÃTICO: JUEGOS COOPERATIVOS (FICHAS COOP-01 A 03)   -->
+    <!-- ESPACIO TEMÁTICO: JUEGOS COOPERATIVOS (FICHAS COOP-01 A 03)   -->
     <!-- ============================================================== -->
 
     <!-- FICHA COOP-01 -->
@@ -2750,25 +2779,25 @@ Línea de salida (exploradores) ════════════════
       <div class="ficha-header">
         <div>
           <div class="ficha-meta-top">
-            <span class="badge badge-coop">ðŸ¤ Espacio cooperativo (1.Âº a 4.Âº)</span>
-            <span class="badge badge-bloque">Bloque D: CooperaciÃ³n e inclusiÃ³n</span>
+            <span class="badge badge-coop">🤝 Espacio cooperativo (1.º a 4.º)</span>
+            <span class="badge badge-bloque">Bloque D: Cooperación e inclusión</span>
             <span class="badge badge-code">F-COOP-01</span>
           </div>
-          <h2 class="ficha-title">El rÃ­o de lava solidario (cruce cooperativo)</h2>
+          <h2 class="ficha-title">El río de lava solidario (cruce cooperativo)</h2>
           <div class="ficha-competencias">
-            <strong>Competencias LOMLOE:</strong> CE4 (cooperaciÃ³n activa), CE2 (control y equilibrio) | <strong>Clave:</strong> CC, CPSAA, CE
+            <strong>Competencias LOMLOE:</strong> CE4 (cooperación activa), CE2 (control y equilibrio) | <strong>Clave:</strong> CC, CPSAA, CE
           </div>
         </div>
         <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
-          ðŸ–¨ï¸ Imprimir esta ficha
+          🖨️ Imprimir esta ficha
         </button>
       </div>
 
       <div class="ficha-tech-grid">
         <div class="tech-item"><strong>Espacio:</strong> gimnasio o pista polideportiva (15 m)</div>
-        <div class="tech-item"><strong>DuraciÃ³n:</strong> 25 minutos</div>
-        <div class="tech-item"><strong>Material:</strong> 4 colchonetas finas por equipo, conos delimitadores</div>
-        <div class="tech-item"><strong>AgrupaciÃ³n:</strong> equipos cooperativos de 5 o 6 alumnos</div>
+        <div class="tech-item"><strong>Duración:</strong> 25 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> cuatro colchonetas finas por equipo, conos delimitadores</div>
+        <div class="tech-item"><strong>Agrupación:</strong> equipos cooperativos de 5 o 6 alumnos</div>
       </div>
 
       <div class="ficha-body">
@@ -2776,81 +2805,81 @@ Línea de salida (exploradores) ════════════════
           <div class="section-title">Objetivos de aprendizaje</div>
           <ul class="objetivos-list">
             <li><strong>Motor:</strong> mantener equilibrios sobre superficies reducidas y realizar transportes motrices coordinados.</li>
-            <li><strong>Socioemocional:</strong> priorizar la seguridad del compaÃ±ero antes que la velocidad; no avanzar sin que todo el grupo estÃ© a salvo.</li>
-            <li><strong>Cognitivo:</strong> diseÃ±ar una estrategia para pasar las colchonetas traseras hacia adelante sin tocar el suelo.</li>
+            <li><strong>Socioemocional:</strong> priorizar la seguridad del compañero antes que la velocidad; no avanzar sin que todo el grupo esté a salvo.</li>
+            <li><strong>Cognitivo:</strong> diseñar una estrategia para pasar las colchonetas traseras hacia adelante sin tocar el suelo.</li>
           </ul>
         </div>
 
         <div>
-          <div class="section-title">Desarrollo y dinÃ¡mica del reto</div>
+          <div class="section-title">Desarrollo y dinámica del reto</div>
           <div class="dinamica-text">
-            <p>Todo el equipo se encuentra en la orilla A y debe cruzar a la orilla B sorteando el rÃ­o de lava imaginario.</p>
-            <p>Disponen de cuatro Â«rocas mÃ¡gicasÂ» (colchonetas). En cada colchoneta caben dos o tres alumnos. Si un pie o mano toca el suelo, el equipo retrocede dos pasos. Cuando los alumnos de la parte trasera liberan una colchoneta, deben pasarla de mano en mano por encima de sus cabezas hacia la parte delantera para seguir colocando apoyos.</p>
-            <p>La misiÃ³n se cumple cuando todos los miembros del equipo cruzan la lÃ­nea de la orilla B tomados de las manos.</p>
+            <p>Todo el equipo se encuentra en la orilla A y debe cruzar a la orilla B sorteando el río de lava imaginario.</p>
+            <p>Disponen de cuatro «rocas mágicas» (colchonetas). En cada colchoneta caben dos o tres alumnos. Si un pie o mano toca el suelo, el equipo retrocede dos pasos. Cuando los alumnos de la parte trasera liberan una colchoneta, deben pasarla de mano en mano por encima de sus cabezas hacia la parte delantera para seguir colocando apoyos.</p>
+            <p>La misión se cumple cuando todos los miembros del equipo cruzan la línea de la orilla B tomados de las manos.</p>
           </div>
         </div>
 
         <div>
-          <div class="section-title">DisposiciÃ³n espacial</div>
+          <div class="section-title">Disposición espacial</div>
           <div class="diagram-box">
- [ Orilla A ] â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   ðŸ‘¥ðŸ‘¥ðŸ‘¥ (Equipo en la orilla)
-      â”‚
-      â–¼
-   [ Colchoneta 1 ] â”€â”€> [ Colchoneta 2 ] â”€â”€> [ Colchoneta 3 ]
-   (Suelo prohibido: rÃ­o de lava)
-      â”‚
-      â–¼
- [ Orilla B ] â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•</div>
+ [ Orilla A ] ═══════════════════════════════════════════════════
+   👥👥👥 (Equipo en la orilla)
+      │
+      ▼
+   [ Colchoneta 1 ] ──> [ Colchoneta 2 ] ──> [ Colchoneta 3 ]
+   (Suelo prohibido: río de lava)
+      │
+      ▼
+ [ Orilla B ] ═══════════════════════════════════════════════════</div>
         </div>
 
         <div class="dua-grid">
           <div class="dua-card dua-support">
-            <strong>ðŸŸ¢ Apoyo DUA:</strong> conceder una quinta colchoneta al equipo; permitir un Â«bastÃ³n de apoyoÂ» (pica de plÃ¡stico) para mantener el equilibrio.
+            <strong>🟢 Apoyo DUA:</strong> conceder una quinta colchoneta al equipo; permitir un «bastón de apoyo» (pica de plástico) para mantener el equilibrio.
           </div>
           <div class="dua-card dua-challenge">
-            <strong>ðŸ”´ Reto DUA:</strong> realizar el cruce en completo silencio, comunicÃ¡ndose Ãºnicamente mediante gestos y miradas.
+            <strong>🔴 Reto DUA:</strong> realizar el cruce en completo silencio, comunicándose únicamente mediante gestos y miradas.
           </div>
         </div>
 
         <div class="debrief-box">
-          <strong>ReflexiÃ³n final (debriefing):</strong>
+          <strong>Reflexión final (debriefing):</strong>
           <ul>
-            <li>Â¿QuÃ© ocurrÃ­a si alguien intentaba avanzar corriendo hacia adelante sin esperar a los compaÃ±eros de atrÃ¡s?</li>
-            <li>Â¿CÃ³mo os ayudasteis mutuamente cuando alguna colchoneta quedaba un poco lejos para saltar?</li>
+            <li>¿Qué ocurría si alguien intentaba avanzar corriendo hacia adelante sin esperar a los compañeros de atrás?</li>
+            <li>¿Cómo os ayudasteis mutuamente cuando alguna colchoneta quedaba un poco lejos para saltar?</li>
           </ul>
         </div>
 
         <div class="safety-alert">
-          <strong>âš ï¸ Seguridad:</strong> repartir el peso en el centro de las colchonetas para evitar deslizamientos; prohibido empujar al compaÃ±ero para ganar sitio.
+          <strong>⚠️ Seguridad:</strong> repartir el peso en el centro de las colchonetas para evitar deslizamientos; prohibido empujar al compañero para ganar sitio.
         </div>
 
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Interdependencia positiva:</strong> Asistencia activa a los compaÃ±eros.</td>
+                <td><strong>Interdependencia positiva:</strong> Asistencia activa a los compañeros.</td>
                 <td>Se desentiende del grupo y busca su propio paso sin esperar.</td>
-                <td>Espera a los demÃ¡s solo cuando se le indica desde fuera.</td>
+                <td>Espera a los demás solo cuando se le indica desde fuera.</td>
                 <td>Ofrece la mano, pasa las colchonetas y cuida que nadie caiga.</td>
-                <td>Lidera con empatÃ­a, motiva al grupo y asegura la inclusiÃ³n de todos.</td>
+                <td>Lidera con empatía, motiva al grupo y asegura la inclusión de todos.</td>
               </tr>
               <tr>
-                <td><strong>ResoluciÃ³n motriz del reto:</strong> Equilibrio y traslaciÃ³n de apoyos.</td>
+                <td><strong>Resolución motriz del reto:</strong> Equilibrio y traslación de apoyos.</td>
                 <td>Pierde el equilibrio constantemente o toca la lava por impulsividad.</td>
                 <td>Mantiene el equilibrio con rigidez pero logra pasar la colchoneta.</td>
                 <td>Coordina el avance con fluidez y equilibrios estables y seguros.</td>
-                <td>Propone optimizaciones de colocaciÃ³n de colchonetas con eficacia motriz.</td>
+                <td>Propone optimizaciones de colocación de colchonetas con eficacia motriz.</td>
               </tr>
             </tbody>
           </table>
@@ -2858,8 +2887,8 @@ Línea de salida (exploradores) ════════════════
       </div>
 
       <div class="ficha-footer">
-        <span>EducaciÃ³n FÃ­sica Primaria | LOMLOE</span>
-        <span>F-COOP-01 | PÃ¡gina 19</span>
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>F-COOP-01 | Página 19</span>
       </div>
     </article>
 
@@ -2868,25 +2897,25 @@ Línea de salida (exploradores) ════════════════
       <div class="ficha-header">
         <div>
           <div class="ficha-meta-top">
-            <span class="badge badge-coop">ðŸ¤ Espacio cooperativo (3.Âº a 6.Âº)</span>
-            <span class="badge badge-bloque">Bloque D: CohesiÃ³n y comunicaciÃ³n</span>
+            <span class="badge badge-coop">🤝 Espacio cooperativo (3.º a 6.º)</span>
+            <span class="badge badge-bloque">Bloque D: Cohesión y comunicación</span>
             <span class="badge badge-code">F-COOP-02</span>
           </div>
           <h2 class="ficha-title">El nudo humano y la red solidaria</h2>
           <div class="ficha-competencias">
-            <strong>Competencias LOMLOE:</strong> CE4 (resoluciÃ³n pacÃ­fica de retos), CE3 (creatividad corporal) | <strong>Clave:</strong> CPSAA, CC
+            <strong>Competencias LOMLOE:</strong> CE4 (resolución pacífica de retos), CE3 (creatividad corporal) | <strong>Clave:</strong> CPSAA, CC
           </div>
         </div>
         <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
-          ðŸ–¨ï¸ Imprimir esta ficha
+          🖨️ Imprimir esta ficha
         </button>
       </div>
 
       <div class="ficha-tech-grid">
         <div class="tech-item"><strong>Espacio:</strong> sala de gimnasio con suelo limpio o espacio al aire libre</div>
-        <div class="tech-item"><strong>DuraciÃ³n:</strong> 20 minutos</div>
+        <div class="tech-item"><strong>Duración:</strong> 20 minutos</div>
         <div class="tech-item"><strong>Material:</strong> sin material (opcional: cuerda cerrada de 10 metros)</div>
-        <div class="tech-item"><strong>AgrupaciÃ³n:</strong> grupos de 8 a 10 alumnos en cÃ­rculo estrecho</div>
+        <div class="tech-item"><strong>Agrupación:</strong> grupos de 8 a 10 alumnos en círculo estrecho</div>
       </div>
 
       <div class="ficha-body">
@@ -2894,78 +2923,78 @@ Línea de salida (exploradores) ════════════════
           <div class="section-title">Objetivos de aprendizaje</div>
           <ul class="objetivos-list">
             <li><strong>Motor:</strong> coordinar pasos, giros y pasos por debajo o por encima de brazos sin soltarse de las manos; adaptar flexibilidad y equilibrio.</li>
-            <li><strong>Socioemocional:</strong> mantener la calma ante situaciones enredadas, escuchar las sugerencias de los demÃ¡s y no buscar culpables.</li>
-            <li><strong>Cognitivo:</strong> analizar visualmente el entramado de brazos y deducir la secuencia lÃ³gica de movimientos para deshacer el nudo.</li>
+            <li><strong>Socioemocional:</strong> mantener la calma ante situaciones enredadas, escuchar las sugerencias de los demás y no buscar culpables.</li>
+            <li><strong>Cognitivo:</strong> analizar visualmente el entramado de brazos y deducir la secuencia lógica de movimientos para deshacer el nudo.</li>
           </ul>
         </div>
 
         <div>
-          <div class="section-title">Desarrollo y dinÃ¡mica del reto</div>
+          <div class="section-title">Desarrollo y dinámica del reto</div>
           <div class="dinamica-text">
-            <p>El grupo se coloca de pie hombro con hombro. Todos estiran la mano derecha y agarran la mano de alguien que no estÃ© a su lado. A continuaciÃ³n, estiran la mano izquierda y agarran la mano de otra persona diferente.</p>
-            <p>Sin soltarse las manos bajo ningÃºn concepto (se permite rotar el agarre para evitar torsiones de muÃ±eca), el grupo debe moverse, pasar por debajo de brazos, saltar por encima de piernas entrelazadas y girar sobre sÃ­ mismos.</p>
-            <p>El juego concluye con Ã©xito cuando el grupo logra desenredarse por completo y queda formando un cÃ­rculo perfecto con las manos unidas.</p>
+            <p>El grupo se coloca de pie hombro con hombro. Todos estiran la mano derecha y agarran la mano de alguien que no esté a su lado. A continuación, estiran la mano izquierda y agarran la mano de otra persona diferente.</p>
+            <p>Sin soltarse las manos bajo ningún concepto (se permite rotar el agarre para evitar torsiones de muñeca), el grupo debe moverse, pasar por debajo de brazos, saltar por encima de piernas entrelazadas y girar sobre sí mismos.</p>
+            <p>El juego concluye con éxito cuando el grupo logra desenredarse por completo y queda formando un círculo perfecto con las manos unidas.</p>
           </div>
         </div>
 
         <div>
-          <div class="section-title">DisposiciÃ³n espacial</div>
+          <div class="section-title">Disposición espacial</div>
           <div class="diagram-box">
-           [ Inicio: nudo enredado ]               [ Final: cÃ­rculo abierto ]
-                     ðŸ‘¤â”€â”€â”€ðŸ‘¤                              ðŸ‘¤ â”€â”€ ðŸ‘¤ â”€â”€ ðŸ‘¤
-                   â•±   â•³   â•²                            â•±               â•²
-                 ðŸ‘¤  â•³   â•³  ðŸ‘¤                         ðŸ‘¤                 ðŸ‘¤
-                   â•²   â•³   â•±                            â•²               â•±
-                     ðŸ‘¤â”€â”€â”€ðŸ‘¤                              ðŸ‘¤ â”€â”€ ðŸ‘¤ â”€â”€ ðŸ‘¤</div>
+           [ Inicio: nudo enredado ]               [ Final: círculo abierto ]
+                     👤───👤                              👤 ── 👤 ── 👤
+                   ╱   ╳   ╲                            ╱               ╲
+                 👤  ╳   ╳  👤                         👤                 👤
+                   ╲   ╳   ╱                            ╲               ╱
+                     👤───👤                              👤 ── 👤 ── 👤</div>
         </div>
 
         <div class="dua-grid">
           <div class="dua-card dua-support">
-            <strong>ðŸŸ¢ Apoyo DUA:</strong> realizar el nudo en grupos reducidos de cuatro a seis alumnos; permitir soltar una mano durante cinco segundos como Â«comodÃ­n de desbloqueoÂ».
+            <strong>🟢 Apoyo DUA:</strong> realizar el nudo en grupos reducidos de cuatro a seis alumnos; permitir soltar una mano durante cinco segundos como «comodín de desbloqueo».
           </div>
           <div class="dua-card dua-challenge">
-            <strong>ðŸ”´ Reto DUA:</strong> cronometrar el desenredado cooperativo o realizarlo con los ojos vendados guiados por la voz de un solo capitÃ¡n rotativo.
+            <strong>🔴 Reto DUA:</strong> cronometrar el desenredado cooperativo o realizarlo con los ojos vendados guiados por la voz de un solo capitán rotativo.
           </div>
         </div>
 
         <div class="debrief-box">
-          <strong>ReflexiÃ³n final (debriefing):</strong>
+          <strong>Reflexión final (debriefing):</strong>
           <ul>
-            <li>Â¿QuÃ© ocurrÃ­a si varias personas intentaban dar Ã³rdenes a gritos al mismo tiempo?</li>
-            <li>Â¿CÃ³mo lograsteis pasar por debajo de los brazos sin haceros daÃ±o en las muÃ±ecas?</li>
+            <li>¿Qué ocurría si varias personas intentaban dar órdenes a gritos al mismo tiempo?</li>
+            <li>¿Cómo lograsteis pasar por debajo de los brazos sin haceros daño en las muñecas?</li>
           </ul>
         </div>
 
         <div class="safety-alert">
-          <strong>âš ï¸ Seguridad:</strong> movimientos lentos y pausados; prohibido tirar bruscamente de las articulaciones de hombros o muÃ±ecas.
+          <strong>⚠️ Seguridad:</strong> movimientos lentos y pausados; prohibido tirar bruscamente de las articulaciones de hombros o muñecas.
         </div>
 
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>ComunicaciÃ³n y escucha activa:</strong> DiÃ¡logo para buscar soluciones.</td>
+                <td><strong>Comunicación y escucha activa:</strong> Diálogo para buscar soluciones.</td>
                 <td>Grita, impone su idea o se desconecta del grupo frustrado.</td>
                 <td>Escucha solo cuando se le pide silencio pero no aporta soluciones.</td>
-                <td>Propone movimientos con respeto, escucha a los demÃ¡s y busca acuerdos.</td>
-                <td>Modula la comunicaciÃ³n grupal con calma, empatÃ­a y liderazgo constructivo.</td>
+                <td>Propone movimientos con respeto, escucha a los demás y busca acuerdos.</td>
+                <td>Modula la comunicación grupal con calma, empatía y liderazgo constructivo.</td>
               </tr>
               <tr>
-                <td><strong>CoordinaciÃ³n motriz adaptada:</strong> Giros y pasos bajo apoyos.</td>
+                <td><strong>Coordinación motriz adaptada:</strong> Giros y pasos bajo apoyos.</td>
                 <td>Tira con brusquedad provocando tirones o se suelta por rigidez.</td>
                 <td>Realiza los pasos con rigidez y lentitud extrema pero no se suelta.</td>
                 <td>Adapta su cuerpo con flexibilidad, cuida los agarres y se mueve con soltura.</td>
-                <td>Demuestra una agilidad motriz excepcional asistiendo a los compaÃ±eros con suavidad.</td>
+                <td>Demuestra una agilidad motriz excepcional asistiendo a los compañeros con suavidad.</td>
               </tr>
             </tbody>
           </table>
@@ -2973,8 +3002,8 @@ Línea de salida (exploradores) ════════════════
       </div>
 
       <div class="ficha-footer">
-        <span>EducaciÃ³n FÃ­sica Primaria | LOMLOE</span>
-        <span>F-COOP-02 | PÃ¡gina 20</span>
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>F-COOP-02 | Página 20</span>
       </div>
     </article>
 
@@ -2983,25 +3012,25 @@ Línea de salida (exploradores) ════════════════
       <div class="ficha-header">
         <div>
           <div class="ficha-meta-top">
-            <span class="badge badge-coop">ðŸ¤ Espacio cooperativo (4.Âº a 6.Âº)</span>
-            <span class="badge badge-bloque">Bloque D: SincronÃ­a y retos motrices</span>
+            <span class="badge badge-coop">🤝 Espacio cooperativo (4.º a 6.º)</span>
+            <span class="badge badge-bloque">Bloque D: Sincronía y retos motrices</span>
             <span class="badge badge-code">F-COOP-03</span>
           </div>
-          <h2 class="ficha-title">El transporte del planeta Tierra (reto del gran mÃ³vil)</h2>
+          <h2 class="ficha-title">El transporte del planeta Tierra (reto del gran móvil)</h2>
           <div class="ficha-competencias">
-            <strong>Competencias LOMLOE:</strong> CE4 (cooperaciÃ³n fÃ­sica), CE2 (control tÃ³nico y coordinaciÃ³n) | <strong>Clave:</strong> CC, CPSAA, STEM
+            <strong>Competencias LOMLOE:</strong> CE4 (cooperación física), CE2 (control tónico y coordinación) | <strong>Clave:</strong> CC, CPSAA, STEM
           </div>
         </div>
         <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
-          ðŸ–¨ï¸ Imprimir esta ficha
+          🖨️ Imprimir esta ficha
         </button>
       </div>
 
       <div class="ficha-tech-grid">
         <div class="tech-item"><strong>Espacio:</strong> pista polideportiva completa o espacio exterior amplio</div>
-        <div class="tech-item"><strong>DuraciÃ³n:</strong> 25 minutos</div>
-        <div class="tech-item"><strong>Material:</strong> balÃ³n gigante fitball, 6 picas de plÃ¡stico, conos y bancos suecos</div>
-        <div class="tech-item"><strong>AgrupaciÃ³n:</strong> cuadrillas de transporte de 6 a 8 alumnos</div>
+        <div class="tech-item"><strong>Duración:</strong> 25 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> balón gigante fitball, 6 picas de plástico, conos y bancos suecos</div>
+        <div class="tech-item"><strong>Agrupación:</strong> cuadrillas de transporte de 6 a 8 alumnos</div>
       </div>
 
       <div class="ficha-body">
@@ -3009,80 +3038,80 @@ Línea de salida (exploradores) ════════════════
           <div class="section-title">Objetivos de aprendizaje</div>
           <ul class="objetivos-list">
             <li><strong>Motor:</strong> coordinar la velocidad de desplazamiento colectivo sujetando un objeto inestable sin tocarlo con las manos directas.</li>
-            <li><strong>Socioemocional:</strong> asumir la responsabilidad individual en el esfuerzo fÃ­sico conjunto (si uno afloja, la carga se desequilibra).</li>
-            <li><strong>Cognitivo:</strong> ajustar la tensiÃ³n y altura de las picas para compensar curvas, desniveles y frenadas.</li>
+            <li><strong>Socioemocional:</strong> asumir la responsabilidad individual en el esfuerzo físico conjunto (si uno afloja, la carga se desequilibra).</li>
+            <li><strong>Cognitivo:</strong> ajustar la tensión y altura de las picas para compensar curvas, desniveles y frenadas.</li>
           </ul>
         </div>
 
         <div>
-          <div class="section-title">Desarrollo y dinÃ¡mica del reto</div>
+          <div class="section-title">Desarrollo y dinámica del reto</div>
           <div class="dinamica-text">
-            <p>La cuadrilla debe transportar el Â«planeta TierraÂ» (gran pelota de fitball) a lo largo de un circuito de 20 metros sorteando conos en eslalon y bancos suecos.</p>
-            <p>EstÃ¡ terminantemente prohibido tocar el balÃ³n con las manos, brazos o cuerpo: se sostiene apoyado exclusivamente sobre las picas que los miembros del equipo sujetan en parejas formando una camilla mÃ³vil. Si el balÃ³n cae, se detienen y retroceden tres pasos. En el retorno entran dos compaÃ±eros de relevo sin apoyar el mÃ³vil.</p>
+            <p>La cuadrilla debe transportar el «planeta Tierra» (gran pelota de fitball) a lo largo de un circuito de 20 metros sorteando conos en eslalon y bancos suecos.</p>
+            <p>Está terminantemente prohibido tocar el balón con las manos, brazos o cuerpo: se sostiene apoyado exclusivamente sobre las picas que los miembros del equipo sujetan en parejas formando una camilla móvil. Si el balón cae, se detienen y retroceden tres pasos. En el retorno entran dos compañeros de relevo sin apoyar el móvil.</p>
           </div>
         </div>
 
         <div>
-          <div class="section-title">DisposiciÃ³n espacial</div>
+          <div class="section-title">Disposición espacial</div>
           <div class="diagram-box">
  [ Cuadrilla de transporte ]
-   ðŸ‘¤ (Pica 1 izquierda) â•â•â•â•â•â•â•â•â•â•â•â•â•â• ðŸ‘¤ (Pica 1 derecha)
-                     ( ðŸŒ FITBALL )
-   ðŸ‘¤ (Pica 2 izquierda) â•â•â•â•â•â•â•â•â•â•â•â•â•â• ðŸ‘¤ (Pica 2 derecha)
-                     ( ðŸŒ FITBALL )
-   ðŸ‘¤ (Pica 3 izquierda) â•â•â•â•â•â•â•â•â•â•â•â•â•â• ðŸ‘¤ (Pica 3 derecha)
-             â”‚
-             â–¼
+   👤 (Pica 1 izquierda) ══════════════ 👤 (Pica 1 derecha)
+                     ( 🌍 FITBALL )
+   👤 (Pica 2 izquierda) ══════════════ 👤 (Pica 2 derecha)
+                     ( 🌍 FITBALL )
+   👤 (Pica 3 izquierda) ══════════════ 👤 (Pica 3 derecha)
+             │
+             ▼
    [ Circuito: eslalon de conos y bancos suecos ]</div>
         </div>
 
         <div class="dua-grid">
           <div class="dua-card dua-support">
-            <strong>ðŸŸ¢ Apoyo DUA:</strong> permitir una tela de apoyo ligera colocada sobre las picas para aumentar la superficie de contacto; reducir el trayecto a diez metros.
+            <strong>🟢 Apoyo DUA:</strong> permitir una tela de apoyo ligera colocada sobre las picas para aumentar la superficie de contacto; reducir el trayecto a diez metros.
           </div>
           <div class="dua-card dua-challenge">
-            <strong>ðŸ”´ Reto DUA:</strong> superar un obstÃ¡culo de elevaciÃ³n (pasar el balÃ³n sobre una valla baja) coordinando las alturas de las picas desde la cabeza a la cola del grupo.
+            <strong>🔴 Reto DUA:</strong> superar un obstáculo de elevación (pasar el balón sobre una valla baja) coordinando las alturas de las picas desde la cabeza a la cola del grupo.
           </div>
         </div>
 
         <div class="debrief-box">
-          <strong>ReflexiÃ³n final (debriefing):</strong>
+          <strong>Reflexión final (debriefing):</strong>
           <ul>
-            <li>Â¿QuÃ© ocurrÃ­a si la pareja delantera caminaba mucho mÃ¡s rÃ¡pido que la trasera?</li>
-            <li>Â¿CÃ³mo comunicabais los avisos de curva o frenada para que todo el equipo reaccionara al mismo tiempo?</li>
+            <li>¿Qué ocurría si la pareja delantera caminaba mucho más rápido que la trasera?</li>
+            <li>¿Cómo comunicabais los avisos de curva o frenada para que todo el equipo reaccionara al mismo tiempo?</li>
           </ul>
         </div>
 
         <div class="safety-alert">
-          <strong>âš ï¸ Seguridad:</strong> sujeciÃ³n firme de las picas con ambas manos; prestar atenciÃ³n al sortear los bancos suecos para no tropezar.
+          <strong>⚠️ Seguridad:</strong> sujeción firme de las picas con ambas manos; prestar atención al sortear los bancos suecos para no tropezar.
         </div>
 
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>SincronizaciÃ³n y cooperaciÃ³n fÃ­sica:</strong> Ritmo colectivo de marcha.</td>
-                <td>Camina a su propio ritmo sin mirar al resto provocando la caÃ­da del balÃ³n.</td>
+                <td><strong>Sincronización y cooperación física:</strong> Ritmo colectivo de marcha.</td>
+                <td>Camina a su propio ritmo sin mirar al resto provocando la caída del balón.</td>
                 <td>Mantiene la pica firme pero le cuesta acompasar su paso al equipo.</td>
-                <td>Adapta su zancada, mantiene la tensiÃ³n de la pica y se coordina con fluidez.</td>
-                <td>Anticipa desequilibrios, guÃ­a el ritmo con serenidad y asiste a sus pares.</td>
+                <td>Adapta su zancada, mantiene la tensión de la pica y se coordina con fluidez.</td>
+                <td>Anticipa desequilibrios, guía el ritmo con serenidad y asiste a sus pares.</td>
               </tr>
               <tr>
-                <td><strong>Responsabilidad en el esfuerzo:</strong> Compromiso con la tarea comÃºn.</td>
+                <td><strong>Responsabilidad en el esfuerzo:</strong> Compromiso con la tarea común.</td>
                 <td>Se desentiende del esfuerzo o suelta la pica ante la primera dificultad.</td>
                 <td>Cumple su parte mientras la tarea es sencilla pero desiste ante el error.</td>
                 <td>Mantiene el esfuerzo constante y asume el reto con perseverancia.</td>
-                <td>Muestra mÃ¡xima constancia, alienta al equipo y celebra el Ã©xito colectivo.</td>
+                <td>Muestra máxima constancia, alienta al equipo y celebra el éxito colectivo.</td>
               </tr>
             </tbody>
           </table>
@@ -3090,13 +3119,13 @@ Línea de salida (exploradores) ════════════════
       </div>
 
       <div class="ficha-footer">
-        <span>EducaciÃ³n FÃ­sica Primaria | LOMLOE</span>
-        <span>F-COOP-03 | PÃ¡gina 21</span>
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>F-COOP-03 | Página 21</span>
       </div>
     </article>
 
     <!-- ============================================================== -->
-    <!-- ESPACIO TEMÃTICO: ATLETISMO ESCOLAR (FICHAS ATLE-01 A 03)      -->
+    <!-- ESPACIO TEMÁTICO: ATLETISMO ESCOLAR (FICHAS ATLE-01 A 03)      -->
     <!-- ============================================================== -->
 
     <!-- FICHA ATLE-01 -->
@@ -3104,102 +3133,102 @@ Línea de salida (exploradores) ════════════════
       <div class="ficha-header">
         <div>
           <div class="ficha-meta-top">
-            <span class="badge badge-atle">ðŸ‘Ÿ Espacio atletismo (1.Âº a 6.Âº)</span>
-            <span class="badge badge-bloque">Bloque C: Velocidad y relevos atlÃ©ticos</span>
+            <span class="badge badge-atle">👟 Espacio atletismo (1.º a 6.º)</span>
+            <span class="badge badge-bloque">Bloque C: Velocidad y relevos atléticos</span>
             <span class="badge badge-code">F-ATLE-01</span>
           </div>
-          <h2 class="ficha-title">Carrera de FÃ³rmula 1 y relevos con vallas bajas</h2>
+          <h2 class="ficha-title">Carrera de Fórmula 1 y relevos con vallas bajas</h2>
           <div class="ficha-competencias">
             <strong>Competencias LOMLOE:</strong> CE2 (velocidad y batida), CE4 (deportividad en equipo) | <strong>Clave:</strong> CPSAA, STEM
           </div>
         </div>
         <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
-          ðŸ–¨ï¸ Imprimir esta ficha
+          🖨️ Imprimir esta ficha
         </button>
       </div>
 
       <div class="ficha-tech-grid">
         <div class="tech-item"><strong>Espacio:</strong> pista perimetral cerrada de 50 metros</div>
-        <div class="tech-item"><strong>DuraciÃ³n:</strong> 25 minutos</div>
+        <div class="tech-item"><strong>Duración:</strong> 25 minutos</div>
         <div class="tech-item"><strong>Material:</strong> 6 vallas blandas de espuma (30-40 cm), conos de eslalon, quitamiedos, testigos</div>
-        <div class="tech-item"><strong>AgrupaciÃ³n:</strong> equipos mixtos de 4 a 6 alumnos en boxes de salida</div>
+        <div class="tech-item"><strong>Agrupación:</strong> equipos mixtos de 4 a 6 alumnos en boxes de salida</div>
       </div>
 
       <div class="ficha-body">
         <div>
           <div class="section-title">Objetivos de aprendizaje</div>
           <ul class="objetivos-list">
-            <li><strong>Motor:</strong> coordinar la carrera rÃ¡pida superando obstÃ¡culos sin frenar en seco; realizar la entrega fluida del testigo en la zona de relevo.</li>
-            <li><strong>Socioemocional:</strong> animar activamente a los compaÃ±eros de relevo y respetar la zona de espera sin obstaculizar a otros equipos.</li>
-            <li><strong>Cognitivo:</strong> calcular el punto de batida para no tropezar con la valla y anticipar la recepciÃ³n del testigo.</li>
+            <li><strong>Motor:</strong> coordinar la carrera rápida superando obstáculos sin frenar en seco; realizar la entrega fluida del testigo en la zona de relevo.</li>
+            <li><strong>Socioemocional:</strong> animar activamente a los compañeros de relevo y respetar la zona de espera sin obstaculizar a otros equipos.</li>
+            <li><strong>Cognitivo:</strong> calcular el punto de batida para no tropezar con la valla y anticipar la recepción del testigo.</li>
           </ul>
         </div>
 
         <div>
-          <div class="section-title">Desarrollo y dinÃ¡mica del circuito</div>
+          <div class="section-title">Desarrollo y dinámica del circuito</div>
           <div class="dinamica-text">
-            <p>Circuito en formato FÃ³rmula 1: arrancada explosiva en boxes con testigo, eslalon rÃ¡pido entre conos, voltereta o rodamiento controlado en colchoneta, superaciÃ³n de tres vallas de espuma en ritmo de zancadas y aceleraciÃ³n de retorno a boxes.</p>
-            <p>La entrega se realiza con la consigna verbal <em>Â«Â¡toma!Â»</em> hacia el compaÃ±ero que ya inicia una carrera de aproximaciÃ³n. Se contabiliza el tiempo colectivo total tras completar todos los relevos.</p>
+            <p>Circuito en formato Fórmula 1: arrancada explosiva en boxes con testigo, eslalon rápido entre conos, voltereta o rodamiento controlado en colchoneta, superación de tres vallas de espuma en ritmo de zancadas y aceleración de retorno a boxes.</p>
+            <p>La entrega se realiza con la consigna verbal <em>«¡toma!»</em> hacia el compañero que ya inicia una carrera de aproximación. Se contabiliza el tiempo colectivo total tras completar todos los relevos.</p>
           </div>
         </div>
 
         <div>
-          <div class="section-title">DisposiciÃ³n espacial</div>
+          <div class="section-title">Disposición espacial</div>
           <div class="diagram-box">
- [ Boxes de salida / relevo ] â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-    (Relevista 1) â”€â”€â”€> [Eslalon de conos] â”€â”€â”€> [Colchoneta rodaje]
-          â–²                                             â”‚
-          â”‚                                             â–¼
-   (Curva de retorno) <â”€â”€â”€ [3 Vallas de espuma] <â”€â”€â”€â”€â”€â”€â”€â”˜</div>
+ [ Boxes de salida / relevo ] ══════════════════════════════════════
+    (Relevista 1) ───> [Eslalon de conos] ───> [Colchoneta rodaje]
+          ▲                                             │
+          │                                             ▼
+   (Curva de retorno) <─── [3 Vallas de espuma] <───────┘</div>
         </div>
 
         <div class="dua-grid">
           <div class="dua-card dua-support">
-            <strong>ðŸŸ¢ Apoyo DUA:</strong> sustituir las vallas por lÃ­neas en el suelo o marcas de tiza; omitir la voltereta permitiendo un paso en cuadrupedia o salto a pies juntos.
+            <strong>🟢 Apoyo DUA:</strong> sustituir las vallas por líneas en el suelo o marcas de tiza; omitir la voltereta permitiendo un paso en cuadrupedia o salto a pies juntos.
           </div>
           <div class="dua-card dua-challenge">
-            <strong>ðŸ”´ Reto DUA:</strong> vallas a 45 cm de altura con entrega de testigo Â«ciegaÂ» (sin mirar atrÃ¡s) en zona delimitada de cinco metros.
+            <strong>🔴 Reto DUA:</strong> vallas a 45 cm de altura con entrega de testigo «ciega» (sin mirar atrás) en zona delimitada de cinco metros.
           </div>
         </div>
 
         <div class="debrief-box">
-          <strong>ReflexiÃ³n final (debriefing):</strong>
+          <strong>Reflexión final (debriefing):</strong>
           <ul>
-            <li>Â¿QuÃ© era mÃ¡s rÃ¡pido para saltar la valla: frenar y dar un salto muy alto o pasar rasante sin detener la carrera?</li>
-            <li>Â¿CÃ³mo influye una entrega limpia del testigo en el tiempo global del equipo?</li>
+            <li>¿Qué era más rápido para saltar la valla: frenar y dar un salto muy alto o pasar rasante sin detener la carrera?</li>
+            <li>¿Cómo influye una entrega limpia del testigo en el tiempo global del equipo?</li>
           </ul>
         </div>
 
         <div class="safety-alert">
-          <strong>âš ï¸ Seguridad:</strong> vallas exclusivamente de gomaespuma blanda que basculen ante cualquier tropiezo; despejar la curva perimetral de objetos.
+          <strong>⚠️ Seguridad:</strong> vallas exclusivamente de gomaespuma blanda que basculen ante cualquier tropiezo; despejar la curva perimetral de objetos.
         </div>
 
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Paso de obstÃ¡culos y vallas:</strong> Fluidez de carrera y batida.</td>
-                <td>Frena por completo antes de cada obstÃ¡culo y salta con temor o descontrol.</td>
-                <td>Salta los obstÃ¡culos pero pierde la velocidad y el ritmo de zancada.</td>
-                <td>Ataca la valla con decisiÃ³n, mantiene el avance y amortigua con soltura.</td>
-                <td>Domina la tÃ©cnica de pase rasante, encadena tres zancadas y no pierde velocidad.</td>
+                <td><strong>Paso de obstáculos y vallas:</strong> Fluidez de carrera y batida.</td>
+                <td>Frena por completo antes de cada obstáculo y salta con temor o descontrol.</td>
+                <td>Salta los obstáculos pero pierde la velocidad y el ritmo de zancada.</td>
+                <td>Ataca la valla con decisión, mantiene el avance y amortigua con soltura.</td>
+                <td>Domina la técnica de pase rasante, encadena tres zancadas y no pierde velocidad.</td>
               </tr>
               <tr>
-                <td><strong>TÃ©cnica del relevo y trabajo en equipo:</strong> Entrega del testigo.</td>
+                <td><strong>Técnica del relevo y trabajo en equipo:</strong> Entrega del testigo.</td>
                 <td>Se le cae el testigo con frecuencia o espera totalmente parado de espaldas.</td>
-                <td>Entrega el testigo en parada total y con cierta descoordinaciÃ³n.</td>
+                <td>Entrega el testigo en parada total y con cierta descoordinación.</td>
                 <td>Realiza la entrega en carrera coordinada con voz preventiva clara.</td>
-                <td>Optimiza la zona de aceleraciÃ³n, entrega con precisiÃ³n milimÃ©trica y alienta a su par.</td>
+                <td>Optimiza la zona de aceleración, entrega con precisión milimétrica y alienta a su par.</td>
               </tr>
             </tbody>
           </table>
@@ -3207,8 +3236,8 @@ Línea de salida (exploradores) ════════════════
       </div>
 
       <div class="ficha-footer">
-        <span>EducaciÃ³n FÃ­sica Primaria | LOMLOE</span>
-        <span>F-ATLE-01 | PÃ¡gina 22</span>
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>F-ATLE-01 | Página 22</span>
       </div>
     </article>
 
@@ -3217,102 +3246,102 @@ Línea de salida (exploradores) ════════════════
       <div class="ficha-header">
         <div>
           <div class="ficha-meta-top">
-            <span class="badge badge-atle">ðŸ‘Ÿ Espacio atletismo (3.Âº a 6.Âº)</span>
-            <span class="badge badge-bloque">Bloque C: Lanzamientos y precisiÃ³n</span>
+            <span class="badge badge-atle">👟 Espacio atletismo (3.º a 6.º)</span>
+            <span class="badge badge-bloque">Bloque C: Lanzamientos y precisión</span>
             <span class="badge badge-code">F-ATLE-02</span>
           </div>
-          <h2 class="ficha-title">Cazadores de distancia: lanzamiento de vÃ³rtice y cohetes</h2>
+          <h2 class="ficha-title">Cazadores de distancia: lanzamiento de vórtice y cohetes</h2>
           <div class="ficha-competencias">
-            <strong>Competencias LOMLOE:</strong> CE2 (coordinaciÃ³n Ã³culo-manual), CE1 (fuerza y salud) | <strong>Clave:</strong> STEM, CPSAA
+            <strong>Competencias LOMLOE:</strong> CE2 (coordinación óculo-manual), CE1 (fuerza y salud) | <strong>Clave:</strong> STEM, CPSAA
           </div>
         </div>
         <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
-          ðŸ–¨ï¸ Imprimir esta ficha
+          🖨️ Imprimir esta ficha
         </button>
       </div>
 
       <div class="ficha-tech-grid">
-        <div class="tech-item"><strong>Espacio:</strong> pista exterior o campo de cÃ©sped (mÃ­nimo 30 m)</div>
-        <div class="tech-item"><strong>DuraciÃ³n:</strong> 25 minutos</div>
-        <div class="tech-item"><strong>Material:</strong> 4 jabalinas vortex con silbato, conos mÃ©tricos, aros diana</div>
-        <div class="tech-item"><strong>AgrupaciÃ³n:</strong> equipos de 4 alumnos (lanzador, 2 jueces y recuperador)</div>
+        <div class="tech-item"><strong>Espacio:</strong> pista exterior o campo de césped (mínimo 30 m)</div>
+        <div class="tech-item"><strong>Duración:</strong> 25 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> 4 jabalinas vortex con silbato, conos métricos, aros diana</div>
+        <div class="tech-item"><strong>Agrupación:</strong> equipos de 4 alumnos (lanzador, 2 jueces y recuperador)</div>
       </div>
 
       <div class="ficha-body">
         <div>
           <div class="section-title">Objetivos de aprendizaje</div>
           <ul class="objetivos-list">
-            <li><strong>Motor:</strong> coordinar la carrera previa de aproximaciÃ³n con el paso cruzado y la extensiÃ³n del brazo ejecutor por encima del hombro a 45Âº.</li>
-            <li><strong>Socioemocional:</strong> respetar rigurosamente el protocolo de seguridad en lanzamientos (nadie recupera el material hasta la seÃ±al).</li>
-            <li><strong>Cognitivo:</strong> asociar el Ã¡ngulo de lanzamiento y la aceleraciÃ³n final con la distancia alcanzada.</li>
+            <li><strong>Motor:</strong> coordinar la carrera previa de aproximación con el paso cruzado y la extensión del brazo ejecutor por encima del hombro a 45º.</li>
+            <li><strong>Socioemocional:</strong> respetar rigurosamente el protocolo de seguridad en lanzamientos (nadie recupera el material hasta la señal).</li>
+            <li><strong>Cognitivo:</strong> asociar el ángulo de lanzamiento y la aceleración final con la distancia alcanzada.</li>
           </ul>
         </div>
 
         <div>
-          <div class="section-title">Desarrollo y dinÃ¡mica del concurso formativo</div>
+          <div class="section-title">Desarrollo y dinámica del concurso formativo</div>
           <div class="dinamica-text">
-            <p>Concurso de lanzamientos formativo con vÃ³rtice aerodinÃ¡mico. Protocolo riguroso: silbato para lanzamiento sincronizado (el mÃ³vil silba al volar si la parÃ¡bola es limpia); doble silbato para medir y devolver rodando por el suelo.</p>
-            <p>PuntuaciÃ³n por franjas de distancia (1 a 4 puntos) y bonus por acierto en diana. Reto personal de superaciÃ³n entre el primer y el tercer intento.</p>
+            <p>Concurso de lanzamientos formativo con vórtice aerodinámico. Protocolo riguroso: silbato para lanzamiento sincronizado (el móvil silba al volar si la parábola es limpia); doble silbato para medir y devolver rodando por el suelo.</p>
+            <p>Puntuación por franjas de distancia (1 a 4 puntos) y bonus por acierto en diana. Reto personal de superación entre el primer y el tercer intento.</p>
           </div>
         </div>
 
         <div>
-          <div class="section-title">DisposiciÃ³n espacial</div>
+          <div class="section-title">Disposición espacial</div>
           <div class="diagram-box">
- [ Zona de espera segura ] â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-    ðŸ‘¤ ðŸ‘¤ ðŸ‘¤ (Medidores / recuperadores en espera)
- â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ LÃ­nea de tiro â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-    ðŸ‘¤ (Lanzador con vortex) â”€â”€â”€ ðŸš€ (Vuelo parabÃ³lico 45Âº) â”€â”€â”€â”€â”€â”€â”€â”€>
-    â”‚                                                               â”‚
-    â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ 10 m â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€ 15 m â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€ 20 m â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-    â”‚ (Zona 1: 1 pto)          â”‚ (Zona 2: 2 pt) â”‚ (Zona 3: 3 ptos)  â”‚</div>
+ [ Zona de espera segura ] ══════════════════════════════════════════
+    👤 👤 👤 (Medidores / recuperadores en espera)
+ ───────────────── Línea de tiro ───────────────────────────────────
+    👤 (Lanzador con vortex) ─── 🚀 (Vuelo parabólico 45º) ────────>
+    │                                                               │
+    ├────────── 10 m ──────────┼───── 15 m ─────┼───── 20 m ────────┤
+    │ (Zona 1: 1 pto)          │ (Zona 2: 2 pt) │ (Zona 3: 3 ptos)  │</div>
         </div>
 
         <div class="dua-grid">
           <div class="dua-card dua-support">
-            <strong>ðŸŸ¢ Apoyo DUA:</strong> lanzamiento estÃ¡tico sin carrera previa; utilizar vortex mÃ¡s ligero o pelotas con cometa; recortar las zonas de puntuaciÃ³n.
+            <strong>🟢 Apoyo DUA:</strong> lanzamiento estático sin carrera previa; utilizar vortex más ligero o pelotas con cometa; recortar las zonas de puntuación.
           </div>
           <div class="dua-card dua-challenge">
-            <strong>ðŸ”´ Reto DUA:</strong> realizar el lanzamiento con la mano no dominante o con carrera rÃ­tmica de cinco pasos completos con paso cruzado.
+            <strong>🔴 Reto DUA:</strong> realizar el lanzamiento con la mano no dominante o con carrera rítmica de cinco pasos completos con paso cruzado.
           </div>
         </div>
 
         <div class="debrief-box">
-          <strong>ReflexiÃ³n final (debriefing):</strong>
+          <strong>Reflexión final (debriefing):</strong>
           <ul>
-            <li>Â¿QuÃ© pasaba cuando lanzabais el vortex muy recto hacia adelante en lugar de enviarlo alto hacia el cielo?</li>
-            <li>Â¿Por quÃ© en atletismo es fundamental la disciplina de seguridad antes de ir a recoger cualquier objeto lanzado?</li>
+            <li>¿Qué pasaba cuando lanzabais el vortex muy recto hacia adelante en lugar de enviarlo alto hacia el cielo?</li>
+            <li>¿Por qué en atletismo es fundamental la disciplina de seguridad antes de ir a recoger cualquier objeto lanzado?</li>
           </ul>
         </div>
 
         <div class="safety-alert">
-          <strong>âš ï¸ Seguridad:</strong> jamÃ¡s lanzar en direcciÃ³n a compaÃ±eros; nadie invade la zona de tiro hasta oÃ­r la orden acÃºstica del docente.
+          <strong>⚠️ Seguridad:</strong> jamás lanzar en dirección a compañeros; nadie invade la zona de tiro hasta oír la orden acústica del docente.
         </div>
 
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Gesto tÃ©cnico de lanzamiento:</strong> Carrera y Ã¡ngulo de salida.</td>
-                <td>Lanza con el codo caÃ­do o de lado, sin aprovechar el cuerpo y en trayectoria plana.</td>
+                <td><strong>Gesto técnico de lanzamiento:</strong> Carrera y ángulo de salida.</td>
+                <td>Lanza con el codo caído o de lado, sin aprovechar el cuerpo y en trayectoria plana.</td>
                 <td>Lanza por encima del hombro pero frena la carrera antes de soltar el vortex.</td>
-                <td>Coordina los pasos previos, arma el brazo arriba y lanza a unos 40-45Âº.</td>
-                <td>Encadena el paso cruzado con fluidez, logra mÃ¡xima palanca y hace silbar el vortex.</td>
+                <td>Coordina los pasos previos, arma el brazo arriba y lanza a unos 40-45º.</td>
+                <td>Encadena el paso cruzado con fluidez, logra máxima palanca y hace silbar el vortex.</td>
               </tr>
               <tr>
                 <td><strong>Respeto a las normas de seguridad:</strong> Protocolo de lanzamientos.</td>
-                <td>Cruza la lÃ­nea de tiro antes de tiempo o lanza sin esperar la seÃ±al.</td>
-                <td>Espera la seÃ±al con cierta impaciencia; atiende a los avisos del docente.</td>
+                <td>Cruza la línea de tiro antes de tiempo o lanza sin esperar la señal.</td>
+                <td>Espera la señal con cierta impaciencia; atiende a los avisos del docente.</td>
                 <td>Cumple rigurosamente el protocolo de tiro y recogida en todo momento.</td>
                 <td>Ayuda a organizar su calle con responsabilidad y garantiza la seguridad de su equipo.</td>
               </tr>
@@ -3322,8 +3351,8 @@ Línea de salida (exploradores) ════════════════
       </div>
 
       <div class="ficha-footer">
-        <span>EducaciÃ³n FÃ­sica Primaria | LOMLOE</span>
-        <span>F-ATLE-02 | PÃ¡gina 23</span>
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>F-ATLE-02 | Página 23</span>
       </div>
     </article>
 
@@ -3332,102 +3361,102 @@ Línea de salida (exploradores) ════════════════
       <div class="ficha-header">
         <div>
           <div class="ficha-meta-top">
-            <span class="badge badge-atle">ðŸ‘Ÿ Espacio atletismo (3.Âº a 6.Âº)</span>
-            <span class="badge badge-bloque">Bloque C: Saltos atlÃ©ticos y batida</span>
+            <span class="badge badge-atle">👟 Espacio atletismo (3.º a 6.º)</span>
+            <span class="badge badge-bloque">Bloque C: Saltos atléticos y batida</span>
             <span class="badge badge-code">F-ATLE-03</span>
           </div>
-          <h2 class="ficha-title">El foso de los canguros (iniciaciÃ³n al salto de longitud y multisaltos)</h2>
+          <h2 class="ficha-title">El foso de los canguros (iniciación al salto de longitud y multisaltos)</h2>
           <div class="ficha-competencias">
-            <strong>Competencias LOMLOE:</strong> CE2 (batida unipodal y amortiguaciÃ³n), CE1 (fuerza elÃ¡stica) | <strong>Clave:</strong> CPSAA, STEM
+            <strong>Competencias LOMLOE:</strong> CE2 (batida unipodal y amortiguación), CE1 (fuerza elástica) | <strong>Clave:</strong> CPSAA, STEM
           </div>
         </div>
         <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
-          ðŸ–¨ï¸ Imprimir esta ficha
+          🖨️ Imprimir esta ficha
         </button>
       </div>
 
       <div class="ficha-tech-grid">
         <div class="tech-item"><strong>Espacio:</strong> foso de arena o gimnasio con quitamiedos unidos</div>
-        <div class="tech-item"><strong>DuraciÃ³n:</strong> 25 minutos</div>
-        <div class="tech-item"><strong>Material:</strong> 4 a 6 colchonetas, cinta mÃ©trica de suelo, aros de batida</div>
-        <div class="tech-item"><strong>AgrupaciÃ³n:</strong> equipos de 4 alumnos (saltador, 2 jueces y anotador)</div>
+        <div class="tech-item"><strong>Duración:</strong> 25 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> 4 a 6 colchonetas, cinta métrica de suelo, aros de batida</div>
+        <div class="tech-item"><strong>Agrupación:</strong> equipos de 4 alumnos (saltador, 2 jueces y anotador)</div>
       </div>
 
       <div class="ficha-body">
         <div>
           <div class="section-title">Objetivos de aprendizaje</div>
           <ul class="objetivos-list">
-            <li><strong>Motor:</strong> coordinar la carrera progresiva con batida enÃ©rgica unipodal, extensiÃ³n de vuelo y caÃ­da simÃ©trica amortiguando a dos pies con rodillas a 90Âº.</li>
-            <li><strong>Socioemocional:</strong> aceptar el registro de la marca con deportividad y felicitar al compaÃ±ero por su tÃ©cnica.</li>
-            <li><strong>Cognitivo:</strong> ajustar la longitud de los Ãºltimos pasos para no cometer salto nulo en la batida.</li>
+            <li><strong>Motor:</strong> coordinar la carrera progresiva con batida enérgica unipodal, extensión de vuelo y caída simétrica amortiguando a dos pies con rodillas a 90º.</li>
+            <li><strong>Socioemocional:</strong> aceptar el registro de la marca con deportividad y felicitar al compañero por su técnica.</li>
+            <li><strong>Cognitivo:</strong> ajustar la longitud de los últimos pasos para no cometer salto nulo en la batida.</li>
           </ul>
         </div>
 
         <div>
           <div class="section-title">Desarrollo y fases del entrenamiento</div>
           <div class="dinamica-text">
-            <p>SesiÃ³n tÃ©cnica estructurada en tres fases: calentamiento en escalera de multisaltos en aros (pata coja y paso gigante), salto de longitud escolar (carrera de 8-10 m, batida en aro blanco, vuelo con rodillas al pecho y recepciÃ³n simÃ©trica amortiguando con rodillas a 90Âº).</p>
-            <p>Fase final con el Â«reto canguroÂ»: suma de distancias del equipo para conseguir una marca colectiva superando el registro inicial.</p>
+            <p>Sesión técnica estructurada en tres fases: calentamiento en escalera de multisaltos en aros (pata coja y paso gigante), salto de longitud escolar (carrera de 8-10 m, batida en aro blanco, vuelo con rodillas al pecho y recepción simétrica amortiguando con rodillas a 90º).</p>
+            <p>Fase final con el «reto canguro»: suma de distancias del equipo para conseguir una marca colectiva superando el registro inicial.</p>
           </div>
         </div>
 
         <div>
-          <div class="section-title">DisposiciÃ³n espacial</div>
+          <div class="section-title">Disposición espacial</div>
           <div class="diagram-box">
- [ Carrera de aproximaciÃ³n: 10 m ] â”€â”€> [ Zona de batida: aro ] â”€â”€> [ Foso / Colchonetas ]
-    ðŸƒ Alumno en aceleraciÃ³n                 (â—Ž Tabla)                   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-                                                                         â”‚ CaÃ­da a dos    â”‚
-                                                                         â”‚ pies flexionadosâ”‚
-                                                                         â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜</div>
+ [ Carrera de aproximación: 10 m ] ──> [ Zona de batida: aro ] ──> [ Foso / Colchonetas ]
+    🏃 Alumno en aceleración                 (◎ Tabla)                   ┌────────────────┐
+                                                                         │ Caída a dos    │
+                                                                         │ pies flexionados│
+                                                                         └────────────────┘</div>
         </div>
 
         <div class="dua-grid">
           <div class="dua-card dua-support">
-            <strong>ðŸŸ¢ Apoyo DUA:</strong> permitir zona de batida amplia de un metro en lugar de lÃ­nea fija; colocar colchoneta mÃ¡s ancha; empezar desde parado a pies juntos.
+            <strong>🟢 Apoyo DUA:</strong> permitir zona de batida amplia de un metro en lugar de línea fija; colocar colchoneta más ancha; empezar desde parado a pies juntos.
           </div>
           <div class="dua-card dua-challenge">
-            <strong>ðŸ”´ Reto DUA:</strong> iniciaciÃ³n al triple salto (apoyo: pata coja + paso de gigante + salto al foso).
+            <strong>🔴 Reto DUA:</strong> iniciación al triple salto (apoyo: pata coja + paso de gigante + salto al foso).
           </div>
         </div>
 
         <div class="debrief-box">
-          <strong>ReflexiÃ³n final (debriefing):</strong>
+          <strong>Reflexión final (debriefing):</strong>
           <ul>
-            <li>Â¿Por quÃ© flexionamos las rodillas al tocar el suelo en lugar de caer con las piernas tiesas?</li>
-            <li>Â¿QuÃ© hacÃ­an los brazos durante el vuelo: se quedaban pegados o ayudaban a equilibrar hacia adelante?</li>
+            <li>¿Por qué flexionamos las rodillas al tocar el suelo en lugar de caer con las piernas tiesas?</li>
+            <li>¿Qué hacían los brazos durante el vuelo: se quedaban pegados o ayudaban a equilibrar hacia adelante?</li>
           </ul>
         </div>
 
         <div class="safety-alert">
-          <strong>âš ï¸ Seguridad:</strong> revisar que las colchonetas no resbalen y estÃ©n bien unidas; flexiÃ³n obligatoria de rodillas para proteger articulaciones.
+          <strong>⚠️ Seguridad:</strong> revisar que las colchonetas no resbalen y estén bien unidas; flexión obligatoria de rodillas para proteger articulaciones.
         </div>
 
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>TÃ©cnica de batida y vuelo:</strong> Impulso unipodal y proyecciÃ³n.</td>
+                <td><strong>Técnica de batida y vuelo:</strong> Impulso unipodal y proyección.</td>
                 <td>Llega frenando a la batida, duda del pie o bate con dos pies descoordinados.</td>
                 <td>Bate a un pie pero el salto carece de altura y cae de forma precipitada.</td>
                 <td>Coordina la carrera, bate con fuerza hacia arriba y adelante y vuela estable.</td>
-                <td>Transforma la velocidad horizontal en un impulso elÃ¡stico vertical perfecto.</td>
+                <td>Transforma la velocidad horizontal en un impulso elástico vertical perfecto.</td>
               </tr>
               <tr>
-                <td><strong>RecepciÃ³n y salud articular:</strong> AmortiguaciÃ³n de la caÃ­da.</td>
-                <td>Cae con piernas rÃ­gidas con riesgo articular o se deja caer de espaldas.</td>
-                <td>Cae sobre los pies pero pierde el equilibrio y apoya las manos detrÃ¡s.</td>
-                <td>Amortigua flexionando rodillas a 90Âº de forma segura y equilibrada.</td>
-                <td>AmortiguaciÃ³n impecable y tÃ©cnica ergonÃ³mica protegiendo rodillas y espalda.</td>
+                <td><strong>Recepción y salud articular:</strong> Amortiguación de la caída.</td>
+                <td>Cae con piernas rígidas con riesgo articular o se deja caer de espaldas.</td>
+                <td>Cae sobre los pies pero pierde el equilibrio y apoya las manos detrás.</td>
+                <td>Amortigua flexionando rodillas a 90º de forma segura y equilibrada.</td>
+                <td>Amortiguación impecable y técnica ergonómica protegiendo rodillas y espalda.</td>
               </tr>
             </tbody>
           </table>
@@ -3435,13 +3464,13 @@ Línea de salida (exploradores) ════════════════
       </div>
 
       <div class="ficha-footer">
-        <span>EducaciÃ³n FÃ­sica Primaria | LOMLOE</span>
-        <span>F-ATLE-03 | PÃ¡gina 24</span>
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>F-ATLE-03 | Página 24</span>
       </div>
     </article>
 
     <!-- ============================================================== -->
-    <!-- ESPACIO TEMÃTICO: EXPRESIÃ“N CORPORAL (FICHAS EXPR-01 A 03)     -->
+    <!-- ESPACIO TEMÁTICO: EXPRESIÓN CORPORAL (FICHAS EXPR-01 A 03)     -->
     <!-- ============================================================== -->
 
     <!-- FICHA EXPR-01 -->
@@ -3449,25 +3478,25 @@ Línea de salida (exploradores) ════════════════
       <div class="ficha-header">
         <div>
           <div class="ficha-meta-top">
-            <span class="badge badge-expr">ðŸŽ­ Espacio expresiÃ³n (1.Âº a 4.Âº)</span>
-            <span class="badge badge-bloque">Bloque E: ExpresiÃ³n, mimo y desinhibiciÃ³n</span>
+            <span class="badge badge-expr">🎭 Espacio expresión (1.º a 4.º)</span>
+            <span class="badge badge-bloque">Bloque E: Expresión, mimo y desinhibición</span>
             <span class="badge badge-code">F-EXPR-01</span>
           </div>
           <h2 class="ficha-title">El laboratorio de los personajes y el mimo invisible</h2>
           <div class="ficha-competencias">
-            <strong>Competencias LOMLOE:</strong> CE3 (desinhibiciÃ³n y gestualidad), CE4 (empatÃ­a escÃ©nica) | <strong>Clave:</strong> CCEC, CPSAA, CCL
+            <strong>Competencias LOMLOE:</strong> CE3 (desinhibición y gestualidad), CE4 (empatía escénica) | <strong>Clave:</strong> CCEC, CPSAA, CCL
           </div>
         </div>
         <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
-          ðŸ–¨ï¸ Imprimir esta ficha
+          🖨️ Imprimir esta ficha
         </button>
       </div>
 
       <div class="ficha-tech-grid">
-        <div class="tech-item"><strong>Espacio:</strong> sala de psicomotricidad o gimnasio diÃ¡fano</div>
-        <div class="tech-item"><strong>DuraciÃ³n:</strong> 25 minutos</div>
-        <div class="tech-item"><strong>Material:</strong> tarjetas ilustradas de acciones cotidianas, caja mÃ¡gica</div>
-        <div class="tech-item"><strong>AgrupaciÃ³n:</strong> asamblea, trabajo individual y parejas</div>
+        <div class="tech-item"><strong>Espacio:</strong> sala de psicomotricidad o gimnasio diáfano</div>
+        <div class="tech-item"><strong>Duración:</strong> 25 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> tarjetas ilustradas de acciones cotidianas, caja mágica</div>
+        <div class="tech-item"><strong>Agrupación:</strong> asamblea, trabajo individual y parejas</div>
       </div>
 
       <div class="ficha-body">
@@ -3475,74 +3504,74 @@ Línea de salida (exploradores) ════════════════
           <div class="section-title">Objetivos de aprendizaje</div>
           <ul class="objetivos-list">
             <li><strong>Motor:</strong> disociar movimientos de los segmentos corporales; adaptar el tono muscular al peso y resistencia del objeto invisible.</li>
-            <li><strong>Socioemocional:</strong> perder la vergÃ¼enza, disfrutar del juego interpretativo y mostrar respeto hacia el trabajo ajeno.</li>
+            <li><strong>Socioemocional:</strong> perder la vergüenza, disfrutar del juego interpretativo y mostrar respeto hacia el trabajo ajeno.</li>
             <li><strong>Cognitivo:</strong> descifrar mensajes corporales no verbales e imaginar soluciones narrativas sin palabras.</li>
           </ul>
         </div>
 
         <div>
-          <div class="section-title">Desarrollo y dinÃ¡mica del juego</div>
+          <div class="section-title">Desarrollo y dinámica del juego</div>
           <div class="dinamica-text">
-            <p>Taller en tres fases: <em>La caja de los objetos invisibles</em> (extraer un objeto imaginario de la caja central y mimar su uso respetando tamaÃ±o, peso y textura durante 15 segundos para que los compaÃ±eros adivinen quÃ© es), <em>El pasillo de las emociones</em> (desfile entre dos filas adoptando la emociÃ³n asignada en la tarjeta secreta) y <em>El espejo mÃ¡gico</em> (imitaciÃ³n simultÃ¡nea y continua en parejas a cÃ¡mara lenta).</p>
+            <p>Taller en tres fases: <em>La caja de los objetos invisibles</em> (extraer un objeto imaginario de la caja central y mimar su uso respetando tamaño, peso y textura durante 15 segundos para que los compañeros adivinen qué es), <em>El pasillo de las emociones</em> (desfile entre dos filas adoptando la emoción asignada en la tarjeta secreta) y <em>El espejo mágico</em> (imitación simultánea y continua en parejas a cámara lenta).</p>
           </div>
         </div>
 
         <div>
-          <div class="section-title">DisposiciÃ³n espacial</div>
+          <div class="section-title">Disposición espacial</div>
           <div class="diagram-box">
  [ ASAMBLEA CENTRAL ]              [ EL PASILLO DE LAS EMOCIONES ]
-        ðŸ‘¥ðŸ‘¥ðŸ‘¥ðŸ‘¥                      ðŸš¶ Fila A (espectadores)
-      ðŸ‘¥ (Caja) ðŸ‘¥                           â”‚ (Pasillo de desfile)
-        ðŸ‘¥ðŸ‘¥ðŸ‘¥ðŸ‘¥                      ðŸš¶ Fila B (espectadores)</div>
+        👥👥👥👥                      🚶 Fila A (espectadores)
+      👥 (Caja) 👥                           │ (Pasillo de desfile)
+        👥👥👥👥                      🚶 Fila B (espectadores)</div>
         </div>
 
         <div class="dua-grid">
           <div class="dua-card dua-support">
-            <strong>ðŸŸ¢ Apoyo DUA:</strong> permitir apoyos de atrezo real ligero si hay bloqueo inicial; realizar la mÃ­mica en parejas simultÃ¡neas para rebajar la exposiciÃ³n individual.
+            <strong>🟢 Apoyo DUA:</strong> permitir apoyos de atrezo real ligero si hay bloqueo inicial; realizar la mímica en parejas simultáneas para rebajar la exposición individual.
           </div>
           <div class="dua-card dua-challenge">
-            <strong>ðŸ”´ Reto DUA:</strong> improvisar una escena corta de un minuto por parejas con un conflicto dramÃ¡tico sin emitir ningÃºn sonido vocal.
+            <strong>🔴 Reto DUA:</strong> improvisar una escena corta de un minuto por parejas con un conflicto dramático sin emitir ningún sonido vocal.
           </div>
         </div>
 
         <div class="debrief-box">
-          <strong>ReflexiÃ³n final (debriefing):</strong>
+          <strong>Reflexión final (debriefing):</strong>
           <ul>
-            <li>Â¿QuÃ© hacÃ­amos con las manos y los hombros para que todo el mundo entendiera que la maleta invisible pesaba 50 kilos?</li>
-            <li>Â¿CÃ³mo nos sentimos cuando todos los compaÃ±eros nos miraban en el pasillo de las emociones?</li>
+            <li>¿Qué hacíamos con las manos y los hombros para que todo el mundo entendiera que la maleta invisible pesaba 50 kilos?</li>
+            <li>¿Cómo nos sentimos cuando todos los compañeros nos miraban en el pasillo de las emociones?</li>
           </ul>
         </div>
 
         <div class="safety-alert">
-          <strong>âš ï¸ Seguridad:</strong> suelo limpio y libre de objetos; desplazamientos descalzos o con calcetines antideslizantes si la temperatura y el suelo lo permiten.
+          <strong>⚠️ Seguridad:</strong> suelo limpio y libre de objetos; desplazamientos descalzos o con calcetines antideslizantes si la temperatura y el suelo lo permiten.
         </div>
 
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>ExpresiÃ³n gestual y corporal:</strong> ManipulaciÃ³n del objeto invisible.</td>
-                <td>Muestra gran timidez o risa nerviosa; no respeta el tamaÃ±o ni el peso del objeto.</td>
-                <td>Realiza la acciÃ³n bÃ¡sica pero olvida la expresividad facial o corporal.</td>
-                <td>Comunica con claridad la acciÃ³n, maneja el volumen del objeto y usa el rostro.</td>
-                <td>Despliega una riqueza gestual fascinante, modula el tono tÃ³nico y cautiva al pÃºblico.</td>
+                <td><strong>Expresión gestual y corporal:</strong> Manipulación del objeto invisible.</td>
+                <td>Muestra gran timidez o risa nerviosa; no respeta el tamaño ni el peso del objeto.</td>
+                <td>Realiza la acción básica pero olvida la expresividad facial o corporal.</td>
+                <td>Comunica con claridad la acción, maneja el volumen del objeto y usa el rostro.</td>
+                <td>Despliega una riqueza gestual fascinante, modula el tono tónico y cautiva al público.</td>
               </tr>
               <tr>
-                <td><strong>Respeto y empatÃ­a como pÃºblico:</strong> Actitud ante la muestra ajena.</td>
-                <td>Se burla de otros compaÃ±eros, habla durante la actuaciÃ³n o distrae.</td>
-                <td>Permanece en silencio pero no presta atenciÃ³n al compaÃ±ero actuante.</td>
-                <td>Observa con atenciÃ³n y respeto; aplaude y felicita el esfuerzo de los demÃ¡s.</td>
-                <td>Es un espectador ejemplar, formula hipÃ³tesis constructivas y refuerza la autoestima del grupo.</td>
+                <td><strong>Respeto y empatía como público:</strong> Actitud ante la muestra ajena.</td>
+                <td>Se burla de otros compañeros, habla durante la actuación o distrae.</td>
+                <td>Permanece en silencio pero no presta atención al compañero actuante.</td>
+                <td>Observa con atención y respeto; aplaude y felicita el esfuerzo de los demás.</td>
+                <td>Es un espectador ejemplar, formula hipótesis constructivas y refuerza la autoestima del grupo.</td>
               </tr>
             </tbody>
           </table>
@@ -3550,8 +3579,8 @@ Línea de salida (exploradores) ════════════════
       </div>
 
       <div class="ficha-footer">
-        <span>EducaciÃ³n FÃ­sica Primaria | LOMLOE</span>
-        <span>F-EXPR-01 | PÃ¡gina 25</span>
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>F-EXPR-01 | Página 25</span>
       </div>
     </article>
 
@@ -3560,25 +3589,25 @@ Línea de salida (exploradores) ════════════════
       <div class="ficha-header">
         <div>
           <div class="ficha-meta-top">
-            <span class="badge badge-expr">ðŸŽ­ Espacio expresiÃ³n (3.Âº a 6.Âº)</span>
-            <span class="badge badge-bloque">Bloque E: Teatro de sombras y dramatizaciÃ³n</span>
+            <span class="badge badge-expr">🎭 Espacio expresión (3.º a 6.º)</span>
+            <span class="badge badge-bloque">Bloque E: Teatro de sombras y dramatización</span>
             <span class="badge badge-code">F-EXPR-02</span>
           </div>
           <h2 class="ficha-title">Siluetas vivas y teatro de sombras corporales</h2>
           <div class="ficha-competencias">
-            <strong>Competencias LOMLOE:</strong> CE3 (plÃ¡stica corporal), CE4 (cooperaciÃ³n escÃ©nica) | <strong>Clave:</strong> CCEC, CPSAA, CC
+            <strong>Competencias LOMLOE:</strong> CE3 (plástica corporal), CE4 (cooperación escénica) | <strong>Clave:</strong> CCEC, CPSAA, CC
           </div>
         </div>
         <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
-          ðŸ–¨ï¸ Imprimir esta ficha
+          🖨️ Imprimir esta ficha
         </button>
       </div>
 
       <div class="ficha-tech-grid">
         <div class="tech-item"><strong>Espacio:</strong> sala oscurecida (gimnasio en penumbra o polivalente)</div>
-        <div class="tech-item"><strong>DuraciÃ³n:</strong> 30 minutos</div>
-        <div class="tech-item"><strong>Material:</strong> sÃ¡bana blanca grande colgada, foco de luz LED o proyector, mÃºsica</div>
-        <div class="tech-item"><strong>AgrupaciÃ³n:</strong> grupos de 4 a 5 alumnos (actores y espectadores)</div>
+        <div class="tech-item"><strong>Duración:</strong> 30 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> sábana blanca grande colgada, foco de luz LED o proyector, música</div>
+        <div class="tech-item"><strong>Agrupación:</strong> grupos de 4 a 5 alumnos (actores y espectadores)</div>
       </div>
 
       <div class="ficha-body">
@@ -3586,56 +3615,56 @@ Línea de salida (exploradores) ════════════════
           <div class="section-title">Objetivos de aprendizaje</div>
           <ul class="objetivos-list">
             <li><strong>Motor:</strong> adaptar las posturas corporales al plano bidimensional de la sombra; coordinar movimientos de perfil con nitidez.</li>
-            <li><strong>Socioemocional:</strong> colaborar en la construcciÃ³n plÃ¡stica de una escena visual colectiva; respetar el clima de concentraciÃ³n y silencio.</li>
-            <li><strong>Cognitivo:</strong> comprender el principio Ã³ptico de la proyecciÃ³n (distancia al foco y a la pantalla).</li>
+            <li><strong>Socioemocional:</strong> colaborar en la construcción plástica de una escena visual colectiva; respetar el clima de concentración y silencio.</li>
+            <li><strong>Cognitivo:</strong> comprender el principio óptico de la proyección (distancia al foco y a la pantalla).</li>
           </ul>
         </div>
 
         <div>
           <div class="section-title">Desarrollo y fases del taller de sombras</div>
           <div class="dinamica-text">
-            <p>ExploraciÃ³n del teatro de sombras: <em>El despertar de la sombra</em> (descubrir cÃ³mo colocarse de perfil define claramente los contornos en contraposiciÃ³n al plano frontal), <em>Metamorfosis colectivas</em> (combinar cuatro cuerpos para dar vida a un dragÃ³n, un Ã¡rbol o una mÃ¡quina humana) y <em>Microhistoria sin palabras</em> (escena dramatizada de un minuto con mÃºsica ambiental).</p>
+            <p>Exploración del teatro de sombras: <em>El despertar de la sombra</em> (descubrir cómo colocarse de perfil define claramente los contornos en contraposición al plano frontal), <em>Metamorfosis colectivas</em> (combinar cuatro cuerpos para dar vida a un dragón, un árbol o una máquina humana) y <em>Microhistoria sin palabras</em> (escena dramatizada de un minuto con música ambiental).</p>
           </div>
         </div>
 
         <div>
-          <div class="section-title">DisposiciÃ³n espacial</div>
+          <div class="section-title">Disposición espacial</div>
           <div class="diagram-box">
- [ FOCO DE LUZ ] â”€â”€> ðŸ‘¤ðŸ‘¤ Actores en perfil â”€â”€> â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” â”€â”€> ðŸ‘¥ðŸ‘¥ Espectadores
-    (Proyector)         (Zona detrÃ¡s de la tela) â”‚ SÃBANA BLANCA  â”‚     (Zona de butacas)
-                                                 â”‚ (Pantalla)     â”‚
-                                                 â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜</div>
+ [ FOCO DE LUZ ] ──> 👤👤 Actores en perfil ──> ┌────────────────┐ ──> 👥👥 Espectadores
+    (Proyector)         (Zona detrás de la tela) │ SÁBANA BLANCA  │     (Zona de butacas)
+                                                 │ (Pantalla)     │
+                                                 └────────────────┘</div>
         </div>
 
         <div class="dua-grid">
           <div class="dua-card dua-support">
-            <strong>ðŸŸ¢ Apoyo DUA:</strong> uso de siluetas de cartulina en varillas para complementar; roles de control tÃ©cnico de luz o sonido para alumnado con movilidad reducida.
+            <strong>🟢 Apoyo DUA:</strong> uso de siluetas de cartulina en varillas para complementar; roles de control técnico de luz o sonido para alumnado con movilidad reducida.
           </div>
           <div class="dua-card dua-challenge">
-            <strong>ðŸ”´ Reto DUA:</strong> crear una transiciÃ³n continua en movimiento donde una figura colectiva se transforma en otra sin que se pierda la nitidez de la sombra.
+            <strong>🔴 Reto DUA:</strong> crear una transición continua en movimiento donde una figura colectiva se transforma en otra sin que se pierda la nitidez de la sombra.
           </div>
         </div>
 
         <div class="debrief-box">
-          <strong>ReflexiÃ³n final (debriefing):</strong>
+          <strong>Reflexión final (debriefing):</strong>
           <ul>
-            <li>Â¿QuÃ© ocurrÃ­a con la silueta si os ponÃ­ais uno detrÃ¡s del otro en la misma lÃ­nea de luz?</li>
-            <li>Â¿Por quÃ© en el teatro de sombras estar de perfil transmite mucha mÃ¡s informaciÃ³n visual que estar de frente?</li>
+            <li>¿Qué ocurría con la silueta si os poníais uno detrás del otro en la misma línea de luz?</li>
+            <li>¿Por qué en el teatro de sombras estar de perfil transmite mucha más información visual que estar de frente?</li>
           </ul>
         </div>
 
         <div class="safety-alert">
-          <strong>âš ï¸ Seguridad:</strong> foco sobre soporte estable y seguro fuera de zonas de paso; fijar cables al suelo con cinta adhesiva para evitar tropiezos en penumbra.
+          <strong>⚠️ Seguridad:</strong> foco sobre soporte estable y seguro fuera de zonas de paso; fijar cables al suelo con cinta adhesiva para evitar tropiezos en penumbra.
         </div>
 
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
@@ -3643,17 +3672,17 @@ Línea de salida (exploradores) ════════════════
             <tbody>
               <tr>
                 <td><strong>Control espacial de la silueta:</strong> Perfil y nitidez en la pantalla.</td>
-                <td>Se sitÃºa de frente perdiendo los rasgos o tapa involuntariamente al compaÃ±ero.</td>
+                <td>Se sitúa de frente perdiendo los rasgos o tapa involuntariamente al compañero.</td>
                 <td>Se coloca de perfil pero le cuesta calcular la distancia correcta al foco de luz.</td>
-                <td>Adapta su posiciÃ³n de perfil con precisiÃ³n, aprovecha los planos y define contornos.</td>
-                <td>Domina las leyes Ã³pticas de la sombra para crear efectos visuales sorprendentes y nÃ­tidos.</td>
+                <td>Adapta su posición de perfil con precisión, aprovecha los planos y define contornos.</td>
+                <td>Domina las leyes ópticas de la sombra para crear efectos visuales sorprendentes y nítidos.</td>
               </tr>
               <tr>
-                <td><strong>CreaciÃ³n colectiva y sincronÃ­a:</strong> ComposiciÃ³n estÃ©tica del grupo.</td>
-                <td>ActÃºa por su cuenta sin coordinar la figura comÃºn con los demÃ¡s.</td>
-                <td>Participa en la figura colectiva aunque la coordinaciÃ³n resulta estÃ¡tica o rÃ­gida.</td>
-                <td>Se sincroniza con el equipo logrando una silueta conjunta armÃ³nica y fluida.</td>
-                <td>Aporta ideas plÃ¡sticas originales, potencia la estÃ©tica grupal y cuida cada detalle escÃ©nico.</td>
+                <td><strong>Creación colectiva y sincronía:</strong> Composición estética del grupo.</td>
+                <td>Actúa por su cuenta sin coordinar la figura común con los demás.</td>
+                <td>Participa en la figura colectiva aunque la coordinación resulta estática o rígida.</td>
+                <td>Se sincroniza con el equipo logrando una silueta conjunta armónica y fluida.</td>
+                <td>Aporta ideas plásticas originales, potencia la estética grupal y cuida cada detalle escénico.</td>
               </tr>
             </tbody>
           </table>
@@ -3661,8 +3690,8 @@ Línea de salida (exploradores) ════════════════
       </div>
 
       <div class="ficha-footer">
-        <span>EducaciÃ³n FÃ­sica Primaria | LOMLOE</span>
-        <span>F-EXPR-02 | PÃ¡gina 26</span>
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>F-EXPR-02 | Página 26</span>
       </div>
     </article>
 
@@ -3671,101 +3700,101 @@ Línea de salida (exploradores) ════════════════
       <div class="ficha-header">
         <div>
           <div class="ficha-meta-top">
-            <span class="badge badge-expr">ðŸŽ­ Espacio expresiÃ³n (4.Âº a 6.Âº)</span>
-            <span class="badge badge-bloque">Bloque E: Danza colectiva, compÃ¡s y acrosport</span>
+            <span class="badge badge-expr">🎭 Espacio expresión (4.º a 6.º)</span>
+            <span class="badge badge-bloque">Bloque E: Danza colectiva, compás y acrosport</span>
             <span class="badge badge-code">F-EXPR-03</span>
           </div>
           <h2 class="ficha-title">Flashmob cooperativo y figuras en danza</h2>
           <div class="ficha-competencias">
-            <strong>Competencias LOMLOE:</strong> CE3 (sincronÃ­a rÃ­tmica), CE4 (cohesiÃ³n grupal) | <strong>Clave:</strong> CCEC, CPSAA, CC
+            <strong>Competencias LOMLOE:</strong> CE3 (sincronía rítmica), CE4 (cohesión grupal) | <strong>Clave:</strong> CCEC, CPSAA, CC
           </div>
         </div>
         <button class="ficha-btn-print no-print" onclick="imprimirFichaIndividual(this)">
-          ðŸ–¨ï¸ Imprimir esta ficha
+          🖨️ Imprimir esta ficha
         </button>
       </div>
 
       <div class="ficha-tech-grid">
-        <div class="tech-item"><strong>Espacio:</strong> patio escolar abierto o pabellÃ³n polideportivo</div>
-        <div class="tech-item"><strong>DuraciÃ³n:</strong> 30 minutos</div>
-        <div class="tech-item"><strong>Material:</strong> equipo de sonido potente, mÃºsica funk/pop 4/4 bien marcada, paÃ±uelos</div>
-        <div class="tech-item"><strong>AgrupaciÃ³n:</strong> gran grupo organizado en bloques escalonados</div>
+        <div class="tech-item"><strong>Espacio:</strong> patio escolar abierto o pabellón polideportivo</div>
+        <div class="tech-item"><strong>Duración:</strong> 30 minutos</div>
+        <div class="tech-item"><strong>Material:</strong> equipo de sonido potente, música funk/pop 4/4 bien marcada, pañuelos</div>
+        <div class="tech-item"><strong>Agrupación:</strong> gran grupo organizado en bloques escalonados</div>
       </div>
 
       <div class="ficha-body">
         <div>
           <div class="section-title">Objetivos de aprendizaje</div>
           <ul class="objetivos-list">
-            <li><strong>Motor:</strong> coordinar pasos de baile al compÃ¡s exacto de la mÃºsica integrando cambios de nivel y figuras estÃ¡ticas de acrosport.</li>
-            <li><strong>Socioemocional:</strong> experimentar la emociÃ³n del trabajo rÃ­tmico masivo; fomentar sentido de pertenencia y alegrÃ­a compartida.</li>
+            <li><strong>Motor:</strong> coordinar pasos de baile al compás exacto de la música integrando cambios de nivel y figuras estáticas de acrosport.</li>
+            <li><strong>Socioemocional:</strong> experimentar la emoción del trabajo rítmico masivo; fomentar sentido de pertenencia y alegría compartida.</li>
             <li><strong>Cognitivo:</strong> memorizar una partitura motriz de 32 tiempos estructurada en bloques de ocho tiempos.</li>
           </ul>
         </div>
 
         <div>
-          <div class="section-title">Desarrollo y dinÃ¡mica del flashmob</div>
+          <div class="section-title">Desarrollo y dinámica del flashmob</div>
           <div class="dinamica-text">
-            <p>Flashmob escolar con entrada escalonada: arranca con 4 alumnos, suma de 8 en el compÃ¡s 16 e irrupciÃ³n de toda la clase en el compÃ¡s 32 completando una formaciÃ³n en abanico.</p>
-            <p>CoreografÃ­a de 32 tiempos: pasos laterales con doble palmada, avance y retroceso marcando talÃ³n, giro de 360Âº con semisentadilla en cruz y clÃ­max final en pose de estatua o acrosport en parejas (la mesa o el aviÃ³n) manteniendo la sonrisa fija durante 8 tiempos antes de dispersarse con naturalidad.</p>
+            <p>Flashmob escolar con entrada escalonada: arranca con 4 alumnos, suma de 8 en el compás 16 e irrupción de toda la clase en el compás 32 completando una formación en abanico.</p>
+            <p>Coreografía de 32 tiempos: pasos laterales con doble palmada, avance y retroceso marcando talón, giro de 360º con semisentadilla en cruz y clímax final en pose de estatua o acrosport en parejas (la mesa o el avión) manteniendo la sonrisa fija durante 8 tiempos antes de dispersarse con naturalidad.</p>
           </div>
         </div>
 
         <div>
-          <div class="section-title">DisposiciÃ³n espacial</div>
+          <div class="section-title">Disposición espacial</div>
           <div class="diagram-box">
- [ ENTRADA 1: Centro ] â”€â”€> [ ENTRADA 2: Alas laterales ] â”€â”€> [ FORMACIÃ“N GENERAL ]
-         ðŸ‘¤ ðŸ‘¤                        ðŸ‘¤          ðŸ‘¤               ðŸ‘¤  ðŸ‘¤  ðŸ‘¤  ðŸ‘¤
-                                    ðŸ‘¤              ðŸ‘¤           ðŸ‘¤  ðŸ‘¤  ðŸ‘¤  ðŸ‘¤
-                                                               ðŸ‘¤  ðŸ‘¤  ðŸ‘¤  ðŸ‘¤</div>
+ [ ENTRADA 1: Centro ] ──> [ ENTRADA 2: Alas laterales ] ──> [ FORMACIÓN GENERAL ]
+         👤 👤                        👤          👤               👤  👤  👤  👤
+                                    👤              👤           👤  👤  👤  👤
+                                                               👤  👤  👤  👤</div>
         </div>
 
         <div class="dua-grid">
           <div class="dua-card dua-support">
-            <strong>ðŸŸ¢ Apoyo DUA:</strong> marcas de tiza en el suelo para referencias de posiciÃ³n; guÃ­as de ritmo colocados en primera fila con movimientos amplificados.
+            <strong>🟢 Apoyo DUA:</strong> marcas de tiza en el suelo para referencias de posición; guías de ritmo colocados en primera fila con movimientos amplificados.
           </div>
           <div class="dua-card dua-challenge">
-            <strong>ðŸ”´ Reto DUA:</strong> asumir el rol de capitanes solistas de la entrada inicial o ejecutar acrosport en trÃ­o en el clÃ­max final.
+            <strong>🔴 Reto DUA:</strong> asumir el rol de capitanes solistas de la entrada inicial o ejecutar acrosport en trío en el clímax final.
           </div>
         </div>
 
         <div class="debrief-box">
-          <strong>ReflexiÃ³n final (debriefing):</strong>
+          <strong>Reflexión final (debriefing):</strong>
           <ul>
-            <li>Â¿QuÃ© energÃ­a se siente en el cuerpo cuando todo el grupo se mueve exactamente al mismo compÃ¡s musical?</li>
-            <li>Â¿Por quÃ© una coreografÃ­a colectiva exige tanta generosidad y atenciÃ³n hacia los compaÃ±eros?</li>
+            <li>¿Qué energía se siente en el cuerpo cuando todo el grupo se mueve exactamente al mismo compás musical?</li>
+            <li>¿Por qué una coreografía colectiva exige tanta generosidad y atención hacia los compañeros?</li>
           </ul>
         </div>
 
         <div class="safety-alert">
-          <strong>âš ï¸ Seguridad:</strong> calzado deportivo antideslizante bien atado; separaciÃ³n de seguridad de dos brazos en los giros para evitar colisiones.
+          <strong>⚠️ Seguridad:</strong> calzado deportivo antideslizante bien atado; separación de seguridad de dos brazos en los giros para evitar colisiones.
         </div>
 
         <div class="rubrica-box">
-          <div class="section-title">RÃºbrica de evaluaciÃ³n competencial</div>
+          <div class="section-title">Rúbrica de evaluación competencial</div>
           <table class="rubrica-table">
             <thead>
               <tr>
                 <th style="width: 28%;">Indicador evaluable</th>
                 <th style="width: 18%;">En proceso (1)</th>
-                <th style="width: 18%;">BÃ¡sico (2)</th>
+                <th style="width: 18%;">Básico (2)</th>
                 <th style="width: 18%;">Conseguido (3)</th>
                 <th style="width: 18%;">Avanzado (4)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>SincronÃ­a rÃ­tmica y memoria:</strong> CompÃ¡s y estructura musical.</td>
+                <td><strong>Sincronía rítmica y memoria:</strong> Compás y estructura musical.</td>
                 <td>Va desacompasado con frecuencia o se pierde al cambiar de frase motriz.</td>
-                <td>Recuerda los pasos pero se retrasa o adelanta respecto al compÃ¡s del grupo.</td>
-                <td>Baila al compÃ¡s exacto de la mÃºsica, coordina giros y recuerda la secuencia.</td>
-                <td>Demuestra una musicalidad impecable, contagia energÃ­a y ayuda a otros a mantener el tempo.</td>
+                <td>Recuerda los pasos pero se retrasa o adelanta respecto al compás del grupo.</td>
+                <td>Baila al compás exacto de la música, coordina giros y recuerda la secuencia.</td>
+                <td>Demuestra una musicalidad impecable, contagia energía y ayuda a otros a mantener el tempo.</td>
               </tr>
               <tr>
-                <td><strong>ExpresiÃ³n corporal y desinhibiciÃ³n:</strong> Presencia escÃ©nica y actitud.</td>
-                <td>Muestra gran rigidez corporal o vergÃ¼enza evidente limitando el movimiento.</td>
-                <td>Ejecuta los pasos de forma mecÃ¡nica sin transmitir emociÃ³n ni gestualidad.</td>
+                <td><strong>Expresión corporal y desinhibición:</strong> Presencia escénica y actitud.</td>
+                <td>Muestra gran rigidez corporal o vergüenza evidente limitando el movimiento.</td>
+                <td>Ejecuta los pasos de forma mecánica sin transmitir emoción ni gestualidad.</td>
                 <td>Baila con soltura, expresividad facial positiva y postura corporal abierta.</td>
-                <td>Brilla con luz propia, proyecta alegrÃ­a, dinamismo escÃ©nico y orgullo grupal.</td>
+                <td>Brilla con luz propia, proyecta alegría, dinamismo escénico y orgullo grupal.</td>
               </tr>
             </tbody>
           </table>
@@ -3773,10 +3802,11 @@ Línea de salida (exploradores) ════════════════
       </div>
 
       <div class="ficha-footer">
-        <span>EducaciÃ³n FÃ­sica Primaria | LOMLOE</span>
-        <span>F-EXPR-03 | PÃ¡gina 27</span>
+        <span>Educación Física Primaria | LOMLOE</span>
+        <span>F-EXPR-03 | Página 27</span>
       </div>
     </article>
+
   </main>
 
   <!-- MODAL DE PLANTILLA EN BLANCO -->
@@ -3801,7 +3831,7 @@ Línea de salida (exploradores) ════════════════
         function filtrarPorPill(valorCiclo) {
       document.getElementById('filtroCiclo').value = valorCiclo;
       
-      // Actualizar estilo activo en los botones de pestaÃ±as
+      // Actualizar estilo activo en los botones de pestañas
       document.querySelectorAll('.pill-btn').forEach(btn => {
         if (btn.dataset.tab === valorCiclo) {
           btn.classList.add('active');
@@ -3818,7 +3848,7 @@ Línea de salida (exploradores) ════════════════
       const bloqueSeleccionado = document.getElementById('filtroBloque').value;
       const textoBusqueda = document.getElementById('busquedaTexto').value.toLowerCase().trim();
 
-      // Sincronizar pill activa si el usuario cambiÃ³ el select
+      // Sincronizar pestaña activa si el usuario cambió el select
       document.querySelectorAll('.pill-btn').forEach(btn => {
         if (btn.dataset.tab === cicloSeleccionado) {
           btn.classList.add('active');
@@ -3849,6 +3879,7 @@ Línea de salida (exploradores) ════════════════
 
       document.getElementById('contadorFichas').innerText = `Mostrando ${visibles} de ${fichas.length} fichas`;
     }
+
 
     function imprimirFichaIndividual(boton) {
       const fichaSeleccionada = boton.closest('.ficha-card');

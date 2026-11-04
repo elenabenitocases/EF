@@ -1,11 +1,11 @@
-# Matriz curricular y organización de Educación Física (1.º a 6.º de primaria)
+# Matriz curricular y organización de educación física (1.º a 6.º de primaria)
 **Marco de referencia:** LOMLOE (Real Decreto 157/2022) | **Enfoque:** competencial, inclusivo (DUA), lúdico y vivencial
 
 ---
 
-## 1. Mapa de competencias clave y competencias específicas de Educación Física
+## 1. Mapa de competencias clave y competencias específicas de educación física
 
-| Código | Competencia específica del área de Educación Física | Relación con competencias clave |
+| Código | Competencia específica del área de educación física | Relación con competencias clave |
 | :--- | :--- | :--- |
 | **CE1** | Adoptar un estilo de vida activo y saludable, conociendo y aplicando hábitos de higiene, postura, descanso, alimentación y gestión del esfuerzo. | STEM, CPSAA, CC |
 | **CE2** | Adaptar las capacidades físicas y las habilidades motrices a situaciones de acción motriz, aplicando la toma de decisiones y el control corporal. | CPSAA, CE |
